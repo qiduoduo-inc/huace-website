@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "nuxt": "3.0.0-rc.9",
+    "sass": "^1.54.9"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^6.1.0",
+    "@originjs/vite-plugin-commonjs": "^1.0.3",
+    "animate.css": "^4.1.1",
+    "ant-design-vue": "^3.2.12",
+    "sass-loader": "^13.0.2",
+    "swiper": "6.0.0-alpha.18",
+    "wow.js": "^1.2.2"
+  }
+}
