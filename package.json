@@ -14,8 +14,10 @@
   "dependencies": {
     "@ant-design/icons-vue": "^6.1.0",
     "@originjs/vite-plugin-commonjs": "^1.0.3",
+    "@popperjs/core": "^2.11.6",
     "animate.css": "^4.1.1",
     "ant-design-vue": "^3.2.12",
+    "bootstrap": "^5.2.3",
     "sass-loader": "^13.0.2",
     "swiper": "6.0.0-alpha.18",
     "wow.js": "^1.2.2"
