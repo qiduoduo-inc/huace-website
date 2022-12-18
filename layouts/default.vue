@@ -5,12 +5,7 @@
 -->
 <template>
   <div class="default-layout">
-    <TopNavigationBar />
     <slot></slot>
-    <FooterNavigationBar />
-    <BackTop />
-    <Robot />
-    <Footer />
   </div>
 </template>
 <style lang="scss" scoped></style>
