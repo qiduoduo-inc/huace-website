@@ -1,8 +1,3 @@
-/*
- * @Author: 王鑫
- * @Description: 判断用户设备中间件
- * @Date: 2022-09-14 13:22:03
- */
 import { defineNuxtPlugin } from '#app';
 
 export default defineNuxtPlugin(() => {
@@ -11,6 +6,7 @@ export default defineNuxtPlugin(() => {
     //   const meta = document.querySelector('meta[name="viewport"]');
     //   const scale =
     //     window.screen.width / 750 > 1 ? 1 : window.screen.width / 750;
+    //   console.log(window.screen.width)
     //   meta.content = `width=device-width,initial-scale=${scale}`;
     // }
     // viewPort();
