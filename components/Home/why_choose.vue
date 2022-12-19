@@ -154,7 +154,7 @@ const tabList = [
       display: block;
       .phone-video-item {
         width: 100%;
-        margin-bottom: 1rem;
+        padding-bottom: 1rem;
         .title{
           padding: 1rem 0;
           text-align: center;

@@ -96,6 +96,7 @@ onMounted(() => {
       height: 22rem;
       overflow-x: auto;
       margin-bottom: 1rem;
+      padding: 1rem;
       img {
         height: 100%;
       }

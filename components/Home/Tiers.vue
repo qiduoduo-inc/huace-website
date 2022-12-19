@@ -10,7 +10,11 @@
     </div>
     <div class="content">
       <div class="row">
-        <div class="col-6 col-md-2" v-for="(item, index) in imgList" :key="index">
+        <div
+          class="col-6 col-md-2 tiers-item"
+          v-for="(item, index) in imgList"
+          :key="index"
+        >
           <img :src="item" alt="" />
         </div>
       </div>
@@ -45,13 +49,55 @@ const imgList = [
   overflow: hidden;
   .content {
     margin: 0 auto;
-    .img-div {
+    .tiers-item {
+      padding: 2.75rem 4.125rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       img {
         width: 100%;
       }
     }
-    img {
-      width: 100%;
+
+    .tiers-item:first-child {
+      background-color: #f4f4f4;
+    }
+    .tiers-item:nth-child(2) {
+      background-color: #f9f9f9;
+    }
+    .tiers-item:nth-child(3) {
+      background-color: #f4f4f4;
+    }
+    .tiers-item:nth-child(4) {
+      background-color: #f9f9f9;
+    }
+    .tiers-item:nth-child(5) {
+      background-color: #f4f4f4;
+    }
+    .tiers-item:nth-child(6) {
+      background-color: #f9f9f9;
+    }
+    .tiers-item:nth-child(7) {
+      background-color: #f9f9f9;
+    }
+    .tiers-item:nth-child(8) {
+      background-color: #f4f4f4;
+    }
+    .tiers-item:nth-child(9) {
+      background-color: #f9f9f9;
+    }
+    .tiers-item:nth-child(10) {
+      background-color: #f4f4f4;
+    }
+    .tiers-item:nth-child(11) {
+      background-color: #f9f9f9;
+    }
+    .tiers-item:nth-child(12) {
+      background-color: #f4f4f4;
+    }
+
+    .tiers-item:hover {
+      background-color: rgba($color: #999999, $alpha: 0.7);
     }
   }
 
@@ -63,19 +109,26 @@ const imgList = [
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 20px;
+      font-size: 1.25rem;
       margin: 0 auto;
       border: 2px #000000 solid;
       margin-top: 1rem;
       margin-bottom: 2rem;
       img {
-        width: 13px;
-        height: 8px;
-        margin-left: 8px;
+        width: 1rem;
+        height: 0.8rem;
+        margin-left: 0.8rem;
       }
     }
   }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (min-width: 750px) and (max-width: 1200px) {
+  .tiers {
+    .content {
+      .tiers-item {
+        padding: 1.3875rem 2.0675rem;
+      }
+    }
+  }
 }
 </style>

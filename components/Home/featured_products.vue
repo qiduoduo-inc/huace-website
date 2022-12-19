@@ -26,7 +26,7 @@
         />
       </div>
     </div>
-    <div class="phone-content">
+    <div class="phone-content container">
       <div class="swiper-container swiper">
         <transition :duration="duration">
           <div class="swiper-wrapper">
@@ -62,21 +62,21 @@ const itemList = [
     keywords: 'Characteristic keywords',
   },
   {
-    url: '../../assets/images/index/featured_products/2.png',
+    url: '../../assets/images/index/featured_products/1.png',
     title: 'The Name',
     introduction:
       'Characteristic keywords With a combined 10+ years of experience, Huace Sports Helmethas the working knowledge',
     keywords: 'Characteristic keywords',
   },
   {
-    url: '../../assets/images/index/featured_products/3.png',
+    url: '../../assets/images/index/featured_products/1.png',
     title: 'The Name',
     introduction:
       'Characteristic keywords With a combined 10+ years of experience, Huace Sports Helmethas the working knowledge',
     keywords: 'Characteristic keywords',
   },
   {
-    url: '../../assets/images/index/featured_products/4.png',
+    url: '../../assets/images/index/featured_products/1.png',
     title: 'The Name',
     introduction:
       'Characteristic keywords With a combined 10+ years of experience, Huace Sports Helmethas the working knowledge',
@@ -115,7 +115,7 @@ onMounted(() => {
       position: relative;
       color: #ffffff;
       overflow: hidden;
-      transition: 0.5s;
+      transition: 1s;
       .product {
         position: absolute;
         right: 0;
@@ -158,6 +158,7 @@ onMounted(() => {
     .focus-item {
       width: 40%;
       height: 43rem;
+      transition: 1s;
       .product {
         position: absolute;
         right: 50%;
@@ -200,39 +201,6 @@ onMounted(() => {
   }
 }
 
-@media only screen and (max-width: 750px) {
-  .feature-products {
-    padding-bottom: 0;
-    .content {
-      display: none;
-    }
-    .phone-content {
-      display: block;
-      .swiper-slide {
-        height: 30rem;
-        background: linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
-        position: relative;
-        color: #ffffff;
-        .title {
-          font-size: 1rem;
-          position: absolute;
-          top: 1rem;
-          left: 1rem;
-        }
-        .introduction {
-          font-size: 1rem;
-          position: absolute;
-          bottom: 1rem;
-          left: 1rem;
-          width: 60%;
-        }
-        img {
-          width: 100%;
-        }
-      }
-    }
-  }
-}
 
 @media only screen and (max-width: 900px) {
   .feature-products {
@@ -245,4 +213,40 @@ onMounted(() => {
     }
   }
 }
+
+@media only screen and (max-width: 750px) {
+  .feature-products {
+    padding-bottom: 0;
+    .content {
+      display: none;
+    }
+    .phone-content {
+      display: block;
+      .swiper-slide {
+        width: 100%;
+        background: linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
+        position: relative;
+        color: #ffffff;
+        .title {
+          font-size: 2rem;
+          position: absolute;
+          top: 2rem;
+          left: 2rem;
+        }
+        .introduction {
+          font-size: 0.8rem;
+          position: absolute;
+          bottom: 2rem;
+          left: 2rem;
+          width: 60%;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
 </style>

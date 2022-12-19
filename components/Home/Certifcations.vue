@@ -6,24 +6,7 @@
     <div class="small-title">
       <p>BSCI、SG、CE、CPSC、AS/NZS、KC</p>
     </div>
-    <div class="certifications-swiper container">
-      <div class="swiper-container swiper">
-        <div class="swiper-wrapper">
-          <div
-            class="swiper-slide"
-            v-for="(item, index) in imgList"
-            :key="index"
-          >
-            <div class="swiperImg">
-              <img :src="item" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-    </div>
-    <div class="phone-certifications-swiper">
+    <div class="certifications-swiper">
       <div class="swiper-container swiper">
         <div class="swiper-wrapper">
           <div
@@ -62,7 +45,7 @@ const imgList = [
 const duration = ref(0);
 
 onMounted(() => {
-  const ss = new Swiper('.certifications-swiper .swiper', {
+  const pp = new Swiper('.certifications-swiper .swiper', {
     watchSlidesProgress: true,
     slidesPerView: 'auto',
     centeredSlides: true,
@@ -79,54 +62,6 @@ onMounted(() => {
     on: {
       progress: function (swiper, progress) {
         for (let i = 0; i < this.slides.length; i++) {
-          let slide = this.slides.eq(i);
-          let slideProgress = slide[0].progress;
-          let modify = 1;
-          if (Math.abs(slideProgress) > 1) {
-            modify = (Math.abs(slideProgress) - 1) * 0.2 + 1;
-          }
-          if (slideProgress < 0 && slideProgress >= -6) {
-            slideProgress += 1;
-          }
-          let translate = slideProgress * modify * 200 + 'px';
-          let scale = 1 - Math.abs(slideProgress) / 5;
-          let zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
-          slide[0].style.transform =
-            'translateX(' + translate + ') scale(' + scale + ')';
-          slide[0].style.zIndex = zIndex;
-          slide[0].style.opacity = 1;
-          if (Math.abs(slideProgress) > 3) {
-            slide[0].style.opacity = 0;
-          }
-        }
-      },
-      setTransition: function (swiper, transition) {
-        for (let i = 0; i < this.slides.length; i++) {
-          let slide = this.slides.eq(i);
-          slide[0].style.transitionDuration = transition + 'ms';
-        }
-      },
-    },
-  });
-
-  const pp = new Swiper('.phone-certifications-swiper .swiper', {
-    watchSlidesProgress: true,
-    slidesPerView: 'auto',
-    centeredSlides: true,
-    loop: true,
-    loopedSlides: 6,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
-    on: {
-      progress: function (swiper, progress) {
-        for (let i = 0; i < this.slides.length; i++) {
-          // const width = this.slides.eq(0)[0].offsetWidth / 1.5;
           let slide = this.slides.eq(i);
           let slideProgress = slide[0].progress;
           let modify = 1;
@@ -179,20 +114,23 @@ onMounted(() => {
     .swiper-container {
       overflow: inherit !important;
     }
+
     .swiper-slide {
-      width: 20rem;
-      height: 30rem;
+      width: 25.875rem;
+      height: 35.9375rem;
       .swiperImg {
         background: linear-gradient(
           rgba(255, 255, 255, 0.33),
           rgba(255, 255, 255, 0.15),
           rgba(255, 255, 255, 0.71)
         );
-        width: 15rem;
-        height: 25rem;
+        width: 23.8125rem;
+        height: 33.75rem;
         display: flex;
         justify-content: center;
         align-items: center;
+        backdrop-filter: blur(14px) saturate(150%);
+        opacity: 0.8;
         img {
           height: 90%;
           width: 90%;
@@ -200,89 +138,56 @@ onMounted(() => {
       }
     }
 
-    .swiper-slide-next,
     .swiper-slide-active {
       .swiperImg {
         opacity: 1;
       }
     }
-  }
+    .swiper-button-next {
+      position: absolute;
+      right: 6.25rem;
+      top: 45%;
+      width: 2.5rem;
+      height: 2.5rem;
+      background: url(@/assets/images/index/certifications/right-arrow.png)
+        no-repeat;
+      background-size: 100%;
+      z-index: 99;
+      cursor: pointer;
+    }
 
-  .phone-certifications-swiper {
-    display: none;
+    .swiper-button-prev {
+      position: absolute;
+      left: 6.25rem;
+      top: 45%;
+      width: 2.5rem;
+      height: 2.5rem;
+      background: url(@/assets/images/index/certifications/left-arrow.png)
+        no-repeat;
+      background-size: 100%;
+      z-index: 99;
+      cursor: pointer;
+    }
   }
-}
-.swiper-button-next {
-  position: absolute;
-  right: -200px;
-  top: 45%;
-  width: 45px;
-  height: 45px;
-  background: url(@/assets/images/index/certifications/right-arrow.png)
-    no-repeat;
-  background-size: 100%;
-  z-index: 99;
-  cursor: pointer;
-}
-
-.swiper-button-prev {
-  position: absolute;
-  left: 100px;
-  top: 45%;
-  width: 45px;
-  height: 45px;
-  background: url(@/assets/images/index/certifications/left-arrow.png) no-repeat;
-  background-size: 100%;
-  z-index: 99;
-  cursor: pointer;
 }
 
 @media only screen and (max-width: 750px) {
   .certifcations {
-    .certifications-swiper {
+    // .swiper-slide {
+    //   width: 17.6rem;
+    //   height: 25rem;
+    //   .swiperImg {
+    //     width: 8rem;
+    //     height: 13rem;
+    //   }
+    // }
+
+    .swiper-button-next {
       display: none;
     }
 
-    .small-title {
-      font-size: 0.3rem;
-      text-align: center;
-      color: #ffffff;
-      margin-bottom: 1rem;
-    }
-
-    .phone-certifications-swiper {
-      display: block;
-      position: relative;
-      .swiper-container {
-        overflow: inherit !important;
-      }
-      .swiper-slide {
-        width: 20rem;
-        height: 30rem;
-        .swiperImg {
-          background: linear-gradient(
-            rgba(255, 255, 255, 0.33),
-            rgba(255, 255, 255, 0.15),
-            rgba(255, 255, 255, 0.71)
-          );
-          width: 20em;
-          height: 25rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          img {
-            height: 90%;
-            width: 90%;
-          }
-        }
-      }
-
-      .swiper-slide-next,
-      .swiper-slide-active {
-        .swiperImg {
-          opacity: 1;
-        }
-      }
+    .swiper-button-prev {
+      display: none;
     }
   }
 }

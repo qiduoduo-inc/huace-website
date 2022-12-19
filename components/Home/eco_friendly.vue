@@ -5,7 +5,7 @@
 -->
 <template>
   <div class="eco-friendlu container-fluid">
-    <div class="row">
+    <div class="pc row">
       <div class="left-box col-4">
         <div class="title">ECO-FRIENDLY</div>
         <div class="detail">
@@ -14,6 +14,18 @@
         </div>
       </div>
       <div class="right-box col-8">
+        <img src="@/assets/images/index/eco_friendly/2.png" alt="" />
+      </div>
+    </div>
+    <div class="h5">
+      <div class="top-box">
+        <div class="title">ECO-FRIENDLY</div>
+        <div class="detail">
+          We have mature technique for exhaust gas recirculation and
+          continuously use Eco friendly materials to produce helmets.
+        </div>
+      </div>
+      <div class="bottom-box">
         <img src="@/assets/images/index/eco_friendly/2.png" alt="" />
       </div>
     </div>
@@ -51,24 +63,38 @@
       width: 100%;
     }
   }
+
+  .h5 {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 750px) {
   .eco-friendlu {
-    .left-box {
-      .title {
-        font-size: 0.5rem;
-        font-weight: bold;
-        position: absolute;
-        left: 1.4rem;
-        top: 1.2rem;
+    .pc {
+      display: none;
+    }
+
+    .h5 {
+      display: block;
+      background-color: #cccccc;
+      margin: 0;
+      .top-box {
+        text-align: center;
+        padding: 1rem 1rem;
+        .title {
+          font-size: 2.5rem;
+          font-weight: bold;
+        }
+        .detail {
+          font-size: 1rem;
+        }
       }
-      .detail {
-        font-size: 0.2rem;
-        position: absolute;
-        left: 1.4rem;
-        top: 2rem;
-        width: 3rem;
+
+      .bottom-box {
+        img {
+          width: 100%;
+        }
       }
     }
   }
