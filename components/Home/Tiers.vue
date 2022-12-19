@@ -4,13 +4,15 @@
  * @Date: 2022-12-16 20:43:21
 -->
 <template>
-  <div class="tiers">
+  <div class="tiers container">
     <div class="box-title">
       <p>BE WITH THE TOP TIERS, TRUST IN HUACE</p>
     </div>
     <div class="content">
-      <div class="img-div" v-for="(item, index) in imgList" :key="index">
-        <img :src="item" alt="" />
+      <div class="row">
+        <div class="col-6 col-md-2" v-for="(item, index) in imgList" :key="index">
+          <img :src="item" alt="" />
+        </div>
       </div>
     </div>
     <div class="join-us">
@@ -42,33 +44,30 @@ const imgList = [
 .tiers {
   overflow: hidden;
   .content {
-    width: 1722px;
     margin: 0 auto;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
     .img-div {
-      width: 287px;
-      height: 158px;
       img {
         width: 100%;
       }
+    }
+    img {
+      width: 100%;
     }
   }
 
   .join-us {
     text-align: center;
     .join-us-btn {
-      width: 200px;
-      height: 50px;
+      width: 8rem;
+      height: 2.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 20px;
       margin: 0 auto;
       border: 2px #000000 solid;
-      margin-top: 40px;
-      margin-bottom: 80px;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
       img {
         width: 13px;
         height: 8px;
@@ -76,5 +75,7 @@ const imgList = [
       }
     }
   }
+}
+@media only screen and (max-width: 900px) {
 }
 </style>

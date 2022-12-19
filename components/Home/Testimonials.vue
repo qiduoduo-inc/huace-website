@@ -1,12 +1,12 @@
 <template>
-  <div class="testimonials">
+  <div class="testimonials container-fluid">
     <div class="box-title">
       <p>TESTIMONIALS</p>
     </div>
     <div class="small-title">
       <p>What our clients and partners say about us</p>
     </div>
-    <div class="video">
+    <div class="video container">
       <img src="@/assets/images/index/testimonials/1.png" alt="" />
     </div>
     <div class="barrage" ref="barrage">
@@ -38,81 +38,73 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-</script>
+<script lang="ts" setup></script>
 
 <style scoped lang="scss">
 .testimonials {
   background: linear-gradient(to right, rgba(0, 0, 0, 81%), #000000);
   color: #ffffff;
   position: relative;
-  height: 900px;
   overflow: hidden;
+  padding: 0 10%;
 
-  .box-title {
-    padding-top: 80px;
-    padding-bottom: 10px;
-  }
   .small-title {
     text-align: center;
-    font-size: 16px;
-    margin-bottom: 40px;
+    font-size: 0.1rem;
+    margin-bottom: 1rem;
   }
   .video {
-    position: absolute;
-    top: 220px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1050px;
-    height: 590px;
+    position: relative;
     z-index: 99;
+    padding-bottom: 4rem;
     img {
       width: 100%;
     }
   }
 
   .barrage {
-    position: absolute;
-    height: 900px;
-    left: 0;
-    top: 0;
-    z-index: 1;
+    overflow: hidden;
     .barrage-item {
       opacity: 0;
-      position: absolute;
       border: 1px #ffffff solid;
       border-radius: 100px;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 15px 40px;
+      padding: 0.1rem 1.2rem;
       transition: 0.5s;
       p {
-        width: 200px;
+        width: 20rem;
       }
     }
     .barrage-item:first-child {
-      top: 90px;
+      position: absolute;
+      top: 1%;
       animation: right2left 15s linear infinite;
     }
     .barrage-item:nth-child(2) {
-      top: 180px;
+      position: absolute;
+      top: 18%;
       animation: right2left 15s linear 2s infinite;
     }
     .barrage-item:nth-child(3) {
-      top: 270px;
+      position: absolute;
+      top: 27%;
       animation: right2left 15s linear 6s infinite;
     }
     .barrage-item:nth-child(4) {
-      top: 420px;
+      position: absolute;
+      top: 42%;
       animation: right2left 15s linear 4s infinite;
     }
     .barrage-item:nth-child(5) {
-      top: 540px;
+      position: absolute;
+      top: 54%;
       animation: right2left 15s linear 10s infinite;
     }
     .barrage-item:nth-child(6) {
-      top: 800px;
+      position: absolute;
+      top: 80%;
       animation: right2left 15s linear 16s infinite;
     }
   }
@@ -126,6 +118,21 @@
   100% {
     opacity: 0.3;
     transform: translate(-100%);
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .testimonials {
+    padding: 0;
+    .small-title {
+      font-size: .3rem;
+    }
+    .video {
+      width: 100%;
+    }
+    .barrage {
+      display: none;
+    }
   }
 }
 </style>

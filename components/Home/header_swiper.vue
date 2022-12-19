@@ -4,7 +4,7 @@
  * @Date: 2022-12-16 18:25:59
 -->
 <template>
-  <div class="header-swiper">
+  <div class="header-swiper container-fluid">
     <Header class="index-header" />
     <div class="index-swiper">
       <div class="swiper-container swiper">
@@ -22,16 +22,17 @@
         <!-- 如果需要分页器 -->
         <div class="swiper-pagination"></div>
       </div>
-    </div>
-    <div class="title">
-      <p class="big-title">Huace Sports Helmet OEM & ODM</p>
-      <p class="small-title">Professional & Satisfaction SINCE 2013</p>
+      <div class="title">
+        <p class="big-title">Huace Sports Helmet OEM & ODM</p>
+        <p class="small-title">Professional & Satisfaction</p>
+        <p class="small-title">SINCE 2013</p>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import Header from '../Header.vue';
+import Header from '../header.vue';
 import Swiper, { Autoplay, Pagination } from 'swiper';
 
 import 'swiper/swiper.scss';
@@ -67,25 +68,24 @@ onMounted(() => {
 .header-swiper {
   width: 100%;
   position: relative;
-  overflow: hidden;
-  
+
   .index-header::v-deep {
     position: absolute;
-    top: 0;
     width: 100%;
-    min-width: 1920px;
+    top: 0;
     z-index: 9;
   }
   .index-swiper {
+    position: relative;
     .swiper-slide {
       width: 100%;
-      // img {
-      //   width: 100%;
-      // }
+      img {
+        width: 100%;
+      }
     }
     .swiper-pagination::v-deep {
       position: absolute;
-      bottom: 10px;
+      bottom: 0.1rem;
       left: 0;
       width: 100%;
       z-index: 99;
@@ -99,7 +99,7 @@ onMounted(() => {
         border-radius: 8px;
         background-color: #bef6ff;
         margin: 0 6px;
-        margin-bottom: 24px;
+        margin-bottom: 1rem;
         display: inline-block;
         opacity: 0.1;
       }
@@ -113,29 +113,35 @@ onMounted(() => {
   .title {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
     text-align: center;
+    width: 100%;
     z-index: 99;
+    width: 100%;
     color: #ffffff;
     .big-title {
-      font-size: 80px;
+      font-size: 3rem;
+      text-align: center;
       font-weight: bold;
-      width: 1250px;
     }
     .small-title {
-      font-size: 40px;
-      width: 570px;
+      font-size: 1.5rem;
       margin: 0 auto;
     }
   }
+}
 
-  @media only screen and (max-width: 750px) {
-    .index-swiper {
-      width: 100vh;
-      overflow: hidden;
-      img {
-        width: 100%;
+@media only screen and (max-width: 750px) {
+  .header-swiper {
+    .index-header::v-deep {
+      position: static;
+    }
+    .title {
+      .big-title {
+        font-size: 1rem;
+      }
+      .small-title {
+        font-size: 0.8rem;
       }
     }
   }

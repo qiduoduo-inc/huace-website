@@ -4,11 +4,11 @@
  * @Date: 2022-12-16 22:09:16
 -->
 <template>
-  <div class="feature-products">
+  <div class="feature-products container-fluid">
     <div class="box-title">
       <p>FEATURED PRODUCTS</p>
     </div>
-    <div class="content">
+    <div class="content container">
       <div
         v-for="(item, index) in itemList"
         :key="index"
@@ -22,38 +22,61 @@
         <p class="introduction">{{ item.introduction }}</p>
         <img
           class="arrow"
-          src="@/assets/images/index/featuredProducts/arrow.png"
+          src="@/assets/images/index/featured_products/arrow.png"
         />
+      </div>
+    </div>
+    <div class="phone-content">
+      <div class="swiper-container swiper">
+        <transition :duration="duration">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide"
+              v-for="(item, index) in itemList"
+              :key="index"
+            >
+              <p class="title">{{ item.title }}</p>
+              <img :src="item.url" alt="" />
+              <p class="introduction">{{ item.introduction }}</p>
+            </div>
+          </div>
+        </transition>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
+import Swiper, { Autoplay, Pagination } from 'swiper';
+
+import 'swiper/swiper.scss';
+Swiper.use([Autoplay, Pagination]);
+const duration = ref(0);
+
 const itemList = [
   {
-    url: '../../assets/images/index/featuredProducts/1.png',
+    url: '../../assets/images/index/featured_products/1.png',
     title: 'The Name',
     introduction:
       'Characteristic keywords With a combined 10+ years of experience, Huace Sports Helmethas the working knowledge',
     keywords: 'Characteristic keywords',
   },
   {
-    url: '../../assets/images/index/featuredProducts/2.png',
+    url: '../../assets/images/index/featured_products/2.png',
     title: 'The Name',
     introduction:
       'Characteristic keywords With a combined 10+ years of experience, Huace Sports Helmethas the working knowledge',
     keywords: 'Characteristic keywords',
   },
   {
-    url: '../../assets/images/index/featuredProducts/3.png',
+    url: '../../assets/images/index/featured_products/3.png',
     title: 'The Name',
     introduction:
       'Characteristic keywords With a combined 10+ years of experience, Huace Sports Helmethas the working knowledge',
     keywords: 'Characteristic keywords',
   },
   {
-    url: '../../assets/images/index/featuredProducts/4.png',
+    url: '../../assets/images/index/featured_products/4.png',
     title: 'The Name',
     introduction:
       'Characteristic keywords With a combined 10+ years of experience, Huace Sports Helmethas the working knowledge',
@@ -65,25 +88,29 @@ const focus = ref(0);
 const enter = (key: number) => {
   focus.value = key;
 };
+
+onMounted(() => {
+  const ss = new Swiper('.feature-products .phone-content .swiper', {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+});
 </script>
 
 <style scoped lang="scss">
 .feature-products {
   background: linear-gradient(to right, #e2e2e2, #ffffff, #eef0f1);
   padding-bottom: 55px;
-  overflow: hidden;
-  
-  .box-title {
-    padding-top: 80px;
-  }
 
   .content {
-    width: 1720px;
     margin: 0 auto;
     display: flex;
     .show-item {
-      width: 344px;
-      height: 688px;
+      width: 21.5rem;
+      height: 43rem;
       background: linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
       position: relative;
       color: #ffffff;
@@ -92,31 +119,31 @@ const enter = (key: number) => {
       .product {
         position: absolute;
         right: 0;
-        top: 140px;
-        width: 475px;
-        height: 475px;
+        top: 10rem;
+        width: 20rem;
+        height: 20rem;
       }
 
       .title {
-        font-size: 50px;
+        font-size: 2rem;
         font-weight: bold;
         position: absolute;
-        top: 75px;
+        top: 6%;
         width: 100%;
         text-align: center;
       }
 
       .keywords {
-        font-size: 20px;
+        font-size: 1rem;
         position: absolute;
-        bottom: 165px;
+        bottom: 20%;
         width: 100%;
         text-align: center;
       }
 
       .arrow {
-        width: 40px;
-        height: 40px;
+        width: 2rem;
+        height: 2rem;
         position: absolute;
         bottom: 70px;
         right: 50%;
@@ -129,23 +156,23 @@ const enter = (key: number) => {
     }
 
     .focus-item {
-      width: 688px;
-      height: 688px;
+      width: 43rem;
+      height: 43rem;
       .product {
         position: absolute;
         right: 50%;
         transform: translateX(50%);
         top: 140px;
-        width: 475px;
-        height: 475px;
+        width: 25rem;
+        height: 25rem;
       }
 
       .title {
-        font-size: 50px;
+        font-size: 2rem;
         font-weight: bold;
         position: absolute;
-        top: 75px;
-        left: 90px;
+        top: 6%;
+        left: 10%;
         text-align: left;
       }
 
@@ -159,11 +186,61 @@ const enter = (key: number) => {
 
       .introduction {
         display: block;
-        width: 300px;
-        font-size: 20px;
+        width: 20rem;
+        font-size: 1.11rem;
         position: absolute;
-        bottom: 70px;
-        left: 90px;
+        bottom: 10%;
+        left: 15%;
+      }
+    }
+  }
+
+  .phone-content {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .feature-products {
+    padding-bottom: 0;
+    .content {
+      display: none;
+    }
+    .phone-content {
+      display: block;
+      .swiper-slide {
+        height: 30rem;
+        background: linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
+        position: relative;
+        color: #ffffff;
+        .title {
+          font-size: 1rem;
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+        }
+        .introduction {
+          font-size: 1rem;
+          position: absolute;
+          bottom: 1rem;
+          left: 1rem;
+          width: 60%;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .feature-products {
+    .content {
+      .focus-item {
+        .introduction {
+          width: 12rem;
+        }
       }
     }
   }
