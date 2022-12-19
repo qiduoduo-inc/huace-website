@@ -109,7 +109,7 @@ onMounted(() => {
     margin: 0 auto;
     display: flex;
     .show-item {
-      width: 21.5rem;
+      width: 20%;
       height: 43rem;
       background: linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
       position: relative;
@@ -156,7 +156,7 @@ onMounted(() => {
     }
 
     .focus-item {
-      width: 43rem;
+      width: 40%;
       height: 43rem;
       .product {
         position: absolute;

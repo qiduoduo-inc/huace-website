@@ -1,10 +1,12 @@
 <template>
   <div class="international-exhibitions container-fluid">
-    <div class="photo-wall container-fluid" ref="photoWall">
-      <div class="photo-item" v-for="(item, index) in itemList">
-        <img :src="item.url" alt="" />
+    <transition>
+      <div class="photo-wall container-fluid" ref="photoWall">
+        <div class="photo-item" v-for="(item, index) in itemList">
+          <img :src="item.url" alt="" />
+        </div>
       </div>
-    </div>
+    </transition>
     <div class="title">
       <p>INTERNATIONAL EXHIBITIONS</p>
     </div>
@@ -229,18 +231,19 @@ const changeImg = () => {
       add++;
     }
   }
-  photoWall.value.childNodes[Arr[0] + 1].style.animation = `close 0.5s linear infinite`;
-  photoWall.value.childNodes[Arr[1] + 1].style.animation = `close 0.5s linear infinite`;
-  photoWall.value.childNodes[Arr[2] + 1].style.animation = `close 0.5s linear infinite`;
+  photoWall.value.childNodes[Arr[0] + 1].style.opacity = 0.5;
+  photoWall.value.childNodes[Arr[1] + 1].style.opacity = 0.5;
+  photoWall.value.childNodes[Arr[2] + 1].style.opacity = 0.5;
+
   setTimeout(() => {
     const a = itemList.value[Arr[0]];
     itemList.value[Arr[0]] = itemList.value[Arr[1]];
     itemList.value[Arr[1]] = itemList.value[Arr[2]];
     itemList.value[Arr[2]] = a;
-  },500);
-  photoWall.value.childNodes[Arr[0] + 1].style.animation = `show 0.5s linear infinite`;
-  photoWall.value.childNodes[Arr[1] + 1].style.animation = `show 0.5s linear infinite`;
-  photoWall.value.childNodes[Arr[2] + 1].style.animation = `show 0.5s linear infinite`;
+    photoWall.value.childNodes[Arr[0] + 1].style.opacity = 1;
+    photoWall.value.childNodes[Arr[1] + 1].style.opacity = 1;
+    photoWall.value.childNodes[Arr[2] + 1].style.opacity = 1;
+  }, 500);
 };
 
 let timer = setInterval(() => {
@@ -271,6 +274,8 @@ onBeforeUnmount(() => {
       'a40 a41 a33 a42 a43 a43 a44 a45 a46 a39';
     .photo-item {
       overflow: hidden;
+      transition: all 0.5s ease;
+      opacity: 1;
       img {
         width: 100%;
         height: 100%;
