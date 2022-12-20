@@ -1,0 +1,147 @@
+.goods_view {
+  &_detail {
+    padding: 0 100px 80px 100px;
+    display: flex;
+    &_banners {
+     
+      width: 66%;
+      background: #C4C4C4;
+    }
+    &_info {
+      flex: 1;
+      padding: 40px 73px 0 40px;
+      &_title {
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 45px;
+        color: #000000;
+      }
+    }
+  }
+  &_banner {
+    height: calc(975 / 1920 * 100vw);
+    background: linear-gradient(84.46deg, #EEF0F1 3.11%, #FFFFFF 51.13%, #E2E2E2 99.86%);
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    display: flex;
+    padding: 24px 100px 0 98px;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    &_desc {
+      height: 150px;
+      font-family: 'Barlow';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 75px;
+      color: #000000;
+      letter-spacing: 0;
+      z-index: 99;
+    }
+    &_img {
+      width: calc(975 / 1920 * 100vw);
+      height: calc(975 / 1920 * 100vw);
+      position: absolute;
+      left: 50%;
+      top: 0px;
+      transform: translateX(-50%);
+    }
+    &_list {
+      position: absolute;
+      left: 50%;
+      bottom: 25px;
+      transform: translateX(-50%);
+      &_item {
+        width: 100px;
+        height: 100px;
+        margin-right: 12px;
+        cursor: pointer;
+      }
+      &_item:last-child {
+        margin-right: 0;
+      }
+      &_item.active {
+        border: 1px solid #333;
+      }
+    }
+    &_descirbe {
+      padding-top: 61px;
+      z-index: 99;
+      &_transform {
+        width: 79px;
+        height: 38px;
+        margin-bottom: 55px;
+        cursor: pointer;
+      }
+      &_info {
+        width: 300px;
+        height: 348px;
+        padding-top: 50px;
+        padding-left: 42px;
+        background: #ffffff;
+        &_label {
+          font-family: 'Barlow';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          text-transform: uppercase;
+          color: #000000;
+          margin-bottom: 18px;
+        }
+        &_value {
+          margin-bottom: 22px;
+          font-family: 'Barlow';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          color: #000000;
+        }
+        &_stars {
+          display: flex;
+          &_item {
+            width: 24px;
+            height: 24px;
+            margin-right: 11px;
+          }
+        }
+      }
+    }
+  }
+  &_tabs {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #000000;
+    &_btn {
+      height: 56px;
+      font-size: 20;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: 0.5s;
+      cursor: pointer;
+      color: #000000;
+      box-sizing: border-box;
+      font-weight: 700;
+    }
+    &_btn.introduction {
+      padding: 14px 39px;
+    }
+    &_btn.introduction.checked {
+      background: #000000;
+      border: 2px solid #000000;
+      color: #ffffff;
+    }
+    &_btn.profile { 
+      padding: 14px 39px;
+    }
+    &_btn.profile.checked {
+      background: #000000;
+      border: 2px solid #000000;
+      color: #ffffff;
+    }
+  }
+}

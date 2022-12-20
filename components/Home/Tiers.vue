@@ -15,8 +15,11 @@
     </div>
     <div class="join-us">
       <a-button class="join-us-btn"
-        >Join Us <img src="@/assets/images/index/tiers/arrow.png" alt=""
-      /></a-button>
+        >
+        <nuxt-link to="/goods">
+          Join Us <img src="@/assets/images/index/tiers/arrow.png" alt=""/>
+        </nuxt-link>
+      </a-button>
     </div>
   </div>
 </template>
