@@ -171,6 +171,7 @@ onMounted(() => {
     display: flex;
     justify-content: center;
     .product-btn {
+      padding: 1.25rem 0;
       width: 20rem;
       height: 2rem;
       font-size: 1.25rem;
@@ -311,7 +312,7 @@ onMounted(() => {
           // bottom: 6rem;
           // left: 50%;
           // transform: translateX(-50%);
-          font-size: 3rem;
+          font-size: 2rem;
           font-weight: bold;
           margin: 0 auto;
         }

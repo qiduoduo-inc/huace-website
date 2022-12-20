@@ -302,13 +302,13 @@
             margin-bottom: 1rem;
           }
           .detail {
-            font-size: 0.5rem;
+            font-size: 0.8rem;
           }
 
           .btn {
             background-color: #f0831e;
             color: #ffffff;
-            font-size: 0.4rem;
+            font-size: 0.6rem;
             font-weight: bold;
             margin-top: 2rem;
             padding: 0.5rem 1rem;
@@ -317,7 +317,7 @@
             -moz-border-radius: 0;
             -webkit-border-radius: 0;
             img {
-              margin-left: 0.5rem;
+              margin-left: 0.2rem;
               width: 1rem;
             }
           }

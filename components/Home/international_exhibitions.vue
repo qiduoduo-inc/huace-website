@@ -1,9 +1,9 @@
 <template>
-  <div class="international-exhibitions container-fluid">
-    <div class="box-title">
-      <p>INTERNATIONAL EXHIBITIONS</p>
-    </div>
-    <transition>
+  <transition>
+    <div class="international-exhibitions container-fluid">
+      <div class="box-title">
+        <p>INTERNATIONAL EXHIBITIONS</p>
+      </div>
       <div class="photo-wall container-fluid" ref="photoWall">
         <div class="photo-item" v-for="(item, index) in itemList">
           <img :src="item.url" alt="" />
@@ -26,11 +26,43 @@
           </div>
         </div>
       </div>
-    </transition>
-    <div class="title">
-      <p>INTERNATIONAL EXHIBITIONS</p>
+      <div class="photo-wall bottom" ref="photoWallOld">
+        <div class="photo-item" v-for="(item, index) in itemListOld">
+          <img :src="item.url" alt="" />
+        </div>
+      </div>
+      <div class="h-photo-wall container-fluid" ref="hPhotoWall">
+        <div class="photo-item" v-for="(item, index) in hItemList">
+          <img :src="item.url" alt="" />
+        </div>
+        <div class="year-box">
+          <div class="year">
+            <p>2015</p>
+          </div>
+          <div class="year">
+            <p>2016</p>
+          </div>
+          <div class="year">
+            <p>2017</p>
+          </div>
+          <div class="year">
+            <p>2018</p>
+          </div>
+          <div class="year">
+            <p>2019</p>
+          </div>
+        </div>
+      </div>
+      <div class="h-photo-wall bottom" ref="hPhotoWallOld">
+        <div class="photo-item" v-for="(item, index) in hItemListOld">
+          <img :src="item.url" alt="" />
+        </div>
+      </div>
+      <div class="title">
+        <p>INTERNATIONAL EXHIBITIONS</p>
+      </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script lang="ts" setup>
@@ -221,10 +253,447 @@ const itemList = ref([
   },
 ]);
 
+const itemListOld = ref([
+  {
+    url: '../../assets/images/index/international_exhibitions/1.png',
+    type: 2,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/2.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/3.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/4.png',
+    type: 2,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/5.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/6.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/7.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/8.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/9.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/10.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/11.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/12.png',
+    type: 2,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/13.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/14.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/15.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/16.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/17.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/18.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/19.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/20.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/21.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/22.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/23.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/24.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/25.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/26.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/27.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/28.png',
+    type: 2,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/29.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/30.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/31.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/32.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/33.png',
+    type: 2,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/34.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/35.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/36.png',
+    type: 2,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/37.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/38.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/39.png',
+    type: 2,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/40.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/41.png',
+    type: 2,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/42.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/43.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/44.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/45.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/46.png',
+    type: 1,
+  },
+]);
+
+const hItemList = ref([
+  {
+    url: '../../assets/images/index/international_exhibitions/1.png',
+    type: 2,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/2.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/3.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/4.png',
+    type: 2,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/5.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/6.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/7.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/8.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/9.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/10.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/11.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/12.png',
+    type: 2,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/13.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/14.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/15.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/16.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/17.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/18.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/19.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/20.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/21.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/22.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/23.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/24.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/25.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/26.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/27.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/40.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/29.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/30.png',
+    type: 1,
+  },
+]);
+
+const hItemListOld = ref([
+  {
+    url: '../../assets/images/index/international_exhibitions/1.png',
+    type: 2,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/2.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/3.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/4.png',
+    type: 2,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/5.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/6.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/7.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/8.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/9.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/10.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/11.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/12.png',
+    type: 2,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/13.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/14.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/15.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/16.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/17.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/18.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/19.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/20.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/21.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/22.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/23.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/24.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/25.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/26.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/27.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/40.png',
+    type: 1,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/29.png',
+    type: 3,
+  },
+  {
+    url: '../../assets/images/index/international_exhibitions/30.png',
+    type: 1,
+  },
+]);
+
 const photoWall = ref(null);
+const photoWallOld = ref(null);
+const hPhotoWall = ref(null);
+const hPhotoWallOld = ref(null);
 
 const changeImg = () => {
   let Arr = [];
+  let hArr = [];
   let add = 0;
 
   while (add < 3) {
@@ -234,18 +703,38 @@ const changeImg = () => {
       add++;
     }
   }
-  photoWall.value.childNodes[Arr[0] + 1].style.opacity = 0.8;
-  photoWall.value.childNodes[Arr[1] + 1].style.opacity = 0.8;
-  photoWall.value.childNodes[Arr[2] + 1].style.opacity = 0.8;
+
+  add = 0;
+  while (add < 3) {
+    const num = Math.floor(30 * Math.random());
+    if (hArr.indexOf(num) == -1 && hItemList.value[num].type === 1) {
+      hArr.push(num);
+      add++;
+    }
+  }
+  const a = itemListOld.value[Arr[0]];
+  itemListOld.value[Arr[0]] = itemListOld.value[Arr[1]];
+  itemListOld.value[Arr[1]] = itemListOld.value[Arr[2]];
+  itemListOld.value[Arr[2]] = a;
+
+  const b = hItemListOld.value[hArr[0]];
+  hItemListOld.value[hArr[0]] = hItemListOld.value[hArr[1]];
+  hItemListOld.value[hArr[1]] = hItemListOld.value[hArr[2]];
+  hItemListOld.value[hArr[2]] = b;
+  photoWallOld.value.childNodes[Arr[0] + 1].style.opacity = 0.5;
+  photoWallOld.value.childNodes[Arr[1] + 1].style.opacity = 0.5;
+  photoWallOld.value.childNodes[Arr[2] + 1].style.opacity = 0.5;
+  hPhotoWallOld.value.childNodes[hArr[0] + 1].style.opacity = 0.5;
+  hPhotoWallOld.value.childNodes[hArr[1] + 1].style.opacity = 0.5;
+  hPhotoWallOld.value.childNodes[hArr[2] + 1].style.opacity = 0.5;
 
   setTimeout(() => {
-    const a = itemList.value[Arr[0]];
-    itemList.value[Arr[0]] = itemList.value[Arr[1]];
-    itemList.value[Arr[1]] = itemList.value[Arr[2]];
-    itemList.value[Arr[2]] = a;
-    photoWall.value.childNodes[Arr[0] + 1].style.opacity = 1;
-    photoWall.value.childNodes[Arr[1] + 1].style.opacity = 1;
-    photoWall.value.childNodes[Arr[2] + 1].style.opacity = 1;
+    photoWallOld.value.childNodes[Arr[0] + 1].style.opacity = 1;
+    photoWallOld.value.childNodes[Arr[1] + 1].style.opacity = 1;
+    photoWallOld.value.childNodes[Arr[2] + 1].style.opacity = 1;
+    hPhotoWallOld.value.childNodes[hArr[0] + 1].style.opacity = 1;
+    hPhotoWallOld.value.childNodes[hArr[1] + 1].style.opacity = 1;
+    hPhotoWallOld.value.childNodes[hArr[2] + 1].style.opacity = 1;
   }, 500);
 };
 let timer;
@@ -436,6 +925,31 @@ onBeforeUnmount(() => {
     }
   }
 
+  .bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    .photo-item {
+      overflow: hidden;
+      transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease; /* Firefox 4 */
+      -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+      -o-transition: all 0.5s ease; /* Opera */
+      opacity: 1;
+      filter: alpha(opacity=100);
+      -moz-opacity: 1;
+      -khtml-opacity: 1;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .h-photo-wall {
+    display: none;
+  }
   .title {
     position: absolute;
     top: 33.2%;
@@ -517,9 +1031,13 @@ onBeforeUnmount(() => {
       display: block;
     }
     .photo-wall {
+      display: none;
+    }
+    .h-photo-wall {
+      height: 100vh;
       overflow: hidden;
       display: grid;
-      grid-template-rows: 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666%;
+      grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
       grid-template-columns: 25% 25% 25% 25%;
       align-content: center;
       grid-template-areas:
@@ -532,12 +1050,7 @@ onBeforeUnmount(() => {
         'a19 a19 a20 a20'
         'a21 a22 a24 a24'
         'a23 a25 a26 a27'
-        'a37 a29 a29 a30'
-        'a33 a31 a32 a39'
-        'a33 a40 a41 a39'
-        'a34 a35 a36 a38'
-        'a28 a42 a43 a43'
-        'a28 a44 a45 a46';
+        'a28 a29 a29 a30';
       .photo-item {
         overflow: hidden;
         transition: all 0.5s ease;
@@ -636,54 +1149,6 @@ onBeforeUnmount(() => {
       .photo-item:nth-child(30) {
         grid-area: a30;
       }
-      .photo-item:nth-child(31) {
-        grid-area: a31;
-      }
-      .photo-item:nth-child(32) {
-        grid-area: a32;
-      }
-      .photo-item:nth-child(33) {
-        grid-area: a33;
-      }
-      .photo-item:nth-child(34) {
-        grid-area: a34;
-      }
-      .photo-item:nth-child(35) {
-        grid-area: a35;
-      }
-      .photo-item:nth-child(36) {
-        grid-area: a36;
-      }
-      .photo-item:nth-child(37) {
-        grid-area: a37;
-      }
-      .photo-item:nth-child(38) {
-        grid-area: a38;
-      }
-      .photo-item:nth-child(39) {
-        grid-area: a39;
-      }
-      .photo-item:nth-child(40) {
-        grid-area: a40;
-      }
-      .photo-item:nth-child(41) {
-        grid-area: a41;
-      }
-      .photo-item:nth-child(42) {
-        grid-area: a42;
-      }
-      .photo-item:nth-child(43) {
-        grid-area: a43;
-      }
-      .photo-item:nth-child(44) {
-        grid-area: a44;
-      }
-      .photo-item:nth-child(45) {
-        grid-area: a45;
-      }
-      .photo-item:nth-child(46) {
-        grid-area: a46;
-      }
     }
 
     .title {
@@ -725,27 +1190,27 @@ onBeforeUnmount(() => {
     .year:first-child {
       position: absolute;
       right: 25%;
-      bottom: 6.66%;
+      bottom: 10%;
     }
     .year:nth-child(2) {
       position: absolute;
       right: 25%;
-      bottom: 39.96%;
+      bottom: 36%;
     }
     .year:nth-child(3) {
       position: absolute;
       left: 25%;
-      bottom: 39.96%;
+      bottom: 36%;
     }
     .year:nth-child(4) {
       position: absolute;
       right: 25%;
-      bottom: 79.92%;
+      bottom: 70%;
     }
     .year:nth-child(5) {
       position: absolute;
       left: 25%;
-      bottom: 79.92%;
+      bottom: 70%;
     }
   }
 }
