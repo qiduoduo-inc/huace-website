@@ -166,15 +166,31 @@ onMounted(() => {
 
   .certifications-swiper {
     position: relative;
-    .swiper-container {
-      // overflow: inherit !important;
-    }
-
     .swiper-slide {
       width: 25.875rem;
       height: 35.9375rem;
       .swiperImg {
         background: linear-gradient(
+          rgba(255, 255, 255, 0.33),
+          rgba(255, 255, 255, 0.15),
+          rgba(255, 255, 255, 0.71)
+        );
+        background: -webkit-linear-gradient(
+          rgba(255, 255, 255, 0.33),
+          rgba(255, 255, 255, 0.15),
+          rgba(255, 255, 255, 0.71)
+        );
+        background: -o-linear-gradient(
+          rgba(255, 255, 255, 0.33),
+          rgba(255, 255, 255, 0.15),
+          rgba(255, 255, 255, 0.71)
+        );
+        background: -ms-linear-gradient(
+          rgba(255, 255, 255, 0.33),
+          rgba(255, 255, 255, 0.15),
+          rgba(255, 255, 255, 0.71)
+        );
+        background: -moz-linear-gradient(
           rgba(255, 255, 255, 0.33),
           rgba(255, 255, 255, 0.15),
           rgba(255, 255, 255, 0.71)
@@ -186,6 +202,9 @@ onMounted(() => {
         align-items: center;
         backdrop-filter: blur(14px) saturate(150%);
         opacity: 0.8;
+        filter: alpha(opacity=80);
+        -moz-opacity: 0.8;
+        -khtml-opacity: 0.8;
         img {
           height: 90%;
           width: 90%;
@@ -196,6 +215,9 @@ onMounted(() => {
     .swiper-slide-active {
       .swiperImg {
         opacity: 1;
+        filter: alpha(opacity=100);
+        -moz-opacity: 1;
+        -khtml-opacity: 1;
       }
     }
     .swiper-button-next {
@@ -261,6 +283,26 @@ onMounted(() => {
             rgba(255, 255, 255, 0.15),
             rgba(255, 255, 255, 0.71)
           );
+          background: -webkit-linear-gradient(
+            rgba(255, 255, 255, 0.33),
+            rgba(255, 255, 255, 0.15),
+            rgba(255, 255, 255, 0.71)
+          );
+          background: -o-linear-gradient(
+            rgba(255, 255, 255, 0.33),
+            rgba(255, 255, 255, 0.15),
+            rgba(255, 255, 255, 0.71)
+          );
+          background: -ms-linear-gradient(
+            rgba(255, 255, 255, 0.33),
+            rgba(255, 255, 255, 0.15),
+            rgba(255, 255, 255, 0.71)
+          );
+          background: -moz-linear-gradient(
+            rgba(255, 255, 255, 0.33),
+            rgba(255, 255, 255, 0.15),
+            rgba(255, 255, 255, 0.71)
+          );
           width: 11.52rem;
           height: 16rem;
           display: flex;
@@ -268,6 +310,9 @@ onMounted(() => {
           align-items: center;
           backdrop-filter: blur(14px) saturate(150%);
           opacity: 0.8;
+          filter: alpha(opacity=80);
+          -moz-opacity: 0.8;
+          -khtml-opacity: 0.8;
           img {
             height: 90%;
             width: 90%;
@@ -278,6 +323,9 @@ onMounted(() => {
       .swiper-slide-active {
         .swiperImg {
           opacity: 1;
+          filter: alpha(opacity=100);
+          -moz-opacity: 1;
+          -khtml-opacity: 1;
         }
       }
     }

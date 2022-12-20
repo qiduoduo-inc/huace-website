@@ -32,7 +32,6 @@
 </template>
 
 <script lang="ts" setup>
-import Header from '../header.vue';
 import Swiper, { Autoplay, Pagination } from 'swiper';
 
 import 'swiper/swiper.scss';
@@ -97,15 +96,23 @@ onMounted(() => {
         width: 8px;
         height: 8px;
         border-radius: 8px;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
         background-color: #bef6ff;
         margin: 0 6px;
         margin-bottom: 1rem;
         display: inline-block;
         opacity: 0.1;
+        filter: alpha(opacity=10);
+        -moz-opacity: 0.1;
+        -khtml-opacity: 0.1;
       }
 
       .swiper-pagination-bullet-active {
         opacity: 0.5;
+        filter: alpha(opacity=50);
+        -moz-opacity: 0.5;
+        -khtml-opacity: 0.5;
       }
     }
   }
@@ -114,6 +121,10 @@ onMounted(() => {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    -webkit-transform: translateY(-50%); /* for Chrome || Safari */
+    -moz-transform: translateY(-50%); /* for Firefox */
+    -ms-transform: translateY(-50%); /* for IE */
+    -o-transform: translateY(-50%); /* for Opera */
     text-align: center;
     width: 100%;
     z-index: 99;

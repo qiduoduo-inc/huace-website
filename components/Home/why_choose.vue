@@ -28,11 +28,14 @@
           <p>Design Teams in South Korea and Europe</p>
         </div>
       </div>
-      <div class="video col-8" v-show="checkId === 1">
-        <img src="@/assets/images/index/why_choose/video1.png" alt="" />
-      </div>
-      <div class="video col-8" v-show="checkId !== 1">
-        <img src="@/assets/images/index/why_choose/video2.png" alt="" />
+      <div class="video-box col-8">
+        <VideoBox
+          ref="videoBox"
+          :img-url="tabList[checkId].url"
+          :video-url="tabList[checkId].videoUrl"
+          :key="tabList[checkId].key"
+          @change="clickTab"
+        />
       </div>
     </div>
 
@@ -43,7 +46,13 @@
         :key="index"
       >
         <p class="title">{{ item.title }}</p>
-        <img :src="item.url" alt="" />
+        <VideoBox
+          ref="videoBox"
+          :img-url="item.url"
+          :video-url="item.videoUrl"
+          :key="item.key"
+          @change="clickTab"
+        />
       </div>
     </div>
   </div>
@@ -53,7 +62,8 @@
 const checked = '../../assets/images/index/why_choose/checked.png';
 const uncheck = '../../assets/images/index/why_choose/uncheck.png';
 
-const checkId = ref(1);
+const videoBox = ref(null);
+const checkId = ref(0);
 const clickTab = (key: number) => {
   checkId.value = key;
 };
@@ -62,22 +72,26 @@ const tabList = [
   {
     url: '../../assets/images/index/why_choose/video1.png',
     title: 'Design & RD',
-    key: 1,
+    key: 0,
+    videoUrl: 'https://test-1255378077.cos.ap-nanjing.myqcloud.com/%E6%9D%AD%E5%B7%9E%E5%8D%8E%E7%AD%96%E5%B7%A5%E8%B4%B8%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-%E6%88%90%E7%89%87.mp4',
   },
   {
     url: '../../assets/images/index/why_choose/video2.png',
     title: 'Manufacturing Management',
-    key: 2,
+    key: 1,
+    videoUrl: 'https://test-1255378077.cos.ap-nanjing.myqcloud.com/%E6%9D%AD%E5%B7%9E%E5%8D%8E%E7%AD%96%E5%B7%A5%E8%B4%B8%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-%E6%88%90%E7%89%87.mp4',
   },
   {
     url: '../../assets/images/index/why_choose/video2.png',
     title: 'Quality Control',
-    key: 3,
+    key: 2,
+    videoUrl: 'https://test-1255378077.cos.ap-nanjing.myqcloud.com/%E6%9D%AD%E5%B7%9E%E5%8D%8E%E7%AD%96%E5%B7%A5%E8%B4%B8%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-%E6%88%90%E7%89%87.mp4',
   },
   {
     url: '../../assets/images/index/why_choose/video2.png',
     title: 'Service',
-    key: 4,
+    key: 3,
+    videoUrl: 'https://test-1255378077.cos.ap-nanjing.myqcloud.com/%E6%9D%AD%E5%B7%9E%E5%8D%8E%E7%AD%96%E5%B7%A5%E8%B4%B8%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-%E6%88%90%E7%89%87.mp4',
   },
 ];
 </script>
@@ -98,9 +112,15 @@ const tabList = [
     .left-box {
       background-color: #000000;
       opacity: 0.88;
+      filter: alpha(opacity=88);
+      -moz-opacity: 0.88;
+      -khtml-opacity: 0.88;
       .top-box {
         .choose-item {
           opacity: 1;
+          filter: alpha(opacity=100);
+          -moz-opacity: 1;
+          -khtml-opacity: 1;
           padding-left: 3rem;
           display: flex;
           align-items: center;
@@ -116,7 +136,10 @@ const tabList = [
         }
         .checked {
           background-color: #f0831e;
-          transition: 0.3s;
+          transition: all 0.3s;
+          -moz-transition: all 0.3s; /* Firefox 4 */
+          -webkit-transition: all 0.3s; /* Safari and Chrome */
+          -o-transition: all 0.3s; /* Opera */
         }
       }
       .bottom-box {
@@ -132,8 +155,8 @@ const tabList = [
       }
     }
 
-    .video {
-      // width: 1198px;
+    .video-box {
+      background-color: rgba($color: #000000, $alpha: 0.88);
       img {
         width: 100%;
       }
@@ -147,7 +170,7 @@ const tabList = [
 @media only screen and (max-width: 750px) {
   .why-choose {
     background-size: 100% 100%;
-    padding:0 1rem;
+    padding: 0 1rem;
     .choose-video {
       display: none;
     }
@@ -156,7 +179,7 @@ const tabList = [
       .phone-video-item {
         width: 100%;
         padding-bottom: 1rem;
-        .title{
+        .title {
           padding: 1rem 0;
           text-align: center;
           font-size: 1rem;

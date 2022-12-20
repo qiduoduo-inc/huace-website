@@ -178,7 +178,10 @@ onMounted(() => {
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: 0.1s;
+      transition: all 0.1s;
+      -moz-transition: all 0.1s; /* Firefox 4 */
+      -webkit-transition: all 0.1s; /* Safari and Chrome */
+      -o-transition: all 0.1s; /* Opera */
       margin: 0 1rem;
       border: 2px #ffffff solid;
       cursor: pointer;
@@ -202,13 +205,24 @@ onMounted(() => {
       .product {
         width: 100%;
         transform: scale(0.9);
-        transition: 0.5s;
+        -webkit-transform: scale(0.9); /* for Chrome || Safari */
+        -moz-transform: scale(0.9); /* for Firefox */
+        -ms-transform: scale(0.9); /* for IE */
+        -o-transform: scale(0.9); /* for Opera */
+        transition: all 0.5s;
+        -moz-transition: all 0.5s; /* Firefox 4 */
+        -webkit-transition: all 0.5s; /* Safari and Chrome */
+        -o-transition: all 0.5s; /* Opera */
       }
       .title {
         position: absolute;
         bottom: 20%;
         left: 50%;
         transform: translateX(-50%);
+        -webkit-transform: translateX(-50%); /* for Chrome || Safari */
+        -moz-transform: translateX(-50%); /* for Firefox */
+        -ms-transform: translateX(-50%); /* for IE */
+        -o-transform: translateX(-50%); /* for Opera */
         font-size: 3.125rem;
         font-weight: bold;
       }
@@ -217,6 +231,10 @@ onMounted(() => {
         bottom: 10%;
         left: 50%;
         transform: translateX(-50%);
+        -webkit-transform: translateX(-50%); /* for Chrome || Safari */
+        -moz-transform: translateX(-50%); /* for Firefox */
+        -ms-transform: translateX(-50%); /* for IE */
+        -o-transform: translateX(-50%); /* for Opera */
         width: 10.5rem;
         height: 3.125rem;
         display: flex;
@@ -255,26 +273,29 @@ onMounted(() => {
     }
 
     .tabs {
-    display: flex;
-    justify-content: center;
-    .product-btn {
-      width: 20rem;
-      height: 2rem;
-      font-size: 1rem;
-      font-weight: bold;
       display: flex;
       justify-content: center;
-      align-items: center;
-      transition: 0.1s;
-      margin: 0 1rem;
-      border: 2px #ffffff solid;
-      cursor: pointer;
-    }
+      .product-btn {
+        width: 20rem;
+        height: 2rem;
+        font-size: 1rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.1s;
+        -moz-transition: all 0.1s; /* Firefox 4 */
+        -webkit-transition: all 0.1s; /* Safari and Chrome */
+        -o-transition: all 0.1s; /* Opera */
+        margin: 0 1rem;
+        border: 2px #ffffff solid;
+        cursor: pointer;
+      }
 
-    .checked {
-      border: 2px #000000 solid;
+      .checked {
+        border: 2px #000000 solid;
+      }
     }
-  }
 
     .phone-content {
       margin-top: 1rem;

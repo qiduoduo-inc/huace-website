@@ -21,16 +21,32 @@
 </template>
 
 <script lang="ts" setup>
-const phoneContent = ref(null);
-console.log(phoneContent);
-onMounted(() => {
-  phoneContent.value.scrollLeft = '10';
-});
 </script>
 
 <style scoped lang="scss">
 .patent-wall {
   background: linear-gradient(to right, rgba(0, 0, 0, 65%), rgba(0, 0, 0, 76%));
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(0, 0, 0, 65%),
+    rgba(0, 0, 0, 76%)
+  );
+  background: -o-linear-gradient(
+    to right,
+    rgba(0, 0, 0, 65%),
+    rgba(0, 0, 0, 76%)
+  );
+  background: -ms-linear-gradient(
+    to right,
+    rgba(0, 0, 0, 65%),
+    rgba(0, 0, 0, 76%)
+  );
+  background: -moz-linear-gradient(
+    to right,
+    rgba(0, 0, 0, 65%),
+    rgba(0, 0, 0, 76%)
+  );
+
   position: relative;
   overflow: hidden;
 

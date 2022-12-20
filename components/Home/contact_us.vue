@@ -76,6 +76,10 @@
 .contact-us {
   position: relative;
   background: linear-gradient(to right, #e2e2e2, #ffffff, #eef0f1);
+  background: -webkit-linear-gradient(to right, #e2e2e2, #ffffff, #eef0f1);
+  background: -o-linear-gradient(to right, #e2e2e2, #ffffff, #eef0f1);
+  background: -ms-linear-gradient(to right, #e2e2e2, #ffffff, #eef0f1);
+  background: -moz-linear-gradient(to right, #e2e2e2, #ffffff, #eef0f1);
   overflow: hidden;
 
   .box-title {
@@ -83,6 +87,10 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    -webkit-transform: translateX(-50%); /* for Chrome || Safari */
+    -moz-transform: translateX(-50%); /* for Firefox */
+    -ms-transform: translateX(-50%); /* for IE */
+    -o-transform: translateX(-50%); /* for Opera */
   }
 
   .center-img {
@@ -90,6 +98,10 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%); /* for Chrome || Safari */
+    -moz-transform: translate(-50%, -50%); /* for Firefox */
+    -ms-transform: translate(-50%, -50%); /* for IE */
+    -o-transform: translate(-50%, -50%); /* for Opera */
     width: 10rem;
     height: 10rem;
     img {
@@ -128,6 +140,8 @@
         padding: 0.5rem 1rem;
         cursor: pointer;
         border-radius: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
         img {
           margin-left: 0.5rem;
           width: 1rem;
@@ -172,6 +186,8 @@
         }
         .btn {
           border-radius: 0;
+          -moz-border-radius: 0;
+          -webkit-border-radius: 0;
           background-color: #f0831e;
           color: #ffffff;
           font-size: 1.25rem;
@@ -257,6 +273,10 @@
     .box-title {
       position: static;
       transform: translateX(0);
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
     }
     .pc-show {
       display: none;
@@ -294,6 +314,8 @@
             padding: 0.5rem 1rem;
             cursor: pointer;
             border-radius: 0;
+            -moz-border-radius: 0;
+            -webkit-border-radius: 0;
             img {
               margin-left: 0.5rem;
               width: 1rem;
@@ -334,6 +356,8 @@
             }
             .btn {
               border-radius: 0;
+              -moz-border-radius: 0;
+              -webkit-border-radius: 0;
               background-color: #f0831e;
               color: #ffffff;
               font-size: 1rem;
