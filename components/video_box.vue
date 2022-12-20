@@ -7,8 +7,8 @@
   <div class="video-box">
     <div class="video-mask" v-show="showVideo">
       <div class="video-player">
-        <video ref="myVideo" autoplay="true" controls>
-          <source :src="videoUrl" type="video/mp4" />
+        <video ref="myVideo" :src="videoUrl" autoplay="true" controls>
+          <!-- <source :src="videoUrl" type="video/mp4" /> -->
         </video>
       </div>
     </div>

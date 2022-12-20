@@ -17,7 +17,7 @@
         <VideoBox
           ref="videoBox"
           :img-url="'../../assets/images/index/eco_friendly/2.png'"
-          :video-url="'../../assets/video/video1.mp4'"
+          :video-url="'https://test-1255378077.cos.ap-nanjing.myqcloud.com/%E6%9D%AD%E5%B7%9E%E5%8D%8E%E7%AD%96%E5%B7%A5%E8%B4%B8%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-%E6%88%90%E7%89%87.mp4'"
         />
       </div>
     </div>
@@ -33,7 +33,7 @@
         <VideoBox
           ref="videoBox"
           :img-url="'../../assets/images/index/eco_friendly/2.png'"
-          :video-url="'../../assets/video/video1.mp4'"
+          :video-url="'https://test-1255378077.cos.ap-nanjing.myqcloud.com/%E6%9D%AD%E5%B7%9E%E5%8D%8E%E7%AD%96%E5%B7%A5%E8%B4%B8%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-%E6%88%90%E7%89%87.mp4'"
         />
       </div>
     </div>

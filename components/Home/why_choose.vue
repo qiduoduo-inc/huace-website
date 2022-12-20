@@ -73,25 +73,25 @@ const tabList = [
     url: '../../assets/images/index/why_choose/video1.png',
     title: 'Design & RD',
     key: 0,
-    videoUrl: '../../assets/video/video1.mp4',
+    videoUrl: 'https://test-1255378077.cos.ap-nanjing.myqcloud.com/%E6%9D%AD%E5%B7%9E%E5%8D%8E%E7%AD%96%E5%B7%A5%E8%B4%B8%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-%E6%88%90%E7%89%87.mp4',
   },
   {
     url: '../../assets/images/index/why_choose/video2.png',
     title: 'Manufacturing Management',
     key: 1,
-    videoUrl: '../../assets/video/video1.mp4',
+    videoUrl: 'https://test-1255378077.cos.ap-nanjing.myqcloud.com/%E6%9D%AD%E5%B7%9E%E5%8D%8E%E7%AD%96%E5%B7%A5%E8%B4%B8%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-%E6%88%90%E7%89%87.mp4',
   },
   {
     url: '../../assets/images/index/why_choose/video2.png',
     title: 'Quality Control',
     key: 2,
-    videoUrl: '../../assets/video/video1.mp4',
+    videoUrl: 'https://test-1255378077.cos.ap-nanjing.myqcloud.com/%E6%9D%AD%E5%B7%9E%E5%8D%8E%E7%AD%96%E5%B7%A5%E8%B4%B8%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-%E6%88%90%E7%89%87.mp4',
   },
   {
     url: '../../assets/images/index/why_choose/video2.png',
     title: 'Service',
     key: 3,
-    videoUrl: '../../assets/video/video1.mp4',
+    videoUrl: 'https://test-1255378077.cos.ap-nanjing.myqcloud.com/%E6%9D%AD%E5%B7%9E%E5%8D%8E%E7%AD%96%E5%B7%A5%E8%B4%B8%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-%E6%88%90%E7%89%87.mp4',
   },
 ];
 </script>
