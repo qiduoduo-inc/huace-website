@@ -1,3 +1,8 @@
+/*
+ * @Author: 王鑫
+ * @Description: 
+ * @Date: 2022-09-03 19:59:23
+ */
 import { defineNuxtConfig } from 'nuxt'
 import { viteCommonjs } from '@originjs/vite-plugin-commonjs'
 
@@ -17,6 +22,7 @@ export default defineNuxtConfig({
         // { src: './assets/styles/fonts/iconfont.js', type: 'text/javascript' },
       ],
       link: [
+        { rel: 'stylesheet', href: "./assets/styles/font.scss" },
         { rel: 'stylesheet', href: "./assets/styles/index.scss" },
         { rel: 'stylesheet', href: "./assets/styles/main.scss" },
       ],

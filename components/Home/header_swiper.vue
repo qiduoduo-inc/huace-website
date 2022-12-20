@@ -120,12 +120,12 @@ onMounted(() => {
     width: 100%;
     color: #ffffff;
     .big-title {
-      font-size: 3rem;
+      font-size: 5rem;
       text-align: center;
       font-weight: bold;
     }
     .small-title {
-      font-size: 1.5rem;
+      font-size: 2.5rem;
       margin: 0 auto;
     }
   }

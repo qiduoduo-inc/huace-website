@@ -1,31 +1,34 @@
 <template>
   <div class="international-exhibitions container-fluid">
+    <div class="box-title">
+      <p>INTERNATIONAL EXHIBITIONS</p>
+    </div>
     <transition>
       <div class="photo-wall container-fluid" ref="photoWall">
         <div class="photo-item" v-for="(item, index) in itemList">
           <img :src="item.url" alt="" />
         </div>
+        <div class="year-box">
+          <div class="year">
+            <p>2015</p>
+          </div>
+          <div class="year">
+            <p>2016</p>
+          </div>
+          <div class="year">
+            <p>2017</p>
+          </div>
+          <div class="year">
+            <p>2018</p>
+          </div>
+          <div class="year">
+            <p>2019</p>
+          </div>
+        </div>
       </div>
     </transition>
     <div class="title">
       <p>INTERNATIONAL EXHIBITIONS</p>
-    </div>
-    <div class="year-box">
-      <div class="year">
-        <p>2015</p>
-      </div>
-      <div class="year">
-        <p>2016</p>
-      </div>
-      <div class="year">
-        <p>2017</p>
-      </div>
-      <div class="year">
-        <p>2018</p>
-      </div>
-      <div class="year">
-        <p>2019</p>
-      </div>
     </div>
   </div>
 </template>
@@ -231,9 +234,9 @@ const changeImg = () => {
       add++;
     }
   }
-  photoWall.value.childNodes[Arr[0] + 1].style.opacity = 0.5;
-  photoWall.value.childNodes[Arr[1] + 1].style.opacity = 0.5;
-  photoWall.value.childNodes[Arr[2] + 1].style.opacity = 0.5;
+  photoWall.value.childNodes[Arr[0] + 1].style.opacity = 0.8;
+  photoWall.value.childNodes[Arr[1] + 1].style.opacity = 0.8;
+  photoWall.value.childNodes[Arr[2] + 1].style.opacity = 0.8;
 
   setTimeout(() => {
     const a = itemList.value[Arr[0]];
@@ -245,10 +248,12 @@ const changeImg = () => {
     photoWall.value.childNodes[Arr[2] + 1].style.opacity = 1;
   }, 500);
 };
-
-let timer = setInterval(() => {
-  changeImg();
-}, 1000);
+let timer 
+onMounted(() => {
+  timer = setInterval(() => {
+    changeImg();
+  }, 1000);
+});
 
 onBeforeUnmount(() => {
   clearTimeout(timer);
@@ -259,12 +264,16 @@ onBeforeUnmount(() => {
 <style scoped lang="scss">
 .international-exhibitions {
   position: relative;
+  .box-title {
+    display: none;
+  }
   .photo-wall {
+    position: relative;
     overflow: hidden;
     display: grid;
     grid-template-rows: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
     grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    align-content: center;
+    align-content: top;
     grid-template-areas:
       'a1 a2 a3 a3 a4 a5 a6 a7 a8 a8'
       'a1 a9 a10 a11 a4 a12 a12 a13 a14 a15'
@@ -473,12 +482,12 @@ onBeforeUnmount(() => {
   .year:nth-child(4) {
     position: absolute;
     right: 10%;
-    top: 16.66%;
+    bottom: 66.64%;
   }
   .year:nth-child(5) {
     position: absolute;
     left: 10%;
-    top: 16.66%;
+    bottom: 66.64%;
   }
 }
 
@@ -498,10 +507,13 @@ onBeforeUnmount(() => {
 @media only screen and (max-width: 750px) {
   .international-exhibitions {
     position: relative;
+    .box-title {
+      display: block;
+    }
     .photo-wall {
       overflow: hidden;
       display: grid;
-      grid-template-rows: 6.66% 6.66% 6.66% 6.66% 6.66% 6.66% 6.66% 6.66% 6.66% 6.66% 6.66% 6.66% 6.66% 6.66% 6.66%;
+      grid-template-rows: 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666%;
       grid-template-columns: 25% 25% 25% 25%;
       align-content: center;
       grid-template-areas:
@@ -669,19 +681,20 @@ onBeforeUnmount(() => {
     }
 
     .title {
-      position: absolute;
-      padding: 0 1rem;
-      top: 40%;
-      left: 25%;
-      width: 50%;
-      height: 13.2%;
-      font-size: 1.5rem;
-      font-weight: bold;
-      background-color: rgba(0, 0, 0, 0.75);
-      color: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      // position: absolute;
+      // padding: 0 1rem;
+      // top: 40%;
+      // left: 25%;
+      // width: 50%;
+      // height: 13.2%;
+      // font-size: 1.5rem;
+      // font-weight: bold;
+      // background-color: rgba(0, 0, 0, 0.75);
+      // color: #ffffff;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      display: none;
     }
 
     .year-box {
@@ -711,22 +724,22 @@ onBeforeUnmount(() => {
     .year:nth-child(2) {
       position: absolute;
       right: 25%;
-      bottom: 26.64%;
+      bottom: 39.96%;
     }
     .year:nth-child(3) {
       position: absolute;
       left: 25%;
-      bottom: 26.64%;
+      bottom: 39.96%;
     }
     .year:nth-child(4) {
       position: absolute;
       right: 25%;
-      top: 26.64%;
+      bottom: 79.92%;
     }
     .year:nth-child(5) {
       position: absolute;
       left: 25%;
-      top: 26.64%;
+      bottom: 79.92%;
     }
   }
 }

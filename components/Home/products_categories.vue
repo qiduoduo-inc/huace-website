@@ -8,11 +8,19 @@
     <div class="box-title">
       <p>PRODUCTS CATEGORIES</p>
     </div>
-    <div class="tabs">
-      <div class="btn" :class="{ checked: checked === 0 }" @click="tabClick(0)">
+    <div class="tabs container">
+      <div
+        class="product-btn"
+        :class="{ checked: checked === 0 }"
+        @click="tabClick(0)"
+      >
         <span>Cycling Helmets</span>
       </div>
-      <div class="btn" :class="{ checked: checked === 1 }" @click="tabClick(1)">
+      <div
+        class="product-btn"
+        :class="{ checked: checked === 1 }"
+        @click="tabClick(1)"
+      >
         <span>Ski Helmets</span>
       </div>
     </div>
@@ -26,7 +34,7 @@
         >
           <img class="product" :src="item.url" alt="" />
           <p class="title">{{ item.title }}</p>
-          <div class="btn">
+          <div class="product-btn">
             See details
             <img
               class="arrow"
@@ -44,7 +52,7 @@
         >
           <img class="product" :src="item.url" alt="" />
           <p class="title">{{ item.title }}</p>
-          <div class="btn">
+          <div class="product-btn">
             See details
             <img
               class="arrow"
@@ -55,7 +63,7 @@
         </div>
       </div>
     </div>
-    <div class="phone-content">
+    <div class="phone-content container-fluid">
       <div class="swiper-container swiper">
         <transition :duration="duration">
           <div class="swiper-wrapper">
@@ -66,7 +74,7 @@
             >
               <img :src="item.url" alt="" />
               <p class="title">{{ item.title }}</p>
-              <div class="btn">
+              <div class="product-btn">
                 See details
                 <img
                   class="arrow"
@@ -83,10 +91,10 @@
 </template>
 
 <script lang="ts" setup>
-import Swiper, { Autoplay, Pagination } from 'swiper';
+import Swiper, { Autoplay } from 'swiper';
 
 import 'swiper/swiper.scss';
-Swiper.use([Autoplay, Pagination]);
+Swiper.use([Autoplay]);
 const duration = ref(0);
 
 const checked = ref(0);
@@ -101,19 +109,19 @@ const itemList = ref([
     title: 'MTB',
   },
   {
-    url: '../../assets/images/index/products_categories/2.png',
+    url: '../../assets/images/index/products_categories/1.png',
     title: 'Road',
   },
   {
-    url: '../../assets/images/index/products_categories/3.png',
+    url: '../../assets/images/index/products_categories/1.png',
     title: 'Casual',
   },
   {
-    url: '../../assets/images/index/products_categories/4.png',
+    url: '../../assets/images/index/products_categories/1.png',
     title: 'E-bike',
   },
   {
-    url: '../../assets/images/index/products_categories/5.png',
+    url: '../../assets/images/index/products_categories/1.png',
     title: 'Kids',
   },
 ]);
@@ -124,19 +132,19 @@ const itemList1 = ref([
     title: '1',
   },
   {
-    url: '../../assets/images/index/products_categories/2.png',
+    url: '../../assets/images/index/products_categories/1.png',
     title: '2',
   },
   {
-    url: '../../assets/images/index/products_categories/3.png',
+    url: '../../assets/images/index/products_categories/1.png',
     title: '3',
   },
   {
-    url: '../../assets/images/index/products_categories/4.png',
+    url: '../../assets/images/index/products_categories/1.png',
     title: '4',
   },
   {
-    url: '../../assets/images/index/products_categories/5.png',
+    url: '../../assets/images/index/products_categories/1.png',
     title: '5',
   },
 ]);
@@ -162,15 +170,18 @@ onMounted(() => {
   .tabs {
     display: flex;
     justify-content: center;
-    .btn {
+    .product-btn {
       width: 20rem;
       height: 2rem;
-      font-size: 20;
+      font-size: 1.25rem;
       font-weight: bold;
       display: flex;
       justify-content: center;
       align-items: center;
-      transform: 0.5s;
+      transition: 0.1s;
+      margin: 0 1rem;
+      border: 2px #ffffff solid;
+      cursor: pointer;
     }
 
     .checked {
@@ -181,37 +192,40 @@ onMounted(() => {
   .content {
     margin: 1rem 0 1.5rem 0;
     .show-item {
-      height: 28rem;
+      width: 23.125rem;
+      height: 36.25rem;
       text-align: center;
       background-color: #f9f9f9;
       position: relative;
-      margin-right: 1rem;
+      margin: 0 0.5rem;
       padding-top: 2rem;
       .product {
-        width: 90%;
+        width: 100%;
+        transform: scale(0.9);
         transition: 0.5s;
       }
       .title {
         position: absolute;
-        bottom: 25%;
+        bottom: 20%;
         left: 50%;
         transform: translateX(-50%);
-        font-size: 2rem;
+        font-size: 3.125rem;
         font-weight: bold;
       }
-      .btn {
+      .product-btn {
         position: absolute;
         bottom: 10%;
         left: 50%;
         transform: translateX(-50%);
-        width: 10rem;
-        height: 3rem;
+        width: 10.5rem;
+        height: 3.125rem;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 1rem;
         font-weight: bold;
         border: 2px #000000 solid;
+        cursor: pointer;
         .arrow {
           margin-left: 0.5rem;
           width: 1rem;
@@ -225,7 +239,7 @@ onMounted(() => {
 
     .show-item:hover {
       .product {
-        width: 100%;
+        transform: scale(1);
       }
     }
   }
@@ -240,29 +254,53 @@ onMounted(() => {
       display: none;
     }
 
+    .tabs {
+    display: flex;
+    justify-content: center;
+    .product-btn {
+      width: 20rem;
+      height: 2rem;
+      font-size: 1rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.1s;
+      margin: 0 1rem;
+      border: 2px #ffffff solid;
+      cursor: pointer;
+    }
+
+    .checked {
+      border: 2px #000000 solid;
+    }
+  }
+
     .phone-content {
       margin-top: 1rem;
       display: block;
       .swiper-slide {
-        height: 38rem;
+        width: 100%;
+        height: 100%;
         background-color: #f9f9f9;
         text-align: center;
         position: relative;
         .title {
-          position: absolute;
-          bottom: 6rem;
-          left: 50%;
-          transform: translateX(-50%);
+          // position: absolute;
+          // bottom: 6rem;
+          // left: 50%;
+          // transform: translateX(-50%);
           font-size: 3rem;
           font-weight: bold;
           margin: 0 auto;
         }
-        .btn {
-          position: absolute;
-          bottom: 2rem;
-          left: 50%;
-          transform: translateX(-50%);
+        .product-btn {
+          // position: absolute;
+          // bottom: 2rem;
+          // left: 50%;
+          // transform: translateX(-50%);
           margin: 0 auto;
+          margin-bottom: 5rem;
           width: 13rem;
           height: 3rem;
           display: flex;

@@ -104,25 +104,25 @@
     .content {
       color: #000000;
       .title {
-        font-size: 3rem;
+        font-size: 3.75rem;
         font-weight: bold;
-        line-height: 2rem;
+        line-height: 3.75rem;
       }
       .number {
-        font-size: 4.5rem;
+        font-size: 6.25rem;
         font-weight: bold;
-        line-height: 6rem;
+        line-height: 6.25rem;
         margin-bottom: 1rem;
       }
       .detail {
-        font-size: 1rem;
+        font-size: 1.25rem;
         width: 25rem;
       }
 
       .btn {
         background-color: #f0831e;
         color: #ffffff;
-        font-size: 1.4rem;
+        font-size: 1.25rem;
         font-weight: bold;
         margin-top: 10rem;
         padding: 0.5rem 1rem;
@@ -145,20 +145,22 @@
       .small-title {
         font-size: 1.5rem;
         font-weight: bold;
-        line-height: 2rem;
+        line-height: 1.5rem;
       }
       .title {
-        font-size: 3rem;
+        font-size: 3.75rem;
         font-weight: bold;
-        line-height: 3rem;
+        line-height: 3.75rem;
         margin: 1rem 0;
         margin-bottom: 1rem;
+        padding-right: 0.5rem;
       }
       .input-box {
         border: 2px #000000 solid;
         width: 100%;
         height: 3rem;
         margin-left: 0.1rem;
+        font-size: 1.25rem;
         input {
           border: none;
           width: 8rem;
@@ -172,7 +174,7 @@
           border-radius: 0;
           background-color: #f0831e;
           color: #ffffff;
-          font-size: 1rem;
+          font-size: 1.25rem;
           line-height: 1rem;
           cursor: pointer;
           display: flex;

@@ -50,7 +50,7 @@
 
   .small-title {
     text-align: center;
-    font-size: 0.1rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
   }
   .video {
@@ -73,9 +73,6 @@
       align-items: center;
       padding: 0.1rem 1.2rem;
       transition: 0.5s;
-      p {
-        width: 20rem;
-      }
     }
     .barrage-item:first-child {
       position: absolute;
@@ -117,7 +114,7 @@
   }
   100% {
     opacity: 0.3;
-    transform: translate(-100%);
+    transform: translate(-200%);
   }
 }
 
@@ -125,7 +122,7 @@
   .testimonials {
     padding: 0;
     .small-title {
-      font-size: .3rem;
+      font-size: 1rem;
     }
     .video {
       width: 100%;

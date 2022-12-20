@@ -26,7 +26,7 @@
         />
       </div>
     </div>
-    <div class="phone-content">
+    <div class="phone-content container-fluid">
       <div class="swiper-container swiper">
         <transition :duration="duration">
           <div class="swiper-wrapper">
@@ -47,10 +47,10 @@
 </template>
 
 <script lang="ts" setup>
-import Swiper, { Autoplay, Pagination } from 'swiper';
+import Swiper, { Autoplay } from 'swiper';
 
 import 'swiper/swiper.scss';
-Swiper.use([Autoplay, Pagination]);
+Swiper.use([Autoplay]);
 const duration = ref(0);
 
 const itemList = [
@@ -62,21 +62,21 @@ const itemList = [
     keywords: 'Characteristic keywords',
   },
   {
-    url: '../../assets/images/index/featured_products/2.png',
+    url: '../../assets/images/index/featured_products/1.png',
     title: 'The Name',
     introduction:
       'Characteristic keywords With a combined 10+ years of experience, Huace Sports Helmethas the working knowledge',
     keywords: 'Characteristic keywords',
   },
   {
-    url: '../../assets/images/index/featured_products/3.png',
+    url: '../../assets/images/index/featured_products/1.png',
     title: 'The Name',
     introduction:
       'Characteristic keywords With a combined 10+ years of experience, Huace Sports Helmethas the working knowledge',
     keywords: 'Characteristic keywords',
   },
   {
-    url: '../../assets/images/index/featured_products/4.png',
+    url: '../../assets/images/index/featured_products/1.png',
     title: 'The Name',
     introduction:
       'Characteristic keywords With a combined 10+ years of experience, Huace Sports Helmethas the working knowledge',
@@ -115,13 +115,14 @@ onMounted(() => {
       position: relative;
       color: #ffffff;
       overflow: hidden;
-      transition: 0.5s;
+      transition: 1s;
       .product {
         position: absolute;
         right: 0;
         top: 10rem;
         width: 20rem;
         height: 20rem;
+        transition: 1s;
       }
 
       .title {
@@ -158,6 +159,7 @@ onMounted(() => {
     .focus-item {
       width: 40%;
       height: 43rem;
+      transition: 1s;
       .product {
         position: absolute;
         right: 50%;
@@ -200,6 +202,18 @@ onMounted(() => {
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .feature-products {
+    .content {
+      .focus-item {
+        .introduction {
+          width: 12rem;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 750px) {
   .feature-products {
     padding-bottom: 0;
@@ -209,37 +223,25 @@ onMounted(() => {
     .phone-content {
       display: block;
       .swiper-slide {
-        height: 30rem;
+        width: 100%;
         background: linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
         position: relative;
         color: #ffffff;
         .title {
-          font-size: 1rem;
+          font-size: 2rem;
           position: absolute;
-          top: 1rem;
-          left: 1rem;
+          top: 2rem;
+          left: 2rem;
         }
         .introduction {
-          font-size: 1rem;
+          font-size: 0.8rem;
           position: absolute;
-          bottom: 1rem;
-          left: 1rem;
+          bottom: 2rem;
+          left: 2rem;
           width: 60%;
         }
         img {
           width: 100%;
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .feature-products {
-    .content {
-      .focus-item {
-        .introduction {
-          width: 12rem;
         }
       }
     }

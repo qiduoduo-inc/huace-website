@@ -82,31 +82,31 @@
   .menu-item {
     .item {
       color: #ffffff;
-      font-size: 1rem;
+      font-size: 1.5rem;
       margin-left: 4rem;
       font-weight: bold;
     }
   }
   .header-left {
-    margin-right: 100px;
+    margin-right: 5rem;
     display: flex;
     align-items: center;
     .header-left-btn {
-      height: 40px;
-      width: 165px;
-      margin-right: 24px;
-      font-size: 20px;
+      height: 3rem;
+      width: 10rem;
+      margin-right: 1.5rem;
+      font-size: 1.25rem;
       font-weight: bold;
     }
     img {
-      width: 24px;
-      height: 24px;
+      width: 1.5rem;
+      height: 1.5rem;
     }
     span {
       color: #cccccc;
-      line-height: 24px;
-      margin-left: 8px;
-      font-size: 24px;
+      line-height: 1.5rem;
+      margin-left: .5rem;
+      font-size: 1.5rem;
       font-weight: bold;
     }
   }
@@ -114,7 +114,7 @@
 
 @media only screen and (max-width: 750px) {
   .header {
-    background-color: #cccccc;
+    background-color: rgba($color: #222222, $alpha: 0.7);
     .navbar-brand {
       margin-left: 2rem;
       img {

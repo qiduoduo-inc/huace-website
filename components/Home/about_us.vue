@@ -7,7 +7,7 @@
   <div class="about-us container-fluid" id="aboutUs" ref="aboutUs">
     <div class="row">
       <div
-        class="left-img col-4"
+        class="left-img col-2"
         ref="left"
         :style="{
           transform: `translateX(${lTranslateX}%)`,
@@ -15,7 +15,7 @@
       >
         <img src="@/assets/images/index/about_us/1.png" alt="" />
       </div>
-      <div class="center-img col-4">
+      <div class="center-img col-8">
         <div class="content container">
           <p class="title">ABOUT US</p>
           <p class="detail">
@@ -30,7 +30,7 @@
         </div>
       </div>
       <div
-        class="right-img col-4"
+        class="right-img col-2"
         ref="right"
         :style="{
           transform: `translateX(${rTranslateX}%)`,
@@ -81,7 +81,7 @@ onBeforeUnmount(() => {
   overflow: hidden;
   .center-img {
     background-image: url('@/assets/images/index/about_us/2.png');
-    background-size: 80% 40%;
+    background-size: 51.5625rem 28.5rem;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     display: flex;
@@ -95,20 +95,20 @@ onBeforeUnmount(() => {
       align-items: center;
 
       .title {
-        font-size: 3rem;
+        font-size: 3.125rem;
         font-weight: bold;
       }
 
       .detail {
-        font-size: 0.1rem;
-        width: 50%;
+        font-size: 1.125rem;
+        width: 35.3125rem;
       }
     }
   }
 
   .left-img {
     img {
-      height: 100%;
+      height: 56.25rem;
     }
   }
 
@@ -116,32 +116,15 @@ onBeforeUnmount(() => {
     display: flex;
     justify-content: flex-end;
     img {
-      height: 100%;
+      height: 56.25rem;
     }
   }
-
-  // .content {
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   align-items: center;
-  //   transform: translateY(-50%);
-  //   .title {
-  //     font-size: 3rem;
-  //     font-weight: bold;
-  //   }
-
-  //   .detail {
-  //     font-size: 0.1rem;
-  //     width: 50%;
-  //   }
-  // }
 }
 @media only screen and (max-width: 750px) {
   .about-us {
     .center-img {
       background-image: url('@/assets/images/index/about_us/2.png');
-      background-size: 100% 50%;
+      background-size: 13rem 8rem;
       background-repeat: no-repeat;
       background-position: 50% 50%;
       display: flex;
@@ -161,14 +144,14 @@ onBeforeUnmount(() => {
 
         .detail {
           font-size: 0.3rem;
-          width: 100%;
+          width: 10rem;
         }
       }
     }
 
     .left-img {
       img {
-        width: 50%;
+        height: 15rem;
       }
     }
 
@@ -176,7 +159,7 @@ onBeforeUnmount(() => {
       display: flex;
       justify-content: flex-end;
       img {
-        width: 50%;
+        height: 15rem;
       }
     }
   }

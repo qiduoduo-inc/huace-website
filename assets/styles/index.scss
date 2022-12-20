@@ -1,3 +1,4 @@
+@import "../styles/font.scss";
 html {
   width: 100%;
   height: 100%;
@@ -12,11 +13,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  font-family: 'Barlow-Regular';
 }
 
 body,
 html {
-  // font-family: ,
   color: #333;
 }
 
@@ -57,7 +58,7 @@ p {
 
 .box-title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3.125rem;
   font-weight: bold;
   margin: 0 auto;
   padding: 3rem 0 1rem 0;
