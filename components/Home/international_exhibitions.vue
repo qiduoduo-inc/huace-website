@@ -234,7 +234,6 @@ const changeImg = () => {
       add++;
     }
   }
-  console.log(photoWall);
   photoWall.value.childNodes[Arr[0] + 1].style.opacity = 0.8;
   photoWall.value.childNodes[Arr[1] + 1].style.opacity = 0.8;
   photoWall.value.childNodes[Arr[2] + 1].style.opacity = 0.8;
@@ -514,7 +513,7 @@ onBeforeUnmount(() => {
     .photo-wall {
       overflow: hidden;
       display: grid;
-      grid-template-rows: 6.66% 6.66% 6.66% 6.66% 6.66% 6.66% 6.66% 6.66% 6.66% 6.66% 6.66% 6.66% 6.66% 6.66% 6.66%;
+      grid-template-rows: 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666% 6.666%;
       grid-template-columns: 25% 25% 25% 25%;
       align-content: center;
       grid-template-areas:

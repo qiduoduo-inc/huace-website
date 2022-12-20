@@ -32,10 +32,11 @@
           <div class="patent">Copyright Huace Sports 2022©</div>
         </div>
         <div class="right-box col">
-          <div class="right-top-box row">
-            <div class="tab col">HOME</div>
-            <div class="tab col">PRODUCTS</div>
-            <div class="follow-us col">
+          <div class="right-top-box row justify-content-between">
+            <div class="col-8"></div>
+            <!-- <div class="tab col">HOME</div>
+            <div class="tab col">PRODUCTS</div> -->
+            <div class="follow-us col-4">
               <p>FOLLOW US</p>
               <div class="icon-group row text-center">
                 <div class="icon col">
@@ -89,7 +90,6 @@
           <div class="item">
             <img
               src="@/assets/images/footer/2.png"
-              style="width: 24px; margin-left: 2px"
               alt=""
             />
             <p>+86-571-86275871</p>
@@ -164,7 +164,7 @@
 
   .left-box {
     .title {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: bold;
     }
     .informations {
@@ -173,8 +173,10 @@
         justify-content: flex-start;
         align-items: center;
         margin-top: 2rem;
+        font-size: 1rem;
+        cursor: pointer;
         img {
-          width: 2rem;
+          width: 1.875rem;
           margin-right: 0.5rem;
         }
         p {
@@ -184,6 +186,7 @@
     }
 
     .patent {
+      font-size: 1rem;
       margin-top: 10rem;
       color: #ffffff;
       opacity: 0.65;
@@ -194,13 +197,14 @@
     position: relative;
     .right-top-box {
       .tab {
-        font-size: 2rem;
+        display: none;
+        font-size: 1.5rem;
         font-weight: bold;
         position: relative;
-        height: 3.5rem;
+        height: 2.5rem;
       }
       .tab:after {
-        width: 8rem;
+        width: 5rem;
         height: 0.2rem;
         position: absolute;
         bottom: 0;
@@ -209,15 +213,15 @@
         content: '';
       }
       .follow-us {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: bold;
         .icon-group {
           margin-top: 1rem;
           .icon {
-            width: 1rem;
-            // img {
-            //   width: 1rem;
-            // }
+            width: 2.25rem;
+            img {
+              cursor: pointer;
+            }
           }
         }
       }
@@ -234,9 +238,10 @@
         justify-content: space-between;
         margin-left: 1rem;
         font-size: 1rem;
+        cursor: pointer;
         img {
           width: 1.5rem;
-          height: 0.8rem;
+          height: 0.9rem;
           margin-right: 0.2rem;
         }
       }
@@ -274,7 +279,7 @@
 
       .top-box {
         .title {
-          font-size: 1.5rem;
+          font-size: 1rem;
           font-weight: bold;
         }
         .informations {
@@ -283,8 +288,9 @@
             justify-content: flex-start;
             align-items: center;
             margin-top: 2rem;
+            font-size: .5rem;
             img {
-              width: 1.5rem;
+              width: .9rem;
               margin-right: 0.5rem;
             }
             p {
@@ -299,6 +305,7 @@
         position: relative;
         .right-top-box {
           .tab {
+            display: none;
             font-size: 1.5rem;
             font-weight: bold;
             position: relative;
@@ -315,7 +322,7 @@
             content: '';
           }
           .follow-us {
-            font-size: 1.5rem;
+            font-size: .75rem;
             margin-top: 1rem;
             font-weight: bold;
             .icon-group {
@@ -324,7 +331,7 @@
               justify-content: flex-start;
               align-items: center;
               .icon {
-                width: 2rem;
+                width: 1.125rem;
                 margin-right: 2rem;
                 img {
                   width: 100%;
@@ -343,6 +350,7 @@
             justify-content: flex-start;
             margin-left: 1rem;
             font-size: 1rem;
+            display: none;
             img {
               width: 1.5rem;
               height: 0.8rem;
@@ -354,7 +362,7 @@
           margin-top: 2rem;
           color: #ffffff;
           opacity: 0.65;
-          font-size: 1rem;
+          font-size: .5rem;
         }
       }
     }

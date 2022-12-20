@@ -26,7 +26,7 @@
         />
       </div>
     </div>
-    <div class="phone-content container">
+    <div class="phone-content container-fluid">
       <div class="swiper-container swiper">
         <transition :duration="duration">
           <div class="swiper-wrapper">
@@ -47,10 +47,10 @@
 </template>
 
 <script lang="ts" setup>
-import Swiper, { Autoplay, Pagination } from 'swiper';
+import Swiper, { Autoplay } from 'swiper';
 
 import 'swiper/swiper.scss';
-Swiper.use([Autoplay, Pagination]);
+Swiper.use([Autoplay]);
 const duration = ref(0);
 
 const itemList = [
@@ -122,6 +122,7 @@ onMounted(() => {
         top: 10rem;
         width: 20rem;
         height: 20rem;
+        transition: 1s;
       }
 
       .title {
@@ -201,7 +202,6 @@ onMounted(() => {
   }
 }
 
-
 @media only screen and (max-width: 900px) {
   .feature-products {
     .content {
@@ -247,6 +247,4 @@ onMounted(() => {
     }
   }
 }
-
-
 </style>

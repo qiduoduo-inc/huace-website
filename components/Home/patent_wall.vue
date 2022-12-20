@@ -14,39 +14,17 @@
     <div class="content container wow animate__fadeInUp" data-wow-duration="2s">
       <img src="@/assets/images/index/patent_wall/1.png" alt="" />
     </div>
-    <div class="phone-content">
+    <div class="phone-content" ref="phoneContent">
       <img class="img" src="@/assets/images/index/patent_wall/1.png" alt="" />
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import Swiper, { Autoplay, Pagination } from 'swiper';
-
-import 'swiper/swiper.scss';
-Swiper.use([Autoplay, Pagination]);
-const duration = ref(0);
-
-const itemList = [
-  '../../assets/images/index/patent_wall/3.png',
-  '../../assets/images/index/patent_wall/3.png',
-  '../../assets/images/index/patent_wall/3.png',
-  '../../assets/images/index/patent_wall/3.png',
-  '../../assets/images/index/patent_wall/3.png',
-  '../../assets/images/index/patent_wall/3.png',
-  '../../assets/images/index/patent_wall/3.png',
-];
-
+const phoneContent = ref(null);
+console.log(phoneContent);
 onMounted(() => {
-  const ss = new Swiper('.patent-wall .phone-content .swiper', {
-    slidesPerView: 4,
-    loop: true,
-    loopedSlides: 6,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-  });
+  phoneContent.value.scrollLeft = '10';
 });
 </script>
 
@@ -94,7 +72,7 @@ onMounted(() => {
     .phone-content {
       display: flex;
       height: 22rem;
-      overflow-x: auto;
+      overflow-x: scroll;
       margin-bottom: 1rem;
       padding: 1rem;
       img {

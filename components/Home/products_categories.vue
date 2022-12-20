@@ -63,7 +63,7 @@
         </div>
       </div>
     </div>
-    <div class="phone-content container">
+    <div class="phone-content container-fluid">
       <div class="swiper-container swiper">
         <transition :duration="duration">
           <div class="swiper-wrapper">
@@ -91,10 +91,10 @@
 </template>
 
 <script lang="ts" setup>
-import Swiper, { Autoplay, Pagination } from 'swiper';
+import Swiper, { Autoplay } from 'swiper';
 
 import 'swiper/swiper.scss';
-Swiper.use([Autoplay, Pagination]);
+Swiper.use([Autoplay]);
 const duration = ref(0);
 
 const checked = ref(0);
@@ -109,19 +109,19 @@ const itemList = ref([
     title: 'MTB',
   },
   {
-    url: '../../assets/images/index/products_categories/2.png',
+    url: '../../assets/images/index/products_categories/1.png',
     title: 'Road',
   },
   {
-    url: '../../assets/images/index/products_categories/3.png',
+    url: '../../assets/images/index/products_categories/1.png',
     title: 'Casual',
   },
   {
-    url: '../../assets/images/index/products_categories/4.png',
+    url: '../../assets/images/index/products_categories/1.png',
     title: 'E-bike',
   },
   {
-    url: '../../assets/images/index/products_categories/5.png',
+    url: '../../assets/images/index/products_categories/1.png',
     title: 'Kids',
   },
 ]);
@@ -132,19 +132,19 @@ const itemList1 = ref([
     title: '1',
   },
   {
-    url: '../../assets/images/index/products_categories/2.png',
+    url: '../../assets/images/index/products_categories/1.png',
     title: '2',
   },
   {
-    url: '../../assets/images/index/products_categories/3.png',
+    url: '../../assets/images/index/products_categories/1.png',
     title: '3',
   },
   {
-    url: '../../assets/images/index/products_categories/4.png',
+    url: '../../assets/images/index/products_categories/1.png',
     title: '4',
   },
   {
-    url: '../../assets/images/index/products_categories/5.png',
+    url: '../../assets/images/index/products_categories/1.png',
     title: '5',
   },
 ]);
@@ -280,25 +280,27 @@ onMounted(() => {
       margin-top: 1rem;
       display: block;
       .swiper-slide {
-        height: 38rem;
+        width: 100%;
+        height: 100%;
         background-color: #f9f9f9;
         text-align: center;
         position: relative;
         .title {
-          position: absolute;
-          bottom: 6rem;
-          left: 50%;
-          transform: translateX(-50%);
+          // position: absolute;
+          // bottom: 6rem;
+          // left: 50%;
+          // transform: translateX(-50%);
           font-size: 3rem;
           font-weight: bold;
           margin: 0 auto;
         }
         .product-btn {
-          position: absolute;
-          bottom: 2rem;
-          left: 50%;
-          transform: translateX(-50%);
+          // position: absolute;
+          // bottom: 2rem;
+          // left: 50%;
+          // transform: translateX(-50%);
           margin: 0 auto;
+          margin-bottom: 5rem;
           width: 13rem;
           height: 3rem;
           display: flex;

@@ -107,6 +107,7 @@ const tabList = [
           font-size: 1rem;
           line-height: 4.1rem;
           font-weight: bold;
+          cursor: pointer;
           img {
             width: 1rem;
             height: 1rem;
