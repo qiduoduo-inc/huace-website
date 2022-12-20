@@ -78,6 +78,10 @@ onBeforeUnmount(() => {
 .about-us {
   position: relative;
   background: linear-gradient(to right, #e2e2e2, #ffffff, #eef0f1);
+  background: -webkit-linear-gradient(to right, #e2e2e2, #ffffff, #eef0f1);
+  background: -o-linear-gradient(to right, #e2e2e2, #ffffff, #eef0f1);
+  background: -ms-linear-gradient(to right, #e2e2e2, #ffffff, #eef0f1);
+  background: -moz-linear-gradient(to right, #e2e2e2, #ffffff, #eef0f1);
   overflow: hidden;
   .center-img {
     background-image: url('@/assets/images/index/about_us/2.png');

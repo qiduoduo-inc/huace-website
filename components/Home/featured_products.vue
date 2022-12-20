@@ -103,6 +103,10 @@ onMounted(() => {
 <style scoped lang="scss">
 .feature-products {
   background: linear-gradient(to right, #e2e2e2, #ffffff, #eef0f1);
+  background: -webkit-linear-gradient(to right, #e2e2e2, #ffffff, #eef0f1);
+  background: -o-linear-gradient(to right, #e2e2e2, #ffffff, #eef0f1);
+  background: -ms-linear-gradient(to right, #e2e2e2, #ffffff, #eef0f1);
+  background: -moz-linear-gradient(to right, #e2e2e2, #ffffff, #eef0f1);
   padding-bottom: 55px;
 
   .content {
@@ -112,17 +116,32 @@ onMounted(() => {
       width: 20%;
       height: 43rem;
       background: linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
+      background: -webkit-linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
+      background: -o-linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
+      background: -ms-linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
+      background: -moz-linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
       position: relative;
       color: #ffffff;
       overflow: hidden;
-      transition: 1s;
+      transition: all 1s ease;
+      -moz-transition: all 1s ease; /* Firefox 4 */
+      -webkit-transition: all 1s ease; /* Safari and Chrome */
+      -o-transition: all 1s ease; /* Opera */
       .product {
         position: absolute;
-        right: 0;
-        top: 10rem;
-        width: 20rem;
-        height: 20rem;
-        transition: 1s;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%); /* for Chrome || Safari */
+        -moz-transform: translateX(-50%); /* for Firefox */
+        -ms-transform: translateX(-50%); /* for IE */
+        -o-transform: translateX(-50%); /* for Opera */
+        top: 5.25rem;
+        width: 25rem;
+        height: 25rem;
+        transition: width, height, top 1s;
+        -moz-transition: width, height, top 1s; /* Firefox 4 */
+        -webkit-transition: width, height, top 1s; /* Safari and Chrome */
+        -o-transition: width, height, top 1s; /* Opera */
       }
 
       .title {
@@ -130,8 +149,9 @@ onMounted(() => {
         font-weight: bold;
         position: absolute;
         top: 6%;
+        left: 10%;
         width: 100%;
-        text-align: center;
+        text-align: left;
       }
 
       .keywords {
@@ -149,6 +169,10 @@ onMounted(() => {
         bottom: 70px;
         right: 50%;
         transform: translateX(50%);
+        -webkit-transform: translateX(50%); /* for Chrome || Safari */
+        -moz-transform: translateX(50%); /* for Firefox */
+        -ms-transform: translateX(50%); /* for IE */
+        -o-transform: translateX(50%); /* for Opera */
       }
 
       .introduction {
@@ -159,14 +183,25 @@ onMounted(() => {
     .focus-item {
       width: 40%;
       height: 43rem;
-      transition: 1s;
+      transition: all 1s ease;
+      -moz-transition: all 1s ease; /* Firefox 4 */
+      -webkit-transition: all 1s ease; /* Safari and Chrome */
+      -o-transition: all 1s ease; /* Opera */
       .product {
         position: absolute;
-        right: 50%;
-        transform: translateX(50%);
-        top: 140px;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%); /* for Chrome || Safari */
+        -moz-transform: translateX(-50%); /* for Firefox */
+        -ms-transform: translateX(-50%); /* for IE */
+        -o-transform: translateX(-50%); /* for Opera */
+        top: 5.25rem;
         width: 25rem;
         height: 25rem;
+        transition: translate, width, height, top 1s;
+        -moz-transition: translate, width, height, top 1s; /* Firefox 4 */
+        -webkit-transition: translate, width, height, top 1s; /* Safari and Chrome */
+        -o-transition: translate, width, height, top 1s; /* Opera */
       }
 
       .title {
@@ -176,6 +211,10 @@ onMounted(() => {
         top: 6%;
         left: 10%;
         text-align: left;
+        transition: translate, width, height, top 1s;
+        -moz-transition: translate, width, height, top 1s; /* Firefox 4 */
+        -webkit-transition: translate, width, height, top 1s; /* Safari and Chrome */
+        -o-transition: translate, width, height, top 1s; /* Opera */
       }
 
       .keywords {
@@ -225,6 +264,10 @@ onMounted(() => {
       .swiper-slide {
         width: 100%;
         background: linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
+        background: -webkit-linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
+        background: -o-linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
+        background: -ms-linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
+        background: -moz-linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
         position: relative;
         color: #ffffff;
         .title {

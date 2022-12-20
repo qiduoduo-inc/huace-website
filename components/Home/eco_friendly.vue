@@ -14,7 +14,11 @@
         </div>
       </div>
       <div class="right-box col-8">
-        <img src="@/assets/images/index/eco_friendly/2.png" alt="" />
+        <VideoBox
+          ref="videoBox"
+          :img-url="'../../assets/images/index/eco_friendly/2.png'"
+          :video-url="'../../assets/video/video1.mp4'"
+        />
       </div>
     </div>
     <div class="h5">
@@ -26,7 +30,11 @@
         </div>
       </div>
       <div class="bottom-box">
-        <img src="@/assets/images/index/eco_friendly/2.png" alt="" />
+        <VideoBox
+          ref="videoBox"
+          :img-url="'../../assets/images/index/eco_friendly/2.png'"
+          :video-url="'../../assets/video/video1.mp4'"
+        />
       </div>
     </div>
   </div>

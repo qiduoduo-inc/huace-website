@@ -248,7 +248,7 @@ const changeImg = () => {
     photoWall.value.childNodes[Arr[2] + 1].style.opacity = 1;
   }, 500);
 };
-let timer 
+let timer;
 onMounted(() => {
   timer = setInterval(() => {
     changeImg();
@@ -271,7 +271,7 @@ onBeforeUnmount(() => {
     position: relative;
     overflow: hidden;
     display: grid;
-    grid-template-rows: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+    grid-template-rows: 16.666% 16.666% 16.666% 16.666% 16.666% 16.666%;
     grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
     align-content: top;
     grid-template-areas:
@@ -284,7 +284,13 @@ onBeforeUnmount(() => {
     .photo-item {
       overflow: hidden;
       transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease; /* Firefox 4 */
+      -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+      -o-transition: all 0.5s ease; /* Opera */
       opacity: 1;
+      filter: alpha(opacity=100);
+      -moz-opacity: 1;
+      -khtml-opacity: 1;
       img {
         width: 100%;
         height: 100%;
@@ -534,7 +540,7 @@ onBeforeUnmount(() => {
         'a28 a44 a45 a46';
       .photo-item {
         overflow: hidden;
-        transition: 0.5s;
+        transition: all 0.5s ease;
         img {
           width: 100%;
           height: 100%;
@@ -747,17 +753,29 @@ onBeforeUnmount(() => {
 @keyframes close {
   0% {
     opacity: 1;
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
   }
   100% {
     opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
   }
 }
 @keyframes show {
   0% {
     opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
   }
   100% {
     opacity: 1;
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
   }
 }
 </style>

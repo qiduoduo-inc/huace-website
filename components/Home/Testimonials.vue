@@ -7,7 +7,11 @@
       <p>What our clients and partners say about us</p>
     </div>
     <div class="video container">
-      <img src="@/assets/images/index/testimonials/1.png" alt="" />
+      <VideoBox
+        ref="videoBox"
+        :img-url="'../../assets/images/index/testimonials/1.png'"
+        :video-url="'../../assets/video/video1.mp4'"
+      />
     </div>
     <div class="barrage" ref="barrage">
       <div class="barrage-item">
@@ -43,6 +47,10 @@
 <style scoped lang="scss">
 .testimonials {
   background: linear-gradient(to right, rgba(0, 0, 0, 81%), #000000);
+  background: -webkit-linear-gradient(to right, rgba(0, 0, 0, 81%), #000000);
+  background: -o-linear-gradient(to right, rgba(0, 0, 0, 81%), #000000);
+  background: -ms-linear-gradient(to right, rgba(0, 0, 0, 81%), #000000);
+  background: -moz-linear-gradient(to right, rgba(0, 0, 0, 81%), #000000);
   color: #ffffff;
   position: relative;
   overflow: hidden;
@@ -66,13 +74,21 @@
     overflow: hidden;
     .barrage-item {
       opacity: 0;
+      filter: alpha(opacity=0);
+      -moz-opacity: 0;
+      -khtml-opacity: 0;
       border: 1px #ffffff solid;
       border-radius: 100px;
+      -moz-border-radius: 100px;
+      -webkit-border-radius: 100px;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 0.1rem 1.2rem;
-      transition: 0.5s;
+      transition: all 0.5s;
+      -moz-transition: all 0.5s; /* Firefox 4 */
+      -webkit-transition: all 0.5s; /* Safari and Chrome */
+      -o-transition: all 0.5s; /* Opera */
     }
     .barrage-item:first-child {
       position: absolute;
@@ -110,11 +126,25 @@
 @keyframes right2left {
   0% {
     opacity: 0.3;
+    filter: alpha(opacity=30);
+    -moz-opacity: 0.3;
+    -khtml-opacity: 0.3;
     transform: translate(100vw);
+    -webkit-transform: translate(100vw); /* for Chrome || Safari */
+    -moz-transform: translate(100vw); /* for Firefox */
+    -ms-transform: translate(100vw); /* for IE */
+    -o-transform: translate(100vw); /* for Opera */
   }
   100% {
     opacity: 0.3;
+    filter: alpha(opacity=30);
+    -moz-opacity: 0.3;
+    -khtml-opacity: 0.3;
     transform: translate(-200%);
+    -webkit-transform: translate(-200%); /* for Chrome || Safari */
+    -moz-transform: translate(-200%); /* for Firefox */
+    -ms-transform: translate(-200%); /* for IE */
+    -o-transform: translate(-200%); /* for Opera */
   }
 }
 
