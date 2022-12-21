@@ -34,7 +34,6 @@
           :img-url="tabList[checkId].url"
           :video-url="tabList[checkId].videoUrl"
           :key="tabList[checkId].key"
-          @change="clickTab"
         />
       </div>
     </div>
@@ -51,7 +50,6 @@
           :img-url="item.url"
           :video-url="item.videoUrl"
           :key="item.key"
-          @change="clickTab"
         />
       </div>
     </div>
