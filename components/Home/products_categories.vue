@@ -68,7 +68,7 @@
       </div>
       <div class="phone-content container-fluid">
         <div class="swiper-container swiper">
-          <div class="swiper-wrapper" v-show="checked === 0">
+          <div class="swiper-wrapper" v-if="checked === 0">
             <div
               class="swiper-slide"
               v-for="(item, index) in itemList"
@@ -86,7 +86,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-wrapper" v-show="checked === 1">
+          <div class="swiper-wrapper" v-if="checked === 1">
             <div
               class="swiper-slide"
               v-for="(item, index) in itemList1"
