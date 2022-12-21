@@ -7,8 +7,7 @@
   <div class="video-box">
     <div class="video-mask" v-show="showVideo">
       <div class="video-player">
-        <video ref="myVideo" :src="videoUrl" autoplay="true" controls>
-          <!-- <source :src="videoUrl" type="video/mp4" /> -->
+        <video ref="myVideo" :src="videoUrl" controls>
         </video>
       </div>
     </div>
@@ -33,16 +32,9 @@ const props = defineProps<{
 const showVideo = ref<boolean>(false);
 const myVideo = ref(null);
 const palyVideo = () => {
-  showVideo.value = true;
+  showVideo.value = !showVideo.value;
   myVideo.value.play();
 };
-
-watch(
-  () => props.key,
-  () => {
-    palyVideo();
-  }
-);
 </script>
 
 <style scoped lang="scss">

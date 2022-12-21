@@ -19,7 +19,9 @@
         <img class="product" :src="item.url" alt="" />
         <p class="title">{{ item.title }}</p>
         <p class="keywords">{{ item.keywords }}</p>
-        <p class="introduction">{{ item.introduction }}</p>
+        <div class="introduction">
+          <p v-for="(p, i) in item.introduction">{{ p }}</p>
+        </div>
         <img
           class="arrow"
           src="@/assets/images/index/featured_products/arrow.png"
@@ -56,30 +58,46 @@ const duration = ref(0);
 const itemList = [
   {
     url: '../../assets/images/index/featured_products/1.png',
-    title: 'The Name',
-    introduction:
-      'Characteristic keywords With a combined 10+ years of experience, Huace Sports Helmethas the working knowledge',
+    title: 'HC-072 MTB Helemt',
+    introduction: [
+      'Removable/3 position adjustable visor',
+      'Removable, Washable And Antibacterial Pads',
+      '3D fit system',
+      'Fashion Design',
+      'ITW buckles',
+    ],
     keywords: 'Characteristic keywords',
   },
   {
-    url: '../../assets/images/index/featured_products/1.png',
-    title: 'The Name',
-    introduction:
-      'Characteristic keywords With a combined 10+ years of experience, Huace Sports Helmethas the working knowledge',
+    url: '../../assets/images/index/featured_products/2.png',
+    title: 'SH-03 Skiing Helmet',
+    introduction: [
+      'Washable And Antibacterial Pads',
+      'Fashion Design',
+      'lightweight',
+    ],
     keywords: 'Characteristic keywords',
   },
   {
-    url: '../../assets/images/index/featured_products/1.png',
-    title: 'The Name',
-    introduction:
-      'Characteristic keywords With a combined 10+ years of experience, Huace Sports Helmethas the working knowledge',
+    url: '../../assets/images/index/featured_products/3.png',
+    title: 'HC-69 Road Helmet',
+    introduction: [
+      'Removable, Washable And Antibacterial Pads',
+      '3D Fit System',
+      'Fashion Design',
+      'Aerodynamic design',
+      'lightweight',
+    ],
     keywords: 'Characteristic keywords',
   },
   {
-    url: '../../assets/images/index/featured_products/1.png',
-    title: 'The Name',
-    introduction:
-      'Characteristic keywords With a combined 10+ years of experience, Huace Sports Helmethas the working knowledge',
+    url: '../../assets/images/index/featured_products/4.png',
+    title: 'HC-059 Kids Helmet',
+    introduction: [
+      'Removable, washable and antibacterial pads',
+      'Fashion design',
+      'lightweight',
+    ],
     keywords: 'Characteristic keywords',
   },
 ];
@@ -113,7 +131,7 @@ onMounted(() => {
     margin: 0 auto;
     display: flex;
     .show-item {
-      width: 20%;
+      width: 25%;
       height: 43rem;
       background: linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
       background: -webkit-linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
@@ -146,7 +164,7 @@ onMounted(() => {
       }
 
       .title {
-        font-size: 2rem;
+        font-size: 1.25rem;
         font-weight: bold;
         position: absolute;
         top: 6%;
@@ -206,10 +224,11 @@ onMounted(() => {
       }
 
       .title {
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: bold;
         position: absolute;
-        top: 6%;
+        white-space: nowrap;
+        top: 3%;
         left: 10%;
         text-align: left;
         transition: translate, width, height, top 1s;
@@ -233,6 +252,7 @@ onMounted(() => {
         position: absolute;
         bottom: 10%;
         left: 15%;
+        white-space: nowrap;
       }
     }
   }
@@ -262,7 +282,10 @@ onMounted(() => {
     }
     .phone-content {
       display: block;
+      transform: translate3d(0, 0, 0);
+      overflow: hidden;
       .swiper-slide {
+        transform: translate3d(0, 0, 0);
         width: 100%;
         background: linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
         background: -webkit-linear-gradient(to right bottom, #9f9f9f, #3e3d3d);

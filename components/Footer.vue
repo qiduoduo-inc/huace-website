@@ -26,7 +26,7 @@
             </div>
             <div class="item">
               <img src="@/assets/images/footer/3.png" alt="" />
-              <p>XXXX@huacesports.com</p>
+              <p>huacesports@gmail.com</p>
             </div>
           </div>
           <div class="patent">Copyright Huace Sports 2022©</div>
@@ -88,15 +88,12 @@
             <p>CHONGXIAN TOWN, LINPING DIST. HANGZHOU CITY, ZHEJIANG, CHINA.</p>
           </div>
           <div class="item">
-            <img
-              src="@/assets/images/footer/2.png"
-              alt=""
-            />
+            <img src="@/assets/images/footer/2.png" alt="" />
             <p>+86-571-86275871</p>
           </div>
           <div class="item">
             <img src="@/assets/images/footer/3.png" alt="" />
-            <p>XXXX@huacesports.com</p>
+            <p>huacesports@gmail.com</p>
           </div>
         </div>
       </div>
@@ -161,6 +158,7 @@
   display: flex;
   justify-content: space-between;
   overflow: hidden;
+  padding-bottom: 10rem;
 
   .left-box {
     .title {
@@ -254,6 +252,9 @@
 }
 
 #components-back-top-demo-custom {
+  .ant-back-top {
+    bottom: 150px;
+  }
   .ant-back-top-inner {
     width: 2rem;
     height: 2rem;
@@ -269,6 +270,7 @@
 
 @media only screen and (max-width: 750px) {
   .footer {
+    padding-bottom: 12rem;
     .pc {
       display: none;
     }
@@ -288,9 +290,9 @@
             justify-content: flex-start;
             align-items: center;
             margin-top: 2rem;
-            font-size: .5rem;
+            font-size: 0.5rem;
             img {
-              width: .9rem;
+              width: 0.9rem;
               margin-right: 0.5rem;
             }
             p {
@@ -322,7 +324,7 @@
             content: '';
           }
           .follow-us {
-            font-size: .75rem;
+            font-size: 0.75rem;
             margin-top: 1rem;
             font-weight: bold;
             .icon-group {
@@ -362,9 +364,14 @@
           margin-top: 2rem;
           color: #ffffff;
           opacity: 0.65;
-          font-size: .5rem;
+          font-size: 0.5rem;
         }
       }
+    }
+  }
+  #components-back-top-demo-custom {
+    .ant-back-top {
+      bottom: 200px;
     }
   }
 }

@@ -4,72 +4,74 @@
  * @Date: 2022-12-16 23:10:48
 -->
 <template>
-  <div class="products-categories container-fluid">
-    <div class="box-title">
-      <p>PRODUCTS CATEGORIES</p>
-    </div>
-    <div class="tabs container">
-      <div
-        class="product-btn"
-        :class="{ checked: checked === 0 }"
-        @click="tabClick(0)"
-      >
-        <span>Cycling Helmets</span>
+  <transition :duration="duration">
+    <div class="products-categories container-fluid">
+      <div class="box-title">
+        <p>PRODUCTS CATEGORIES</p>
       </div>
-      <div
-        class="product-btn"
-        :class="{ checked: checked === 1 }"
-        @click="tabClick(1)"
-      >
-        <span>Ski Helmets</span>
+      <div class="tabs container">
+        <div
+          class="product-btn"
+          :class="{ checked: checked === 0 }"
+          @click="tabClick(0)"
+        >
+          <span>Cycling Helmets</span>
+        </div>
+        <div
+          class="product-btn"
+          :class="{ checked: checked === 1 }"
+          @click="tabClick(1)"
+        >
+          <span>Ski Helmets</span>
+        </div>
       </div>
-    </div>
 
-    <div class="content container-fluid">
-      <div class="row" v-show="checked === 0">
-        <div
-          class="show-item col"
-          v-for="(item, index) in itemList"
-          :key="index"
-        >
-          <img class="product" :src="item.url" alt="" />
-          <p class="title">{{ item.title }}</p>
-          <div class="product-btn">
-            See details
-            <img
-              class="arrow"
-              src="@/assets/images/index/tiers/arrow.png"
-              alt=""
-            />
+      <div class="content container-fluid">
+        <div class="row" v-show="checked === 0">
+          <div
+            class="show-item col"
+            v-for="(item, index) in itemList"
+            :key="index"
+          >
+            <img class="product" :src="item.url" alt="" />
+            <p class="title">{{ item.title }}</p>
+            <div class="product-btn">
+              See details
+              <img
+                class="arrow"
+                src="@/assets/images/index/tiers/arrow.png"
+                alt=""
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row" v-show="checked === 1">
-        <div
-          class="show-item col"
-          v-for="(item, index) in itemList1"
-          :key="index"
-        >
-          <img class="product" :src="item.url" alt="" />
-          <p class="title">{{ item.title }}</p>
-          <div class="product-btn">
-            See details
-            <img
-              class="arrow"
-              src="@/assets/images/index/tiers/arrow.png"
-              alt=""
-            />
+        <div class="row justify-content-md-center" v-show="checked === 1">
+          <div class="col"></div>
+          <div
+            class="show-item col"
+            v-for="(item, index) in itemList1"
+            :key="index"
+          >
+            <img class="product" :src="item.url" alt="" />
+            <p class="title">{{ item.title }}</p>
+            <div class="product-btn">
+              See details
+              <img
+                class="arrow"
+                src="@/assets/images/index/tiers/arrow.png"
+                alt=""
+              />
+            </div>
           </div>
+          <div class="col"></div>
         </div>
       </div>
-    </div>
-    <div class="phone-content container-fluid">
-      <div class="swiper-container swiper">
-        <transition :duration="duration">
-          <div class="swiper-wrapper">
+      <div class="phone-content container-fluid">
+        <div class="swiper-container swiper">
+          <div class="swiper-wrapper" v-show="checked === 0">
             <div
               class="swiper-slide"
-              v-for="(item, index) in swiperList"
+              v-for="(item, index) in itemList"
               :key="index"
             >
               <img :src="item.url" alt="" />
@@ -84,10 +86,28 @@
               </div>
             </div>
           </div>
-        </transition>
+          <div class="swiper-wrapper" v-show="checked === 1">
+            <div
+              class="swiper-slide"
+              v-for="(item, index) in itemList1"
+              :key="index"
+            >
+              <img :src="item.url" alt="" />
+              <p class="title">{{ item.title }}</p>
+              <div class="product-btn">
+                See details
+                <img
+                  class="arrow"
+                  src="@/assets/images/index/tiers/arrow.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script lang="ts" setup>
@@ -109,49 +129,37 @@ const itemList = ref([
     title: 'MTB',
   },
   {
-    url: '../../assets/images/index/products_categories/1.png',
+    url: '../../assets/images/index/products_categories/2.png',
     title: 'Road',
   },
   {
-    url: '../../assets/images/index/products_categories/1.png',
-    title: 'Casual',
+    url: '../../assets/images/index/products_categories/3.png',
+    title: 'Urban',
   },
   {
-    url: '../../assets/images/index/products_categories/1.png',
-    title: 'E-bike',
+    url: '../../assets/images/index/products_categories/4.png',
+    title: 'TT',
   },
   {
-    url: '../../assets/images/index/products_categories/1.png',
+    url: '../../assets/images/index/products_categories/5.png',
     title: 'Kids',
   },
 ]);
 
 const itemList1 = ref([
   {
-    url: '../../assets/images/index/products_categories/1.png',
-    title: '1',
+    url: '../../assets/images/index/products_categories/1.jpg',
+    title: 'SH-01',
   },
   {
-    url: '../../assets/images/index/products_categories/1.png',
-    title: '2',
+    url: '../../assets/images/index/products_categories/3.jpg',
+    title: 'SH-02',
   },
   {
-    url: '../../assets/images/index/products_categories/1.png',
-    title: '3',
-  },
-  {
-    url: '../../assets/images/index/products_categories/1.png',
-    title: '4',
-  },
-  {
-    url: '../../assets/images/index/products_categories/1.png',
-    title: '5',
+    url: '../../assets/images/index/products_categories/5.jpg',
+    title: 'SH-03',
   },
 ]);
-
-const swiperList = computed(() => {
-  return checked.value === 0 ? itemList.value : itemList1.value;
-});
 
 onMounted(() => {
   const ss = new Swiper('.products-categories .phone-content .swiper', {
@@ -197,7 +205,6 @@ onMounted(() => {
     margin: 1rem 0 1.5rem 0;
     .show-item {
       width: 23.125rem;
-      height: 36.25rem;
       text-align: center;
       background-color: #f9f9f9;
       position: relative;
@@ -216,28 +223,15 @@ onMounted(() => {
         -o-transition: all 0.5s; /* Opera */
       }
       .title {
-        position: absolute;
-        bottom: 20%;
-        left: 50%;
-        transform: translateX(-50%);
-        -webkit-transform: translateX(-50%); /* for Chrome || Safari */
-        -moz-transform: translateX(-50%); /* for Firefox */
-        -ms-transform: translateX(-50%); /* for IE */
-        -o-transform: translateX(-50%); /* for Opera */
         font-size: 3.125rem;
         font-weight: bold;
       }
       .product-btn {
-        position: absolute;
-        bottom: 10%;
-        left: 50%;
-        transform: translateX(-50%);
-        -webkit-transform: translateX(-50%); /* for Chrome || Safari */
-        -moz-transform: translateX(-50%); /* for Firefox */
-        -ms-transform: translateX(-50%); /* for IE */
-        -o-transform: translateX(-50%); /* for Opera */
         width: 10.5rem;
         height: 3.125rem;
+        margin: 0 auto;
+        margin-top: 1.6rem;
+        margin-bottom: 2.5rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -264,6 +258,29 @@ onMounted(() => {
   }
   .phone-content {
     display: none;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .products-categories {
+    .content {
+      .show-item {
+        .title {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  .products-categories {
+    .content {
+      .show-item {
+        .title {
+          font-size: 2rem;
+        }
+      }
+    }
   }
 }
 
@@ -301,26 +318,21 @@ onMounted(() => {
     .phone-content {
       margin-top: 1rem;
       display: block;
+      transform: translate3d(0, 0, 0);
+      overflow: hidden;
       .swiper-slide {
         width: 100%;
         height: 100%;
         background-color: #f9f9f9;
+        transform: translate3d(0, 0, 0);
         text-align: center;
         position: relative;
         .title {
-          // position: absolute;
-          // bottom: 6rem;
-          // left: 50%;
-          // transform: translateX(-50%);
           font-size: 2rem;
           font-weight: bold;
           margin: 0 auto;
         }
         .product-btn {
-          // position: absolute;
-          // bottom: 2rem;
-          // left: 50%;
-          // transform: translateX(-50%);
           margin: 0 auto;
           margin-bottom: 5rem;
           width: 13rem;

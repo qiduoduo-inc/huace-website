@@ -17,6 +17,7 @@
   <HomeTestimonials />
   <HomeContactUs @show-dialog="showFDialog" />
   <Footer />
+  <FixedFooter />
   <QuoteDialog :show-dialog="showDialog" @cancel-dialog="cancelDialog" />
 </template>
 

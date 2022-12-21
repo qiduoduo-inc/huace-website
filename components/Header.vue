@@ -132,14 +132,15 @@ const showDialog = () => {
     }
   }
 }
-@media only screen and (max-width: 1024px) {
+
+@media only screen and (max-width: 1440px) {
   .header {
-    font-size: 0.8rem !important;
+    font-size: 1.3rem !important;
     padding: 0.625rem 2.25rem;
     .menu-item {
-      font-size: 0.8rem !important;
+      font-size: 1.3rem !important;
       .item {
-        font-size: 0.8rem !important;
+        font-size: 1.3rem !important;
         margin-left: 2rem;
       }
     }
@@ -155,6 +156,31 @@ const showDialog = () => {
     }
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .header {
+    font-size: 1.15rem !important;
+    padding: 0.625rem 2.25rem;
+    .menu-item {
+      font-size: 1.15rem !important;
+      .item {
+        font-size: 1.15rem !important;
+        margin-left: 2rem;
+      }
+    }
+
+    .header-left {
+      .header-left-btn {
+        height: 2rem;
+        width: 8rem;
+        line-height: 1rem;
+        font-size: 1rem;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
 
 @media only screen and (max-width: 750px) {
   .header {
