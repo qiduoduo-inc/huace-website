@@ -15,7 +15,7 @@
             We‘d love to hear from you! Send us a message using the opposite, or
             email us.
           </p>
-          <div class="btn">
+          <div class="btn" @click="showDialog">
             Get a Quoute
             <img src="@/assets/images/index/contact_us/2.png" alt="" />
           </div>
@@ -25,9 +25,17 @@
         <div class="content">
           <p class="small-title">SUBSCRIBE NEWSLETTER</p>
           <p class="title">GET CATALOGE TODAY!</p>
-          <div class="input-box row text-center">
-            <input class="col" type="text" placeholder="Enter your email" />
-            <div class="btn col-4">Subscribe</div>
+          <div
+            class="input-box row text-center"
+            :class="{ 'err-message': isFEmail }"
+          >
+            <input
+              class="col"
+              type="text"
+              placeholder="Enter your email"
+              v-model="email"
+            />
+            <div class="btn col-4" @click="submit">Subscribe</div>
           </div>
           <p class="message">
             Your personal details are strictly for our use,and you can
@@ -46,7 +54,7 @@
             We‘d love to hear from you! Send us a message using the opposite, or
             email us.
           </p>
-          <div class="btn">
+          <div class="btn" @click="showDialog">
             Get a Quoute
             <img src="@/assets/images/index/contact_us/2.png" alt="" />
           </div>
@@ -56,9 +64,17 @@
         <div class="content">
           <p class="small-title">SUBSCRIBE NEWSLETTER</p>
           <p class="title">GET CATALOGE TODAY!</p>
-          <div class="input-box row text-center">
-            <input class="col" type="text" placeholder="Enter your email" />
-            <div class="btn col-4">Subscribe</div>
+          <div
+            class="input-box row text-center"
+            :class="{ 'err-message': isFEmail }"
+          >
+            <input
+              class="col"
+              type="text"
+              placeholder="Enter your email"
+              v-model="email"
+            />
+            <div class="btn col-4" @click="submit">Subscribe</div>
           </div>
           <p class="message">
             Your personal details are strictly for our use,and you can
@@ -70,7 +86,23 @@
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { isEmail } from '@/utils/validator';
+const emit = defineEmits(['showDialog']);
+const showDialog = () => {
+  emit('showDialog', true);
+};
+const email = ref<string>('');
+const isFEmail = ref<boolean>(false);
+watch(email, (val) => {
+  isFEmail.value = !isEmail(val);
+});
+
+const submit = () => {
+  isFEmail.value = !isEmail(email.value);
+  if (isFEmail.value) return;
+};
+</script>
 
 <style scoped lang="scss">
 .contact-us {
@@ -377,5 +409,18 @@
       }
     }
   }
+}
+.err-message {
+  position: relative;
+  transition: all 1s;
+}
+.err-message::after {
+  content: '* email adrress is invalid';
+  color: red;
+  position: absolute;
+  font-size: 1rem;
+  top: 100%;
+  left: 0;
+  white-space: nowrap;
 }
 </style>

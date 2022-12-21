@@ -70,7 +70,7 @@
           </li>
         </ul>
         <div class="header-left d-flex">
-          <a-button ghost class="header-left-btn">QUOTE NOW</a-button>
+          <a-button ghost class="header-left-btn" @click="showDialog">QUOTE NOW</a-button>
           <!-- <img src="@/assets/images/header/uk.png" alt="" />
           <span>EN</span> -->
         </div>
@@ -79,7 +79,12 @@
   </nav>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const emit = defineEmits(['showDialog']);
+const showDialog = () => {
+  emit('showDialog', true);
+};
+</script>
 
 <style scoped lang="scss">
 .header {
