@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="join-us">
-      <a-button class="join-us-btn"
+      <a-button class="join-us-btn" @click="showDialog"
         >Join Us <img src="@/assets/images/index/tiers/arrow.png" alt=""
       /></a-button>
     </div>
@@ -42,6 +42,11 @@ const imgList = [
   '../../assets/images/index/tiers/11.png',
   '../../assets/images/index/tiers/12.png',
 ];
+
+const emit = defineEmits(['showDialog']);
+const showDialog = () => {
+  emit('showDialog', true);
+};
 </script>
 
 <style scoped lang="scss">

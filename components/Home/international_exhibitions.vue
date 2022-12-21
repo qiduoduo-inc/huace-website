@@ -80,7 +80,7 @@ const itemList = ref([
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/4.png',
+    url: '../../assets/images/index/international_exhibitions/4.jpg',
     type: 2,
   },
   {
@@ -267,7 +267,7 @@ const itemListOld = ref([
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/4.png',
+    url: '../../assets/images/index/international_exhibitions/4.jpg',
     type: 2,
   },
   {
@@ -454,7 +454,7 @@ const hItemList = ref([
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/4.png',
+    url: '../../assets/images/index/international_exhibitions/4.jpg',
     type: 2,
   },
   {
@@ -577,7 +577,7 @@ const hItemListOld = ref([
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/4.png',
+    url: '../../assets/images/index/international_exhibitions/4.jpg',
     type: 2,
   },
   {
@@ -721,12 +721,12 @@ const changeImg = () => {
   hItemListOld.value[hArr[0]] = hItemListOld.value[hArr[1]];
   hItemListOld.value[hArr[1]] = hItemListOld.value[hArr[2]];
   hItemListOld.value[hArr[2]] = b;
-  photoWallOld.value.childNodes[Arr[0] + 1].style.opacity = 0.5;
-  photoWallOld.value.childNodes[Arr[1] + 1].style.opacity = 0.5;
-  photoWallOld.value.childNodes[Arr[2] + 1].style.opacity = 0.5;
-  hPhotoWallOld.value.childNodes[hArr[0] + 1].style.opacity = 0.5;
-  hPhotoWallOld.value.childNodes[hArr[1] + 1].style.opacity = 0.5;
-  hPhotoWallOld.value.childNodes[hArr[2] + 1].style.opacity = 0.5;
+  photoWallOld.value.childNodes[Arr[0] + 1].style.opacity = 0;
+  photoWallOld.value.childNodes[Arr[1] + 1].style.opacity = 0;
+  photoWallOld.value.childNodes[Arr[2] + 1].style.opacity = 0;
+  hPhotoWallOld.value.childNodes[hArr[0] + 1].style.opacity = 0;
+  hPhotoWallOld.value.childNodes[hArr[1] + 1].style.opacity = 0;
+  hPhotoWallOld.value.childNodes[hArr[2] + 1].style.opacity = 0;
 
   setTimeout(() => {
     photoWallOld.value.childNodes[Arr[0] + 1].style.opacity = 1;
@@ -735,7 +735,7 @@ const changeImg = () => {
     hPhotoWallOld.value.childNodes[hArr[0] + 1].style.opacity = 1;
     hPhotoWallOld.value.childNodes[hArr[1] + 1].style.opacity = 1;
     hPhotoWallOld.value.childNodes[hArr[2] + 1].style.opacity = 1;
-  }, 500);
+  }, 3000);
 };
 let timer;
 onMounted(() => {
@@ -772,10 +772,10 @@ onBeforeUnmount(() => {
       'a40 a41 a33 a42 a43 a43 a44 a45 a46 a39';
     .photo-item {
       overflow: hidden;
-      transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease; /* Firefox 4 */
-      -webkit-transition: all 0.5s ease; /* Safari and Chrome */
-      -o-transition: all 0.5s ease; /* Opera */
+      transition: all 1s ease;
+      -moz-transition: all 1s ease; /* Firefox 4 */
+      -webkit-transition: all 1s ease; /* Safari and Chrome */
+      -o-transition: all 1s ease; /* Opera */
       opacity: 1;
       filter: alpha(opacity=100);
       -moz-opacity: 1;
@@ -932,10 +932,10 @@ onBeforeUnmount(() => {
     z-index: 1;
     .photo-item {
       overflow: hidden;
-      transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease; /* Firefox 4 */
-      -webkit-transition: all 0.5s ease; /* Safari and Chrome */
-      -o-transition: all 0.5s ease; /* Opera */
+      transition: all 1s ease;
+      -moz-transition: all 1s ease; /* Firefox 4 */
+      -webkit-transition: all 1s ease; /* Safari and Chrome */
+      -o-transition: all 1s ease; /* Opera */
       opacity: 1;
       filter: alpha(opacity=100);
       -moz-opacity: 1;
@@ -1054,7 +1054,7 @@ onBeforeUnmount(() => {
         'a28 a29 a29 a30';
       .photo-item {
         overflow: hidden;
-        transition: all 0.5s ease;
+        transition: all 1s ease;
         img {
           width: 100%;
           height: 100%;

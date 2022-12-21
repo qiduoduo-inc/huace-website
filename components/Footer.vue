@@ -270,7 +270,7 @@
 
 @media only screen and (max-width: 750px) {
   .footer {
-    padding-bottom: 12rem;
+    padding-bottom: 8rem;
     .pc {
       display: none;
     }

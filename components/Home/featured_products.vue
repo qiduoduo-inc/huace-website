@@ -39,7 +39,9 @@
             >
               <p class="title">{{ item.title }}</p>
               <img :src="item.url" alt="" />
-              <p class="introduction">{{ item.introduction }}</p>
+              <div class="introduction">
+                <p v-for="(p, i) in item.introduction">{{ p }}</p>
+              </div>
             </div>
           </div>
         </transition>
@@ -58,7 +60,7 @@ const duration = ref(0);
 const itemList = [
   {
     url: '../../assets/images/index/featured_products/1.png',
-    title: 'HC-072 MTB Helemt',
+    title: 'HC-072',
     introduction: [
       'Removable/3 position adjustable visor',
       'Removable, Washable And Antibacterial Pads',
@@ -66,21 +68,21 @@ const itemList = [
       'Fashion Design',
       'ITW buckles',
     ],
-    keywords: 'Characteristic keywords',
+    keywords: 'MTB Helemt',
   },
   {
     url: '../../assets/images/index/featured_products/2.png',
-    title: 'SH-03 Skiing Helmet',
+    title: 'SH-03',
     introduction: [
       'Washable And Antibacterial Pads',
       'Fashion Design',
       'lightweight',
     ],
-    keywords: 'Characteristic keywords',
+    keywords: 'Skiing Helmet',
   },
   {
     url: '../../assets/images/index/featured_products/3.png',
-    title: 'HC-69 Road Helmet',
+    title: 'HC-69',
     introduction: [
       'Removable, Washable And Antibacterial Pads',
       '3D Fit System',
@@ -88,17 +90,17 @@ const itemList = [
       'Aerodynamic design',
       'lightweight',
     ],
-    keywords: 'Characteristic keywords',
+    keywords: 'Road Helmet',
   },
   {
     url: '../../assets/images/index/featured_products/4.png',
-    title: 'HC-059 Kids Helmet',
+    title: 'HC-059',
     introduction: [
       'Removable, washable and antibacterial pads',
       'Fashion design',
       'lightweight',
     ],
-    keywords: 'Characteristic keywords',
+    keywords: 'Kids Helmet',
   },
 ];
 
@@ -148,19 +150,19 @@ onMounted(() => {
       cursor: pointer;
       .product {
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        -webkit-transform: translateX(-50%); /* for Chrome || Safari */
-        -moz-transform: translateX(-50%); /* for Firefox */
-        -ms-transform: translateX(-50%); /* for IE */
-        -o-transform: translateX(-50%); /* for Opera */
+        left: 0;
+        transform: translateX(-45%);
+        -webkit-transform: translateX(-45%); /* for Chrome || Safari */
+        -moz-transform: translateX(-45%); /* for Firefox */
+        -ms-transform: translateX(-45%); /* for IE */
+        -o-transform: translateX(-45%); /* for Opera */
         top: 5.25rem;
         width: 25rem;
         height: 25rem;
-        transition: width, height, top 1s;
-        -moz-transition: width, height, top 1s; /* Firefox 4 */
-        -webkit-transition: width, height, top 1s; /* Safari and Chrome */
-        -o-transition: width, height, top 1s; /* Opera */
+        transition: translate, width, height, top, left 1s;
+        -moz-transition: translate, width, height, top, left 1s; /* Firefox 4 */
+        -webkit-transition: translate, width, height, top, left 1s; /* Safari and Chrome */
+        -o-transition: translate, width, height, top, left 1s; /* Opera */
       }
 
       .title {
@@ -171,6 +173,10 @@ onMounted(() => {
         left: 10%;
         width: 100%;
         text-align: left;
+        transition: top, font-size 1s;
+        -moz-transition: top, font-size 1s; /* Firefox 4 */
+        -webkit-transition: top, font-size 1s; /* Safari and Chrome */
+        -o-transition: top, font-size 1s; /* Opera */
       }
 
       .keywords {
@@ -231,10 +237,10 @@ onMounted(() => {
         top: 3%;
         left: 10%;
         text-align: left;
-        transition: translate, width, height, top 1s;
-        -moz-transition: translate, width, height, top 1s; /* Firefox 4 */
-        -webkit-transition: translate, width, height, top 1s; /* Safari and Chrome */
-        -o-transition: translate, width, height, top 1s; /* Opera */
+        transition: top, font-size 0.1s;
+        -moz-transition: top, font-size 0.1s; /* Firefox 4 */
+        -webkit-transition: top, font-size 0.1s; /* Safari and Chrome */
+        -o-transition: top, font-size 0.1s; /* Opera */
       }
 
       .keywords {
