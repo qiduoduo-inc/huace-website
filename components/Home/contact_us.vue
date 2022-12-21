@@ -16,7 +16,7 @@
             email us.
           </p>
           <div class="btn" @click="showDialog">
-            Get a Quoute
+            Get A Quoute
             <img src="@/assets/images/index/contact_us/2.png" alt="" />
           </div>
         </div>
@@ -55,7 +55,7 @@
             email us.
           </p>
           <div class="btn" @click="showDialog">
-            Get a Quoute
+            Get A Quoute
             <img src="@/assets/images/index/contact_us/2.png" alt="" />
           </div>
         </div>
