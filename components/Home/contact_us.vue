@@ -337,13 +337,13 @@ const submit = () => {
             margin-bottom: 1rem;
           }
           .detail {
-            font-size: 0.8rem;
+            font-size: 1rem;
           }
 
           .btn {
             background-color: #f0831e;
             color: #ffffff;
-            font-size: 0.6rem;
+            font-size: 1rem;
             font-weight: bold;
             margin-top: 2rem;
             padding: 0.5rem 1rem;

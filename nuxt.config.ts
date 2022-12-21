@@ -19,7 +19,7 @@ export default defineNuxtConfig({
         }
       ],
       script: [
-        // { src: './assets/styles/fonts/iconfont.js', type: 'text/javascript' },
+        { src: './require.js', type: 'text/javascript' },
       ],
       link: [
         { rel: 'stylesheet', href: "./assets/styles/font.scss" },
@@ -31,5 +31,8 @@ export default defineNuxtConfig({
         { children: 'Javascript is required' }
       ],
     }
+  },
+  build: {
+    transpile: ['swiper']
   }
 })

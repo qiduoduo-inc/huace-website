@@ -77,3 +77,14 @@ p {
     padding: 1.5rem 5px 0.8rem 5px;
   }
 }
+.ant-btn.ant-btn-background-ghost:hover,
+.ant-btn.ant-btn-background-ghost:focus {
+  color: #f0831e;
+  border-color: #f0831e;
+}
+.ant-btn:hover,
+.ant-btn:focus {
+  color: #f0831e;
+  border-color: #f0831e;
+  background: #fff;
+}

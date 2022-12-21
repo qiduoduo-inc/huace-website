@@ -3796,6 +3796,11 @@
   "resolved" "https://registry.npmmirror.com/require-directory/-/require-directory-2.1.1.tgz"
   "version" "2.1.1"
 
+"require.js@^1.0.0":
+  "integrity" "sha512-+KwgNIkkrtblYf9Agaxy8p1eTnf7QkZQGk/gq+3rfZr4tROFpCMrz9/ImWfV6dQAO34MaR+VML3jKhen0Ea03A=="
+  "resolved" "https://registry.npmjs.org/require.js/-/require.js-1.0.0.tgz"
+  "version" "1.0.0"
+
 "requires-port@^1.0.0":
   "integrity" "sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ=="
   "resolved" "https://registry.npmmirror.com/requires-port/-/requires-port-1.0.0.tgz"

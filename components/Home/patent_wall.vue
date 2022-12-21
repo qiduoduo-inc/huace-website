@@ -6,7 +6,7 @@
 <template>
   <div class="patent-wall container-fluid">
     <div class="bg container-fludid">
-      <img src="@/assets/images/index/patent_wall/2.png" alt="" />
+      <!-- <img src="@/assets/images/index/patent_wall/2.png" alt="" /> -->
     </div>
     <div class="box-title">
       <p>PATENT WALL</p>
@@ -73,6 +73,8 @@ onMounted(async () => {
     height: 100%;
     width: 100%;
     z-index: -1;
+    background-image: url('@/assets/images/index/patent_wall/2.png');
+    background-size: cover;
     img {
       width: 100%;
     }

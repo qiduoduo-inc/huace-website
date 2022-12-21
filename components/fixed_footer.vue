@@ -31,7 +31,6 @@
     </div>
     <div class="h5">
       <div class="top-box">
-        <p class="small-title">SUBSCRIBE NEWSLETTER</p>
         <p class="title">GET CATALOGE TODAY!</p>
       </div>
       <div class="bottom-box">
@@ -47,10 +46,6 @@
           />
           <div class="btn col-4" @click="submit">Subscribe</div>
         </div>
-        <p class="message">
-          Your personal details are strictly for our use,and you can unsubscribe
-          at any time
-        </p>
       </div>
     </div>
   </div>
@@ -81,6 +76,8 @@ const submit = () => {
   background-color: #ffffff;
   padding: 1rem 6.25rem;
   z-index: 99999;
+  box-shadow: 10px 10px 24px #000000;
+
   .pc {
     .left-box {
       display: flex;
@@ -273,8 +270,7 @@ const submit = () => {
 
 @media only screen and (max-width: 750px) {
   .fixed-footer {
-    padding: 1rem;
-    box-shadow: 10px 10px 24px #000000;
+    padding: 0.5rem 1rem;
     .pc {
       display: none;
     }
