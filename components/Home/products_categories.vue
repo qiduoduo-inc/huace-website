@@ -4,72 +4,74 @@
  * @Date: 2022-12-16 23:10:48
 -->
 <template>
-  <div class="products-categories container-fluid">
-    <div class="box-title">
-      <p>PRODUCTS CATEGORIES</p>
-    </div>
-    <div class="tabs container">
-      <div
-        class="product-btn"
-        :class="{ checked: checked === 0 }"
-        @click="tabClick(0)"
-      >
-        <span>Cycling Helmets</span>
+  <transition :duration="duration">
+    <div class="products-categories container-fluid">
+      <div class="box-title">
+        <p>PRODUCTS CATEGORIES</p>
       </div>
-      <div
-        class="product-btn"
-        :class="{ checked: checked === 1 }"
-        @click="tabClick(1)"
-      >
-        <span>Urban Helmets</span>
+      <div class="tabs container">
+        <div
+          class="product-btn"
+          :class="{ checked: checked === 0 }"
+          @click="tabClick(0)"
+        >
+          <span>Cycling Helmets</span>
+        </div>
+        <div
+          class="product-btn"
+          :class="{ checked: checked === 1 }"
+          @click="tabClick(1)"
+        >
+          <span>Ski Helmets</span>
+        </div>
       </div>
-    </div>
 
-    <div class="content container-fluid">
-      <div class="row" v-show="checked === 0">
-        <div
-          class="show-item col"
-          v-for="(item, index) in itemList"
-          :key="index"
-        >
-          <img class="product" :src="item.url" alt="" />
-          <p class="title">{{ item.title }}</p>
-          <div class="product-btn">
-            See details
-            <img
-              class="arrow"
-              src="@/assets/images/index/tiers/arrow.png"
-              alt=""
-            />
+      <div class="content container-fluid">
+        <div class="row" v-show="checked === 0">
+          <div
+            class="show-item col"
+            v-for="(item, index) in itemList"
+            :key="index"
+          >
+            <img class="product" :src="item.url" alt="" />
+            <p class="title">{{ item.title }}</p>
+            <div class="product-btn">
+              See details
+              <img
+                class="arrow"
+                src="@/assets/images/index/tiers/arrow.png"
+                alt=""
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row" v-show="checked === 1">
-        <div
-          class="show-item col"
-          v-for="(item, index) in itemList1"
-          :key="index"
-        >
-          <img class="product" :src="item.url" alt="" />
-          <p class="title">{{ item.title }}</p>
-          <div class="product-btn">
-            See details
-            <img
-              class="arrow"
-              src="@/assets/images/index/tiers/arrow.png"
-              alt=""
-            />
+        <div class="row justify-content-md-center" v-show="checked === 1">
+          <div class="col"></div>
+          <div
+            class="show-item col"
+            v-for="(item, index) in itemList1"
+            :key="index"
+          >
+            <img class="product" :src="item.url" alt="" />
+            <p class="title">{{ item.title }}</p>
+            <div class="product-btn">
+              See details
+              <img
+                class="arrow"
+                src="@/assets/images/index/tiers/arrow.png"
+                alt=""
+              />
+            </div>
           </div>
+          <div class="col"></div>
         </div>
       </div>
-    </div>
-    <div class="phone-content container-fluid">
-      <div class="swiper-container swiper">
-        <transition :duration="duration">
-          <div class="swiper-wrapper">
+      <div class="phone-content container-fluid">
+        <div class="swiper-container swiper">
+          <div class="swiper-wrapper" v-show="checked === 0">
             <div
               class="swiper-slide"
-              v-for="(item, index) in swiperList"
+              v-for="(item, index) in itemList"
               :key="index"
             >
               <img :src="item.url" alt="" />
@@ -84,10 +86,28 @@
               </div>
             </div>
           </div>
-        </transition>
+          <div class="swiper-wrapper" v-show="checked === 1">
+            <div
+              class="swiper-slide"
+              v-for="(item, index) in itemList1"
+              :key="index"
+            >
+              <img :src="item.url" alt="" />
+              <p class="title">{{ item.title }}</p>
+              <div class="product-btn">
+                See details
+                <img
+                  class="arrow"
+                  src="@/assets/images/index/tiers/arrow.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script lang="ts" setup>
@@ -114,7 +134,7 @@ const itemList = ref([
   },
   {
     url: '../../assets/images/index/products_categories/3.png',
-    title: 'Skiing',
+    title: 'Urban',
   },
   {
     url: '../../assets/images/index/products_categories/4.png',
@@ -129,29 +149,17 @@ const itemList = ref([
 const itemList1 = ref([
   {
     url: '../../assets/images/index/products_categories/1.jpg',
-    title: '1',
-  },
-  {
-    url: '../../assets/images/index/products_categories/2.jpg',
-    title: '2',
+    title: 'SH-01',
   },
   {
     url: '../../assets/images/index/products_categories/3.jpg',
-    title: '3',
-  },
-  {
-    url: '../../assets/images/index/products_categories/4.jpg',
-    title: '4',
+    title: 'SH-02',
   },
   {
     url: '../../assets/images/index/products_categories/5.jpg',
-    title: '5',
+    title: 'SH-03',
   },
 ]);
-
-const swiperList = computed(() => {
-  return checked.value === 0 ? itemList.value : itemList1.value;
-});
 
 onMounted(() => {
   const ss = new Swiper('.products-categories .phone-content .swiper', {
@@ -268,9 +276,9 @@ onMounted(() => {
 }
 @media only screen and (max-width: 1440px) {
   .products-categories {
-    .content{
-      .show-item{
-        .title{
+    .content {
+      .show-item {
+        .title {
           font-size: 2.5rem;
         }
       }
@@ -280,9 +288,9 @@ onMounted(() => {
 
 @media only screen and (max-width: 1180px) {
   .products-categories {
-    .content{
-      .show-item{
-        .title{
+    .content {
+      .show-item {
+        .title {
           font-size: 2rem;
         }
       }
@@ -334,19 +342,11 @@ onMounted(() => {
         text-align: center;
         position: relative;
         .title {
-          // position: absolute;
-          // bottom: 6rem;
-          // left: 50%;
-          // transform: translateX(-50%);
           font-size: 2rem;
           font-weight: bold;
           margin: 0 auto;
         }
         .product-btn {
-          // position: absolute;
-          // bottom: 2rem;
-          // left: 50%;
-          // transform: translateX(-50%);
           margin: 0 auto;
           margin-bottom: 5rem;
           width: 13rem;

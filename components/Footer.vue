@@ -26,7 +26,7 @@
             </div>
             <div class="item">
               <img src="@/assets/images/footer/3.png" alt="" />
-              <p>XXXX@huacesports.com</p>
+              <p>huacesports@gmail.com</p>
             </div>
           </div>
           <div class="patent">Copyright Huace Sports 2022©</div>
@@ -96,7 +96,7 @@
           </div>
           <div class="item">
             <img src="@/assets/images/footer/3.png" alt="" />
-            <p>XXXX@huacesports.com</p>
+            <p>huacesports@gmail.com</p>
           </div>
         </div>
       </div>
