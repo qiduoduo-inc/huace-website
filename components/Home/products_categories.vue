@@ -301,10 +301,13 @@ onMounted(() => {
     .phone-content {
       margin-top: 1rem;
       display: block;
+      transform: translate3d(0, 0, 0);
+      overflow: hidden;
       .swiper-slide {
         width: 100%;
         height: 100%;
         background-color: #f9f9f9;
+        transform: translate3d(0, 0, 0);
         text-align: center;
         position: relative;
         .title {

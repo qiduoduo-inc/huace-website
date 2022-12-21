@@ -5,7 +5,7 @@
 -->
 <template>
   <div class="header-swiper container-fluid">
-    <Header class="index-header" @show-dialog="showDialog"/>
+    <Header class="index-header" @show-dialog="showDialog" />
     <div class="index-swiper">
       <div class="swiper-container swiper">
         <transition :duration="duration">
@@ -81,8 +81,11 @@ const showDialog = () => {
   }
   .index-swiper {
     position: relative;
+    transform: translate3d(0, 0, 0);
+    overflow: hidden;
     .swiper-slide {
       width: 100%;
+      transform: translate3d(0, 0, 0);
       img {
         width: 100%;
       }

@@ -271,12 +271,14 @@ onMounted(() => {
       display: block;
       position: relative;
       .swiper-container {
-        overflow: inherit !important;
+        transform: translate3d(0, 0, 0);
+        overflow: hidden;
       }
 
       .swiper-slide {
         width: 12.96rem;
         height: 18rem;
+        transform: translate3d(0, 0, 0);
         .swiperImg {
           background: linear-gradient(
             rgba(255, 255, 255, 0.33),

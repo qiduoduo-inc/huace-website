@@ -113,7 +113,7 @@ onMounted(() => {
     margin: 0 auto;
     display: flex;
     .show-item {
-      width: 20%;
+      width: 25%;
       height: 43rem;
       background: linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
       background: -webkit-linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
@@ -262,7 +262,10 @@ onMounted(() => {
     }
     .phone-content {
       display: block;
+      transform: translate3d(0, 0, 0);
+      overflow: hidden;
       .swiper-slide {
+        transform: translate3d(0, 0, 0);
         width: 100%;
         background: linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
         background: -webkit-linear-gradient(to right bottom, #9f9f9f, #3e3d3d);
