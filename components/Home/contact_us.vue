@@ -55,7 +55,7 @@
             email us.
           </p>
           <div class="btn" @click="showDialog">
-            Get A Quoute
+            Get A Quote
             <img src="@/assets/images/index/contact_us/2.png" alt="" />
           </div>
         </div>
