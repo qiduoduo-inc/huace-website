@@ -15,23 +15,23 @@
     </div>
     <div class="barrage" ref="barrage">
       <div class="barrage-item">
-        <p>The helmet quality is reliable</p>
+        <p>Keep up the good work</p>
         <img src="@/assets/images/index/testimonials/2.png" alt="" />
       </div>
       <div class="barrage-item">
-        <p>The helmet quality is reliable</p>
+        <p>Continue to grow together</p>
+        <img src="@/assets/images/index/testimonials/3.png" alt="" />
+      </div>
+      <div class="barrage-item">
+        <p>All the best wishes</p>
+        <img src="@/assets/images/index/testimonials/3.png" alt="" />
+      </div>
+      <div class="barrage-item">
+        <p>Thanks for your hard work from 2018</p>
         <img src="@/assets/images/index/testimonials/2.png" alt="" />
       </div>
       <div class="barrage-item">
-        <p>The helmet quality is reliable</p>
-        <img src="@/assets/images/index/testimonials/2.png" alt="" />
-      </div>
-      <div class="barrage-item">
-        <p>The helmet quality is reliable</p>
-        <img src="@/assets/images/index/testimonials/2.png" alt="" />
-      </div>
-      <div class="barrage-item">
-        <p>The helmet quality is reliable</p>
+        <p>We've done very good relationship so far</p>
         <img src="@/assets/images/index/testimonials/2.png" alt="" />
       </div>
       <div class="barrage-item">
