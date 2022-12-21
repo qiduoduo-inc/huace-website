@@ -31,5 +31,8 @@ export default defineNuxtConfig({
         { children: 'Javascript is required' }
       ],
     }
+  },
+  build: {
+    transpile: ['swiper']
   }
 })

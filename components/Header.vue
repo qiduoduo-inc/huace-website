@@ -95,7 +95,7 @@ const showDialog = () => {
 <style scoped lang="scss">
 .header {
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 0.625rem 6.25rem;
+  padding: 0.1rem 6.25rem;
 
   .navbar-brand {
     img {

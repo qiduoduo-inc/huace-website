@@ -15,7 +15,7 @@
   <HomeEcoFriendly />
   <HomeInternationalExhibitions />
   <HomeTestimonials />
-  <HomeContactUs @show-dialog="showFDialog" />
+  <HomeContactUs @show-dialog="showFDialog" ref="contactUs" />
   <Footer />
   <FixedFooter />
   <QuoteDialog :show-dialog="showDialog" @cancel-dialog="cancelDialog" />
@@ -31,5 +31,6 @@ const showFDialog = (value) => {
 const cancelDialog = (value) => {
   showDialog.value = value;
 };
+
 </script>
 <style lang="scss" scoped></style>

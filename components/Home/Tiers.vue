@@ -21,8 +21,8 @@
     </div>
     <div class="join-us">
       <a-button class="join-us-btn" @click="showDialog"
-        >Join Us <img src="@/assets/images/index/tiers/arrow.png" alt=""
-      /></a-button>
+        >Join Us <span class="arrow-icon"></span
+      ></a-button>
     </div>
   </div>
 </template>
@@ -119,10 +119,21 @@ const showDialog = () => {
       border: 2px #000000 solid;
       margin-top: 1rem;
       margin-bottom: 2rem;
-      img {
+      .arrow-icon {
+        display: inline-block;
         width: 1rem;
         height: 0.8rem;
         margin-left: 0.8rem;
+        background-image: url('@/assets/images/index/tiers/arrow.png');
+        background-size: 100% 100%;
+      }
+    }
+    .join-us-btn:hover,
+    .join-us-btn:focus {
+      border-color: #f0831e;
+      color: #f0831e;
+      .arrow-icon {
+        background-image: url('@/assets/images/index/tiers/arrow1.png');
       }
     }
   }
