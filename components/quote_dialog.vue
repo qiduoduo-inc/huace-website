@@ -110,7 +110,7 @@ const onSubmit = () => {
   .title {
     font-size: 1.25rem;
     font-weight: bolder;
-    color: #9bf80c;
+    color: #f0831e;
     margin-bottom: 1rem;
   }
 
