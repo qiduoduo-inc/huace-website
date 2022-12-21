@@ -326,14 +326,15 @@ const submit = () => {
         .content {
           color: #000000;
           .title {
-            font-size: 1rem;
+            font-size: 1.4rem;
             font-weight: bold;
-            line-height: 2rem;
+            line-height: 1.4rem;
+            margin-bottom: 0.5rem;
           }
           .number {
-            font-size: 2rem;
+            font-size: 1.4rem;
             font-weight: bold;
-            line-height: 2rem;
+            line-height: 1.4rem;
             margin-bottom: 1rem;
           }
           .detail {
@@ -366,12 +367,12 @@ const submit = () => {
           .small-title {
             font-size: 1rem;
             font-weight: bold;
-            line-height: 2rem;
+            line-height: 1rem;
           }
           .title {
-            font-size: 2rem;
+            font-size: 1.4rem;
             font-weight: bold;
-            line-height: 2rem;
+            line-height: 1.4rem;
             margin: 1rem 0;
             margin-bottom: 1rem;
           }

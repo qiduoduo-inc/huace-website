@@ -177,8 +177,9 @@ onBeforeUnmount(() => {
 
         .detail {
           font-size: 1.125rem;
-          width: 80%;
+          width: 70%;
           margin-bottom: 1rem;
+          text-align: justify;
         }
       }
     }
@@ -227,15 +228,17 @@ onBeforeUnmount(() => {
           align-items: center;
 
           .title {
-            font-size: 2rem;
+            font-size: 1.6rem;
             font-weight: bold;
             margin-bottom: 1rem;
           }
 
           .detail {
-            font-size: 0.65rem;
-            width: 80%;
+            font-size: 0.7rem;
+            padding-left: 40px;
+            padding-right: 40px;
             margin-bottom: 10px;
+            text-align: justify;
           }
         }
       }
