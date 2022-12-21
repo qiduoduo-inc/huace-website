@@ -11,7 +11,7 @@
     <div class="content">
       <div class="row">
         <div
-          class="col-6 col-md-2 tiers-item"
+          class="col-4 col-md-2 tiers-item"
           v-for="(item, index) in imgList"
           :key="index"
         >
@@ -122,7 +122,17 @@ const imgList = [
     }
   }
 }
-@media only screen and (min-width: 750px) and (max-width: 1200px) {
+@media only screen and (min-width: 1360px) and (max-width: 1200px) {
+  .tiers {
+    .content {
+      .tiers-item {
+        padding: 1.3875rem 2.0675rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
   .tiers {
     .content {
       .tiers-item {

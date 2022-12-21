@@ -5,7 +5,7 @@
 -->
 <template>
   <div class="header-swiper container-fluid">
-    <Header class="index-header" />
+    <Header class="index-header" @show-dialog="showDialog"/>
     <div class="index-swiper">
       <div class="swiper-container swiper">
         <transition :duration="duration">
@@ -61,6 +61,11 @@ onMounted(() => {
     },
   });
 });
+
+const emit = defineEmits(['showDialog']);
+const showDialog = () => {
+  emit('showDialog', true);
+};
 </script>
 
 <style scoped lang="scss">

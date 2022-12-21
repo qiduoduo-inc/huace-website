@@ -231,7 +231,7 @@
       position: absolute;
       bottom: 0;
       right: 0;
-      display: flex;
+      display: none;
       .item {
         display: flex;
         align-items: center;

@@ -15,6 +15,7 @@
     <div class="videoBox" v-show="!showVideo">
       <div class="container-fluid">
         <div class="videoMovie" @click="palyVideo">
+          <img class="paly-btn" src="@/assets/video/paly.png" alt="" />
           <img :src="imgUrl" />
         </div>
       </div>
@@ -32,7 +33,7 @@ const props = defineProps<{
 const showVideo = ref<boolean>(false);
 const myVideo = ref(null);
 const palyVideo = () => {
-  showVideo.value = true
+  showVideo.value = true;
   myVideo.value.play();
 };
 
@@ -46,8 +47,19 @@ watch(
 
 <style scoped lang="scss">
 .video-box {
+  position: relative;
   img {
     width: 100%;
+  }
+
+  .paly-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 3.5625rem;
+    height: 3.5625rem;
+    cursor: pointer;
   }
   video {
     width: 100%;

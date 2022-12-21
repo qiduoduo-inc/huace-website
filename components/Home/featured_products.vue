@@ -123,10 +123,11 @@ onMounted(() => {
       position: relative;
       color: #ffffff;
       overflow: hidden;
-      transition: all 1s ease;
-      -moz-transition: all 1s ease; /* Firefox 4 */
-      -webkit-transition: all 1s ease; /* Safari and Chrome */
-      -o-transition: all 1s ease; /* Opera */
+      transition: all 0.7s ease;
+      -moz-transition: all 0.7s ease; /* Firefox 4 */
+      -webkit-transition: all 0.7s ease; /* Safari and Chrome */
+      -o-transition: all 0.7s ease; /* Opera */
+      cursor: pointer;
       .product {
         position: absolute;
         left: 50%;
@@ -183,10 +184,10 @@ onMounted(() => {
     .focus-item {
       width: 40%;
       height: 43rem;
-      transition: all 1s ease;
-      -moz-transition: all 1s ease; /* Firefox 4 */
-      -webkit-transition: all 1s ease; /* Safari and Chrome */
-      -o-transition: all 1s ease; /* Opera */
+      transition: all 0.7s ease;
+      -moz-transition: all 0.7s ease; /* Firefox 4 */
+      -webkit-transition: all 0.7s ease; /* Safari and Chrome */
+      -o-transition: all 0.7s ease; /* Opera */
       .product {
         position: absolute;
         left: 50%;

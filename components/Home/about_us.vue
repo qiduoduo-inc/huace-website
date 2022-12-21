@@ -126,6 +126,7 @@ onBeforeUnmount(() => {
 }
 @media only screen and (max-width: 750px) {
   .about-us {
+    padding: 4rem 0;
     .center-img {
       background-image: url('@/assets/images/index/about_us/2.png');
       background-size: 13rem 8rem;
@@ -147,8 +148,8 @@ onBeforeUnmount(() => {
         }
 
         .detail {
-          font-size: 0.3rem;
-          width: 10rem;
+          font-size: 0.65rem;
+          width: 12.5rem;
         }
       }
     }
