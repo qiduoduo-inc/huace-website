@@ -70,28 +70,28 @@ const clickTab = (key: number) => {
 
 const tabList = [
   {
-    url: '../../assets/images/index/why_choose/video1.png',
+    url: '../../assets/images/index/why_choose/1.jpeg',
     title: 'Design & RD',
     key: 0,
-    videoUrl: 'https://test-1255378077.cos.ap-nanjing.myqcloud.com/%E6%9D%AD%E5%B7%9E%E5%8D%8E%E7%AD%96%E5%B7%A5%E8%B4%B8%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-%E6%88%90%E7%89%87.mp4',
+    videoUrl: 'https://vod-icbu.alicdn.com/4f4e1c368ac918af/338c0d38e970196f/20221130_0f88e5389ecd635b_388795089333_mp4_264_hd_unlimit_taobao_aliyun.mp4',
   },
   {
-    url: '../../assets/images/index/why_choose/video2.png',
+    url: '../../assets/images/index/why_choose/2.jpeg',
     title: 'Manufacturing Management',
     key: 1,
-    videoUrl: 'https://test-1255378077.cos.ap-nanjing.myqcloud.com/%E6%9D%AD%E5%B7%9E%E5%8D%8E%E7%AD%96%E5%B7%A5%E8%B4%B8%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-%E6%88%90%E7%89%87.mp4',
+    videoUrl: 'https://vod-icbu.alicdn.com/4f4e1c368ac918af/e222b924f8e86214/20221130_a6dc5ef3b0d26eff_388797669089_mp4_264_hd_unlimit_taobao_aliyun.mp4',
   },
   {
-    url: '../../assets/images/index/why_choose/video2.png',
+    url: '../../assets/images/index/why_choose/3.jpeg',
     title: 'Quality Control',
     key: 2,
-    videoUrl: 'https://test-1255378077.cos.ap-nanjing.myqcloud.com/%E6%9D%AD%E5%B7%9E%E5%8D%8E%E7%AD%96%E5%B7%A5%E8%B4%B8%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-%E6%88%90%E7%89%87.mp4',
+    videoUrl: 'https://vod-icbu.alicdn.com/4f4e1c368ac918af/0614afb07a05ee40/20221130_0019dfe6b337d74d_388327344266_mp4_264_hd_unlimit_taobao_aliyun.mp4',
   },
   {
-    url: '../../assets/images/index/why_choose/video2.png',
+    url: '../../assets/images/index/why_choose/4.jpeg',
     title: 'Service',
     key: 3,
-    videoUrl: 'https://test-1255378077.cos.ap-nanjing.myqcloud.com/%E6%9D%AD%E5%B7%9E%E5%8D%8E%E7%AD%96%E5%B7%A5%E8%B4%B8%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-%E6%88%90%E7%89%87.mp4',
+    videoUrl: 'https://vod-icbu.alicdn.com/4f4e1c368ac918af/ed880a969f9a7543/20221130_c13acc8822725a22_389669015816_mp4_264_hd_unlimit_taobao_aliyun.mp4',
   },
 ];
 </script>
