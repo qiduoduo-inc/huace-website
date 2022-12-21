@@ -127,6 +127,7 @@ onMounted(() => {
       -moz-transition: all 0.7s ease; /* Firefox 4 */
       -webkit-transition: all 0.7s ease; /* Safari and Chrome */
       -o-transition: all 0.7s ease; /* Opera */
+      cursor: pointer;
       .product {
         position: absolute;
         left: 50%;

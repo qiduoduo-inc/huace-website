@@ -11,7 +11,8 @@
     <div class="box-title">
       <p>PATENT WALL</p>
     </div>
-    <div class="content container wow animate__fadeInUp" data-wow-duration="2s">
+    <!-- wow animate__fadeInUp -->
+    <div class="content container reset" data-wow-duration="2s">
       <img src="@/assets/images/index/patent_wall/1.png" alt="" />
     </div>
     <div class="phone-content" ref="phoneContent">
@@ -21,6 +22,21 @@
 </template>
 
 <script lang="ts" setup>
+const { $ScrollReveal } = useNuxtApp();
+async function loadImages() {
+  await $ScrollReveal().reveal('.reset', {
+    distance: '10rem',
+    origin: 'bottom',
+    cleanup: true,
+    duration: 2000,
+    reset: true,
+  });
+}
+
+onMounted(async () => {
+  await nextTick();
+  await loadImages();
+});
 </script>
 
 <style scoped lang="scss">
