@@ -33,7 +33,7 @@ const showVideo = ref<boolean>(false);
 const myVideo = ref(null);
 const palyVideo = () => {
   showVideo.value = !showVideo.value;
-  myVideo.play();
+  myVideo.value.play();
 };
 </script>
 
