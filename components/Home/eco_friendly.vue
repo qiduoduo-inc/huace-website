@@ -44,6 +44,7 @@
 
 <style scoped lang="scss">
 .eco-friendlu {
+  display: none;
   overflow: hidden;
   .left-box {
     position: relative;
