@@ -18,6 +18,7 @@
     "animate.css": "^4.1.1",
     "ant-design-vue": "^3.2.12",
     "bootstrap": "^5.2.3",
+    "require.js": "^1.0.0",
     "sass-loader": "^13.0.2",
     "scrollreveal": "^4.0.9",
     "swiper": "6.0.0-alpha.18",
