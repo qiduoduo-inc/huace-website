@@ -235,6 +235,7 @@ onBeforeUnmount(() => {
           .detail {
             font-size: 0.65rem;
             width: 80%;
+            margin-bottom: 10px;
           }
         }
       }
