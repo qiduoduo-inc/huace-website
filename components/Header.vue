@@ -11,7 +11,7 @@
       /></a>
       <button
         class="navbar-toggler"
-        style="border: none; color: #ffffff"
+        style="border: none; color: #ffffff; display: none"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent"
@@ -33,8 +33,12 @@
           ></path>
         </svg>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <div
+        class="collapse navbar-collapse"
+        id="navbarSupportedContent"
+        style="justify-content: flex-end"
+      >
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="display: none">
           <li class="menu-item nav-item">
             <div class="header-logo">
               <a class="nav-link active item" aria-current="page" href="#"
@@ -70,7 +74,9 @@
           </li>
         </ul>
         <div class="header-left d-flex">
-          <a-button ghost class="header-left-btn" @click="showDialog">QUOTE NOW</a-button>
+          <a-button ghost class="header-left-btn" @click="showDialog"
+            >QUOTE NOW</a-button
+          >
           <!-- <img src="@/assets/images/header/uk.png" alt="" />
           <span>EN</span> -->
         </div>
@@ -181,11 +187,10 @@ const showDialog = () => {
   }
 }
 
-
 @media only screen and (max-width: 750px) {
   .header {
     background-color: #333333;
-    padding: 0.625rem 1rem;
+    padding: 0.1rem 1rem;
     .navbar-brand {
       margin-left: 1rem;
       img {

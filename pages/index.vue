@@ -5,7 +5,7 @@
 -->
 <template>
   <HomeHeaderSwiper @show-dialog="showFDialog" />
-  <HomeTiers />
+  <HomeTiers @show-dialog="showFDialog" />
   <HomeWhyChoose />
   <HomeFeaturedProducts />
   <HomeProductsCategories />
