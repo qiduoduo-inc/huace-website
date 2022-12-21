@@ -205,7 +205,6 @@ onMounted(() => {
     margin: 1rem 0 1.5rem 0;
     .show-item {
       width: 23.125rem;
-      height: 36.25rem;
       text-align: center;
       background-color: #f9f9f9;
       position: relative;
@@ -224,28 +223,15 @@ onMounted(() => {
         -o-transition: all 0.5s; /* Opera */
       }
       .title {
-        position: absolute;
-        bottom: 20%;
-        left: 50%;
-        transform: translateX(-50%);
-        -webkit-transform: translateX(-50%); /* for Chrome || Safari */
-        -moz-transform: translateX(-50%); /* for Firefox */
-        -ms-transform: translateX(-50%); /* for IE */
-        -o-transform: translateX(-50%); /* for Opera */
         font-size: 3.125rem;
         font-weight: bold;
       }
       .product-btn {
-        position: absolute;
-        bottom: 10%;
-        left: 50%;
-        transform: translateX(-50%);
-        -webkit-transform: translateX(-50%); /* for Chrome || Safari */
-        -moz-transform: translateX(-50%); /* for Firefox */
-        -ms-transform: translateX(-50%); /* for IE */
-        -o-transform: translateX(-50%); /* for Opera */
         width: 10.5rem;
         height: 3.125rem;
+        margin: 0 auto;
+        margin-top: 1.6rem;
+        margin-bottom: 2.5rem;
         display: flex;
         justify-content: center;
         align-items: center;
