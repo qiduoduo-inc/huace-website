@@ -16,7 +16,7 @@
             email us.
           </p>
           <div class="btn" @click="showDialog">
-            Get A Quoute
+            Get A Quote
             <img src="@/assets/images/index/contact_us/2.png" alt="" />
           </div>
         </div>
@@ -88,6 +88,8 @@
 
 <script lang="ts" setup>
 import { isEmail } from '@/utils/validator';
+import { message } from 'ant-design-vue';
+
 const emit = defineEmits(['showDialog']);
 const showDialog = () => {
   emit('showDialog', true);
@@ -101,6 +103,7 @@ watch(email, (val) => {
 const submit = () => {
   isFEmail.value = !isEmail(email.value);
   if (isFEmail.value) return;
+  message.success('Success');
 };
 </script>
 
