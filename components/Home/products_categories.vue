@@ -21,7 +21,7 @@
         :class="{ checked: checked === 1 }"
         @click="tabClick(1)"
       >
-        <span>Ski Helmets</span>
+        <span>Urban Helmets</span>
       </div>
     </div>
 
@@ -109,42 +109,42 @@ const itemList = ref([
     title: 'MTB',
   },
   {
-    url: '../../assets/images/index/products_categories/1.png',
+    url: '../../assets/images/index/products_categories/2.png',
     title: 'Road',
   },
   {
-    url: '../../assets/images/index/products_categories/1.png',
-    title: 'Casual',
+    url: '../../assets/images/index/products_categories/3.png',
+    title: 'Skiing',
   },
   {
-    url: '../../assets/images/index/products_categories/1.png',
-    title: 'E-bike',
+    url: '../../assets/images/index/products_categories/4.png',
+    title: 'TT',
   },
   {
-    url: '../../assets/images/index/products_categories/1.png',
+    url: '../../assets/images/index/products_categories/5.png',
     title: 'Kids',
   },
 ]);
 
 const itemList1 = ref([
   {
-    url: '../../assets/images/index/products_categories/1.png',
+    url: '../../assets/images/index/products_categories/1.jpg',
     title: '1',
   },
   {
-    url: '../../assets/images/index/products_categories/1.png',
+    url: '../../assets/images/index/products_categories/2.jpg',
     title: '2',
   },
   {
-    url: '../../assets/images/index/products_categories/1.png',
+    url: '../../assets/images/index/products_categories/3.jpg',
     title: '3',
   },
   {
-    url: '../../assets/images/index/products_categories/1.png',
+    url: '../../assets/images/index/products_categories/4.jpg',
     title: '4',
   },
   {
-    url: '../../assets/images/index/products_categories/1.png',
+    url: '../../assets/images/index/products_categories/5.jpg',
     title: '5',
   },
 ]);
@@ -264,6 +264,29 @@ onMounted(() => {
   }
   .phone-content {
     display: none;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .products-categories {
+    .content{
+      .show-item{
+        .title{
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  .products-categories {
+    .content{
+      .show-item{
+        .title{
+          font-size: 2rem;
+        }
+      }
+    }
   }
 }
 

@@ -121,7 +121,7 @@ const onSubmit = () => {
 
   .send-btn {
     width: 100%;
-    background-color: #9bf80c;
+    background-color: #f0831e;
     border: none;
     font-weight: bold;
   }

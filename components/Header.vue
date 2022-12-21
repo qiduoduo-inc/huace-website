@@ -132,14 +132,15 @@ const showDialog = () => {
     }
   }
 }
-@media only screen and (max-width: 1415px) {
+
+@media only screen and (max-width: 1440px) {
   .header {
-    font-size: 1.25rem !important;
+    font-size: 1.3rem !important;
     padding: 0.625rem 2.25rem;
     .menu-item {
-      font-size: 1.25rem !important;
+      font-size: 1.3rem !important;
       .item {
-        font-size: 1.25rem !important;
+        font-size: 1.3rem !important;
         margin-left: 2rem;
       }
     }
