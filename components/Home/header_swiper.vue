@@ -15,7 +15,7 @@
               v-for="(item, index) in imgList"
               :key="index"
             >
-              <img :src="item" alt="" />
+              <img :src="`${item}`" alt="" />
             </div>
           </div>
         </transition>
@@ -43,9 +43,9 @@ interface item {
 const duration = ref(0);
 
 const imgList = [
-  '../../assets/images/index/header/1.png',
-  '../../assets/images/index/header/2.png',
-  '../../assets/images/index/header/3.png',
+  'assets/images/index/header/1.png',
+  'assets/images/index/header/2.png',
+  'assets/images/index/header/3.png',
 ];
 
 onMounted(() => {

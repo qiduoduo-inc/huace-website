@@ -15,7 +15,7 @@
           v-for="(item, index) in imgList"
           :key="index"
         >
-          <img :src="item" alt="" />
+          <img :src="`${item}`" alt="" />
         </div>
       </div>
     </div>
@@ -29,18 +29,18 @@
 
 <script lang="ts" setup>
 const imgList = [
-  '../../assets/images/index/tiers/1.png',
-  '../../assets/images/index/tiers/2.png',
-  '../../assets/images/index/tiers/3.png',
-  '../../assets/images/index/tiers/4.png',
-  '../../assets/images/index/tiers/5.png',
-  '../../assets/images/index/tiers/6.png',
-  '../../assets/images/index/tiers/7.png',
-  '../../assets/images/index/tiers/8.png',
-  '../../assets/images/index/tiers/9.png',
-  '../../assets/images/index/tiers/10.png',
-  '../../assets/images/index/tiers/11.png',
-  '../../assets/images/index/tiers/12.png',
+  'assets/images/index/tiers/1.png',
+  'assets/images/index/tiers/2.png',
+  'assets/images/index/tiers/3.png',
+  'assets/images/index/tiers/4.png',
+  'assets/images/index/tiers/5.png',
+  'assets/images/index/tiers/6.png',
+  'assets/images/index/tiers/7.png',
+  'assets/images/index/tiers/8.png',
+  'assets/images/index/tiers/9.png',
+  'assets/images/index/tiers/10.png',
+  'assets/images/index/tiers/11.png',
+  'assets/images/index/tiers/12.png',
 ];
 
 const emit = defineEmits(['showDialog']);

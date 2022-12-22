@@ -19,7 +19,6 @@ export default defineNuxtConfig({
         }
       ],
       script: [
-        { src: './require.js', type: 'text/javascript' },
       ],
       link: [
         { rel: 'stylesheet', href: "./assets/styles/font.scss" },
@@ -27,12 +26,12 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: "./assets/styles/main.scss" },
       ],
       noscript: [
-        // <noscript>Javascript is required</noscript>
         { children: 'Javascript is required' }
       ],
-    }
+    },
+    // buildAssetsDir: '/assets/', // 打包后资源文件存放文件夹
   },
   build: {
-    transpile: ['swiper']
+    transpile: ['swiper'],
   }
 })

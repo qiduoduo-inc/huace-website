@@ -18,7 +18,7 @@
             v-for="(item, index) in tabList"
             :key="item.key"
           >
-            <img :src="checkId === item.key ? checked : uncheck" alt="" />
+            <img :src="checkId === item.key ? `${checked}` : `${uncheck}`" alt="" />
             <p>{{ item.title }}</p>
           </div>
         </div>
@@ -31,7 +31,7 @@
       <div class="video-box col-8">
         <VideoBox
           ref="videoBox"
-          :img-url="tabList[checkId].url"
+          :img-url="`${tabList[checkId].url}`"
           :video-url="tabList[checkId].videoUrl"
           :key="tabList[checkId].key"
         />
@@ -47,7 +47,7 @@
         <p class="title">{{ item.title }}</p>
         <VideoBox
           ref="videoBox"
-          :img-url="item.url"
+          :img-url="`${item.url}`"
           :video-url="item.videoUrl"
           :key="item.key"
         />
@@ -57,8 +57,8 @@
 </template>
 
 <script lang="ts" setup>
-const checked = '../../assets/images/index/why_choose/checked.png';
-const uncheck = '../../assets/images/index/why_choose/uncheck.png';
+const checked = 'assets/images/index/why_choose/checked.png';
+const uncheck = 'assets/images/index/why_choose/uncheck.png';
 
 const videoBox = ref(null);
 const checkId = ref(0);
@@ -68,25 +68,25 @@ const clickTab = (key: number) => {
 
 const tabList = [
   {
-    url: '../../assets/images/index/why_choose/1.jpeg',
+    url: 'assets/images/index/why_choose/1.jpeg',
     title: 'Design & RD',
     key: 0,
     videoUrl: 'https://vod-icbu.alicdn.com/4f4e1c368ac918af/338c0d38e970196f/20221130_0f88e5389ecd635b_388795089333_mp4_264_hd_unlimit_taobao_aliyun.mp4',
   },
   {
-    url: '../../assets/images/index/why_choose/2.jpeg',
+    url: 'assets/images/index/why_choose/2.jpeg',
     title: 'Manufacturing Management',
     key: 1,
     videoUrl: 'https://vod-icbu.alicdn.com/4f4e1c368ac918af/e222b924f8e86214/20221130_a6dc5ef3b0d26eff_388797669089_mp4_264_hd_unlimit_taobao_aliyun.mp4',
   },
   {
-    url: '../../assets/images/index/why_choose/3.jpeg',
+    url: 'assets/images/index/why_choose/3.jpeg',
     title: 'Quality Control',
     key: 2,
     videoUrl: 'https://vod-icbu.alicdn.com/4f4e1c368ac918af/0614afb07a05ee40/20221130_0019dfe6b337d74d_388327344266_mp4_264_hd_unlimit_taobao_aliyun.mp4',
   },
   {
-    url: '../../assets/images/index/why_choose/4.jpeg',
+    url: 'assets/images/index/why_choose/4.jpeg',
     title: 'Service',
     key: 3,
     videoUrl: 'https://vod-icbu.alicdn.com/4f4e1c368ac918af/ed880a969f9a7543/20221130_c13acc8822725a22_389669015816_mp4_264_hd_unlimit_taobao_aliyun.mp4',

@@ -33,7 +33,7 @@
             v-for="(item, index) in itemList"
             :key="index"
           >
-            <img class="product" :src="item.url" alt="" />
+            <img class="product" :src="`${item.url}`" alt="" />
             <p class="title">{{ item.title }}</p>
             <div class="product-btn">
               See details
@@ -52,7 +52,7 @@
             v-for="(item, index) in itemList1"
             :key="index"
           >
-            <img class="product" :src="item.url" alt="" />
+            <img class="product" :src="`${item.url}`" alt="" />
             <p class="title">{{ item.title }}</p>
             <div class="product-btn">
               See details
@@ -74,7 +74,7 @@
               v-for="(item, index) in itemList"
               :key="index"
             >
-              <img :src="item.url" alt="" />
+              <img :src="`${item.url}`" alt="" />
               <p class="title">{{ item.title }}</p>
               <div class="product-btn">
                 See details
@@ -92,7 +92,7 @@
               v-for="(item, index) in itemList1"
               :key="index"
             >
-              <img :src="item.url" alt="" />
+              <img :src="`${item.url}`" alt="" />
               <p class="title">{{ item.title }}</p>
               <div class="product-btn">
                 See details
@@ -125,38 +125,38 @@ const tabClick = (key: number) => {
 
 const itemList = ref([
   {
-    url: '../../assets/images/index/products_categories/1.png',
+    url: 'assets/images/index/products_categories/1.png',
     title: 'MTB',
   },
   {
-    url: '../../assets/images/index/products_categories/2.png',
+    url: 'assets/images/index/products_categories/2.png',
     title: 'Road',
   },
   {
-    url: '../../assets/images/index/products_categories/3.png',
+    url: 'assets/images/index/products_categories/3.png',
     title: 'Urban',
   },
   {
-    url: '../../assets/images/index/products_categories/4.png',
+    url: 'assets/images/index/products_categories/4.png',
     title: 'TT',
   },
   {
-    url: '../../assets/images/index/products_categories/5.png',
+    url: 'assets/images/index/products_categories/5.png',
     title: 'Kids',
   },
 ]);
 
 const itemList1 = ref([
   {
-    url: '../../assets/images/index/products_categories/1.jpg',
+    url: 'assets/images/index/products_categories/1.jpg',
     title: 'SH-01',
   },
   {
-    url: '../../assets/images/index/products_categories/3.jpg',
+    url: 'assets/images/index/products_categories/3.jpg',
     title: 'SH-02',
   },
   {
-    url: '../../assets/images/index/products_categories/5.jpg',
+    url: 'assets/images/index/products_categories/5.jpg',
     title: 'SH-03',
   },
 ]);

@@ -15,7 +15,7 @@
             :key="index"
           >
             <div class="swiperImg">
-              <img :src="item" alt="" />
+              <img :src="`${item}`" alt="" />
             </div>
           </div>
         </div>
@@ -32,7 +32,7 @@
             :key="index"
           >
             <div class="swiperImg">
-              <img :src="item" alt="" />
+              <img :src="`${item}`" alt="" />
             </div>
           </div>
         </div>
@@ -49,12 +49,12 @@ import 'swiper/swiper.scss';
 Swiper.use([Autoplay, Navigation]);
 
 const imgList = [
-  '../../assets/images/index/certifications/2.png',
-  '../../assets/images/index/certifications/3.png',
-  '../../assets/images/index/certifications/4.png',
-  '../../assets/images/index/certifications/5.png',
-  '../../assets/images/index/certifications/5.png',
-  '../../assets/images/index/certifications/5.png',
+  'assets/images/index/certifications/2.png',
+  'assets/images/index/certifications/3.png',
+  'assets/images/index/certifications/4.png',
+  'assets/images/index/certifications/5.png',
+  'assets/images/index/certifications/5.png',
+  'assets/images/index/certifications/5.png',
 ];
 
 const duration = ref(0);

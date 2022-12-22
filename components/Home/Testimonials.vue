@@ -9,7 +9,7 @@
     <div class="video container">
       <VideoBox
         ref="videoBox"
-        :img-url="'../../assets/images/index/testimonials/1.jpeg'"
+        :img-url="'assets/images/index/testimonials/1.jpeg'"
         :video-url="'https://vod-icbu.alicdn.com/4f4e1c368ac918af/f80d3981810b040e/20221207_768175434ef07758_389250000673_mp4_264_hd_unlimit_taobao.mp4'"
       />
     </div>

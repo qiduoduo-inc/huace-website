@@ -12,7 +12,7 @@
       <p>PATENT WALL</p>
     </div>
     <!-- wow animate__fadeInUp -->
-    <div class="content container reset" data-wow-duration="2s">
+    <div class="content container reset">
       <img src="@/assets/images/index/patent_wall/1.png" alt="" />
     </div>
     <div class="phone-content" ref="phoneContent">
