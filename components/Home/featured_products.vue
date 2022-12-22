@@ -4,33 +4,30 @@
  * @Date: 2022-12-16 22:09:16
 -->
 <template>
-  <div class="feature-products container-fluid">
-    <div class="box-title">
-      <p>FEATURED PRODUCTS</p>
-    </div>
-    <div class="content container">
-      <div
-        v-for="(item, index) in itemList"
-        :key="index"
-        class="show-item"
-        :class="{ 'focus-item': focus === index }"
-        @mouseenter="enter(index)"
-      >
-        <img class="product" :src="`${item.url}`" alt="" />
-        <p class="title">{{ item.title }}</p>
-        <p class="keywords">{{ item.keywords }}</p>
-        <div class="introduction">
-          <p v-for="(p, i) in item.introduction">{{ p }}</p>
-        </div>
-        <img
-          class="arrow"
-          src="@/assets/images/index/featured_products/arrow.png"
-        />
+  <transition :duration="duration">
+    <div class="feature-products container-fluid">
+      <div class="box-title">
+        <p>FEATURED PRODUCTS</p>
       </div>
-    </div>
-    <div class="phone-content container-fluid">
-      <div class="swiper-container swiper">
-        <transition :duration="duration">
+      <div class="content container">
+        <div
+          v-for="(item, index) in itemList"
+          :key="index"
+          class="show-item"
+          :class="{ 'focus-item': focus === index }"
+          @mouseenter="enter(index)"
+        >
+          <img class="product" :src="`${item.url}`" alt="" />
+          <p class="title">{{ item.title }}</p>
+          <p class="keywords">{{ item.keywords }}</p>
+          <div class="introduction">
+            <p v-for="(p, i) in item.introduction">{{ p }}</p>
+          </div>
+          <img class="arrow" src="/images/index/featured_products/arrow.png" />
+        </div>
+      </div>
+      <div class="phone-content container-fluid">
+        <div class="swiper-container swiper">
           <div class="swiper-wrapper">
             <div
               class="swiper-slide"
@@ -44,10 +41,10 @@
               </div>
             </div>
           </div>
-        </transition>
+        </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script lang="ts" setup>
@@ -59,7 +56,7 @@ const duration = ref(0);
 
 const itemList = [
   {
-    url: 'assets/images/index/featured_products/1.png',
+    url: '/images/index/featured_products/1.png',
     title: 'HC-072',
     introduction: [
       'Removable/3 position adjustable visor',
@@ -71,7 +68,7 @@ const itemList = [
     keywords: 'MTB Helemt',
   },
   {
-    url: 'assets/images/index/featured_products/2.png',
+    url: '/images/index/featured_products/2.png',
     title: 'SH-03',
     introduction: [
       'Washable And Antibacterial Pads',
@@ -81,7 +78,7 @@ const itemList = [
     keywords: 'Skiing Helmet',
   },
   {
-    url: 'assets/images/index/featured_products/3.png',
+    url: '/images/index/featured_products/3.png',
     title: 'HC-69',
     introduction: [
       'Removable, Washable And Antibacterial Pads',
@@ -93,7 +90,7 @@ const itemList = [
     keywords: 'Road Helmet',
   },
   {
-    url: 'assets/images/index/featured_products/4.png',
+    url: '/images/index/featured_products/4.png',
     title: 'HC-059',
     introduction: [
       'Removable, washable and antibacterial pads',

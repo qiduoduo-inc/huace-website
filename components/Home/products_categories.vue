@@ -39,7 +39,7 @@
               See details
               <img
                 class="arrow"
-                src="@/assets/images/index/tiers/arrow.png"
+                src="/images/index/tiers/arrow.png"
                 alt=""
               />
             </div>
@@ -58,7 +58,7 @@
               See details
               <img
                 class="arrow"
-                src="@/assets/images/index/tiers/arrow.png"
+                src="/images/index/tiers/arrow.png"
                 alt=""
               />
             </div>
@@ -80,7 +80,7 @@
                 See details
                 <img
                   class="arrow"
-                  src="@/assets/images/index/tiers/arrow.png"
+                  src="/images/index/tiers/arrow.png"
                   alt=""
                 />
               </div>
@@ -98,7 +98,7 @@
                 See details
                 <img
                   class="arrow"
-                  src="@/assets/images/index/tiers/arrow.png"
+                  src="/images/index/tiers/arrow.png"
                   alt=""
                 />
               </div>
@@ -125,38 +125,38 @@ const tabClick = (key: number) => {
 
 const itemList = ref([
   {
-    url: 'assets/images/index/products_categories/1.png',
+    url: '/images/index/products_categories/1.png',
     title: 'MTB',
   },
   {
-    url: 'assets/images/index/products_categories/2.png',
+    url: '/images/index/products_categories/2.png',
     title: 'Road',
   },
   {
-    url: 'assets/images/index/products_categories/3.png',
+    url: '/images/index/products_categories/3.png',
     title: 'Urban',
   },
   {
-    url: 'assets/images/index/products_categories/4.png',
+    url: '/images/index/products_categories/4.png',
     title: 'TT',
   },
   {
-    url: 'assets/images/index/products_categories/5.png',
+    url: '/images/index/products_categories/5.png',
     title: 'Kids',
   },
 ]);
 
 const itemList1 = ref([
   {
-    url: 'assets/images/index/products_categories/1.jpg',
+    url: '/images/index/products_categories/1.jpg',
     title: 'SH-01',
   },
   {
-    url: 'assets/images/index/products_categories/3.jpg',
+    url: '/images/index/products_categories/3.jpg',
     title: 'SH-02',
   },
   {
-    url: 'assets/images/index/products_categories/5.jpg',
+    url: '/images/index/products_categories/5.jpg',
     title: 'SH-03',
   },
 ]);

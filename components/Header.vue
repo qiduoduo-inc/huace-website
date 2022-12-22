@@ -7,7 +7,7 @@
   <nav class="header navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"
-        ><img src="@/assets/images/header/logo.png" alt=""
+        ><img src="/images/header/logo.png" alt=""
       /></a>
       <button
         class="navbar-toggler"
@@ -77,7 +77,7 @@
           <a-button ghost class="header-left-btn" @click="showDialog"
             >QUOTE NOW</a-button
           >
-          <!-- <img src="@/assets/images/header/uk.png" alt="" />
+          <!-- <img src="/images/header/uk.png" alt="" />
           <span>EN</span> -->
         </div>
       </div>

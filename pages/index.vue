@@ -12,7 +12,6 @@
   <HomeAboutUs />
   <HomePatentWall />
   <HomeCertifcations />
-  <HomeEcoFriendly />
   <HomeInternationalExhibitions />
   <HomeTestimonials />
   <HomeContactUs @show-dialog="showFDialog" ref="contactus" id="contactUs" />

@@ -4,11 +4,11 @@
  * @Date: 2022-12-16 18:25:59
 -->
 <template>
-  <div class="header-swiper container-fluid">
-    <Header class="index-header" @show-dialog="showDialog" />
-    <div class="index-swiper">
-      <div class="swiper-container swiper">
-        <transition :duration="duration">
+  <transition :duration="duration">
+    <div class="header-swiper container-fluid">
+      <Header class="index-header" @show-dialog="showDialog" />
+      <div class="index-swiper">
+        <div class="swiper-container swiper">
           <div class="swiper-wrapper">
             <div
               class="swiper-slide"
@@ -18,17 +18,17 @@
               <img :src="`${item}`" alt="" />
             </div>
           </div>
-        </transition>
-        <!-- 如果需要分页器 -->
-        <div class="swiper-pagination"></div>
-      </div>
-      <div class="title">
-        <p class="big-title">Huace Sports Helmet OEM & ODM</p>
-        <p class="small-title">Professional & Satisfaction</p>
-        <p class="small-title">SINCE 2013</p>
+          <!-- 如果需要分页器 -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="title">
+          <p class="big-title">Huace Sports Helmet OEM & ODM</p>
+          <p class="small-title">Professional & Satisfaction</p>
+          <p class="small-title">SINCE 2013</p>
+        </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script lang="ts" setup>
@@ -43,9 +43,9 @@ interface item {
 const duration = ref(0);
 
 const imgList = [
-  'assets/images/index/header/1.png',
-  'assets/images/index/header/2.png',
-  'assets/images/index/header/3.png',
+  '/images/index/header/1.png',
+  '/images/index/header/2.png',
+  '/images/index/header/3.png',
 ];
 
 onMounted(() => {

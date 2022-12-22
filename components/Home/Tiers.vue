@@ -29,18 +29,18 @@
 
 <script lang="ts" setup>
 const imgList = [
-  'assets/images/index/tiers/1.png',
-  'assets/images/index/tiers/2.png',
-  'assets/images/index/tiers/3.png',
-  'assets/images/index/tiers/4.png',
-  'assets/images/index/tiers/5.png',
-  'assets/images/index/tiers/6.png',
-  'assets/images/index/tiers/7.png',
-  'assets/images/index/tiers/8.png',
-  'assets/images/index/tiers/9.png',
-  'assets/images/index/tiers/10.png',
-  'assets/images/index/tiers/11.png',
-  'assets/images/index/tiers/12.png',
+  '/images/index/tiers/1.png',
+  '/images/index/tiers/2.png',
+  '/images/index/tiers/3.png',
+  '/images/index/tiers/4.png',
+  '/images/index/tiers/5.png',
+  '/images/index/tiers/6.png',
+  '/images/index/tiers/7.png',
+  '/images/index/tiers/8.png',
+  '/images/index/tiers/9.png',
+  '/images/index/tiers/10.png',
+  '/images/index/tiers/11.png',
+  '/images/index/tiers/12.png',
 ];
 
 const emit = defineEmits(['showDialog']);
@@ -124,7 +124,7 @@ const showDialog = () => {
         width: 1rem;
         height: 0.8rem;
         margin-left: 0.8rem;
-        background-image: url('@/assets/images/index/tiers/arrow.png');
+        background-image: url('/images/index/tiers/arrow.png');
         background-size: 100% 100%;
       }
     }
@@ -133,7 +133,7 @@ const showDialog = () => {
       border-color: #f0831e;
       color: #f0831e;
       .arrow-icon {
-        background-image: url('@/assets/images/index/tiers/arrow1.png');
+        background-image: url('/images/index/tiers/arrow1.png');
       }
     }
   }

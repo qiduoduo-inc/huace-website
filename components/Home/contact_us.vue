@@ -4,7 +4,7 @@
       <p>CONTACT US</p>
     </div>
     <div class="center-img pc-show">
-      <img src="@/assets/images/index/contact_us/1.png" alt="" />
+      <img src="/images/index/contact_us/1.png" alt="" />
     </div>
     <div class="row pc-show">
       <div class="left-box col-6">
@@ -17,7 +17,7 @@
           </p>
           <div class="btn" @click="showDialog">
             Get A Quote
-            <img src="@/assets/images/index/contact_us/2.png" alt="" />
+            <img src="/images/index/contact_us/2.png" alt="" />
           </div>
         </div>
       </div>
@@ -56,7 +56,7 @@
           </p>
           <div class="btn" @click="showDialog">
             Get A Quote
-            <img src="@/assets/images/index/contact_us/2.png" alt="" />
+            <img src="/images/index/contact_us/2.png" alt="" />
           </div>
         </div>
       </div>

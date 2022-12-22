@@ -13,7 +13,7 @@
           transform: `translateX(${lTranslateX}%)`,
         }"
       >
-        <img src="@/assets/images/index/about_us/1.png" alt="" />
+        <img src="/images/index/about_us/1.png" alt="" />
       </div>
       <div class="center-img col-8">
         <div class="content container">
@@ -63,7 +63,7 @@
           transform: `translateX(${rTranslateX}%)`,
         }"
       >
-        <img src="@/assets/images/index/about_us/3.png" alt="" />
+        <img src="/images/index/about_us/3.png" alt="" />
       </div>
     </div>
     <div class="h5 row">
@@ -155,7 +155,7 @@ onBeforeUnmount(() => {
   overflow: hidden;
   .pc {
     .center-img {
-      background-image: url('@/assets/images/index/about_us/2.png');
+      background-image: url('/images/index/about_us/2.png');
       background-size: 51.5625rem 28.5rem;
       background-repeat: no-repeat;
       background-position: 50% 50%;
@@ -213,7 +213,7 @@ onBeforeUnmount(() => {
     .h5 {
       display: block;
       .center-img {
-        background-image: url('@/assets/images/index/about_us/2.png');
+        background-image: url('/images/index/about_us/2.png');
         background-size: 13rem 8rem;
         background-repeat: no-repeat;
         background-position: 50% 50%;
