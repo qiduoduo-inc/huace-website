@@ -77,6 +77,7 @@ const submit = () => {
   padding: 1rem 6.25rem;
   z-index: 99999;
   box-shadow: 10px 10px 24px #000000;
+  animation: bottom2top 1s;
 
   .pc {
     .left-box {
@@ -340,6 +341,31 @@ const submit = () => {
         }
       }
     }
+  }
+}
+
+@keyframes bottom2top {
+  0% {
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    -moz-opacity: 0.3;
+    -khtml-opacity: 0.3;
+    transform: translateY(100vh);
+    -webkit-transform: translateY(100vh); /* for Chrome || Safari */
+    -moz-transform: translateY(100vh); /* for Firefox */
+    -ms-transform: translateY(100vh); /* for IE */
+    -o-transform: translateY(100vh); /* for Opera */
+  }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0); /* for Chrome || Safari */
+    -moz-transform: translateY(0); /* for Firefox */
+    -ms-transform: translateY(0); /* for IE */
+    -o-transform: translateY(0); /* for Opera */
   }
 }
 </style>

@@ -4,7 +4,7 @@
  * @Date: 2022-12-17 07:53:23
 -->
 <template>
-  <div class="about-us container-fluid" id="aboutUs" ref="aboutUs">
+  <div class="about-us container-fluid" id="aboutUs">
     <div class="pc row">
       <div
         class="left-img col-2"
