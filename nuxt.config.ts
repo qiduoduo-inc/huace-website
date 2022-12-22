@@ -7,11 +7,6 @@ import { defineNuxtConfig, } from 'nuxt'
 export default defineNuxtConfig({
   app: {
     head: {
-      // link: [
-      //   { rel: 'stylesheet', href: "assets/styles/font.scss" },
-      //   { rel: 'stylesheet', href: "assets/styles/index.scss" },
-      //   { rel: 'stylesheet', href: "assets/styles/main.scss" },
-      // ],
       noscript: [
         { children: 'Javascript is required' }
       ],
@@ -30,9 +25,6 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         sass: {
-          // font: '@import "~/assets/styles/font.scss"',
-          // bootstrap: '@import "~/assets/styles/main.scss"',
-          // index: '@import "~/assets/styles/index.scss"',
           loadPaths: ['@/assets/styles'],
         },
       },
