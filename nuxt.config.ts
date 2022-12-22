@@ -21,17 +21,21 @@ export default defineNuxtConfig({
       script: [
       ],
       link: [
-        { rel: 'stylesheet', href: "./assets/styles/font.scss" },
-        { rel: 'stylesheet', href: "./assets/styles/index.scss" },
-        { rel: 'stylesheet', href: "./assets/styles/main.scss" },
+        { rel: 'stylesheet', href: "assets/styles/font.scss" },
+        { rel: 'stylesheet', href: "assets/styles/index.scss" },
+        { rel: 'stylesheet', href: "assets/styles/main.scss" },
       ],
       noscript: [
         { children: 'Javascript is required' }
       ],
     },
-    // buildAssetsDir: '/assets/', // 打包后资源文件存放文件夹
   },
   build: {
     transpile: ['swiper'],
-  }
+  },
+  css: [
+    '@/assets/styles/font.scss',
+    '@/assets/styles/index.scss',
+    '@/assets/styles/main.scss',
+  ]
 })
