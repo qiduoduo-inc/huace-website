@@ -158,7 +158,6 @@
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  padding-bottom: 10rem;
 
   .left-box {
     .title {
@@ -252,9 +251,6 @@
 }
 
 #components-back-top-demo-custom {
-  .ant-back-top {
-    bottom: 150px;
-  }
   .ant-back-top-inner {
     width: 2rem;
     height: 2rem;
@@ -270,7 +266,6 @@
 
 @media only screen and (max-width: 750px) {
   .footer {
-    padding-bottom: 8rem;
     .pc {
       display: none;
     }
