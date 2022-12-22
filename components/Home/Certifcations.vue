@@ -15,7 +15,7 @@
             :key="index"
           >
             <div class="swiperImg">
-              <img :src="item" alt="" />
+              <img :src="`${item}`" alt="" />
             </div>
           </div>
         </div>
@@ -32,7 +32,7 @@
             :key="index"
           >
             <div class="swiperImg">
-              <img :src="item" alt="" />
+              <img :src="`${item}`" alt="" />
             </div>
           </div>
         </div>
@@ -49,12 +49,12 @@ import 'swiper/swiper.scss';
 Swiper.use([Autoplay, Navigation]);
 
 const imgList = [
-  '../../assets/images/index/certifications/2.png',
-  '../../assets/images/index/certifications/3.png',
-  '../../assets/images/index/certifications/4.png',
-  '../../assets/images/index/certifications/5.png',
-  '../../assets/images/index/certifications/5.png',
-  '../../assets/images/index/certifications/5.png',
+  '/images/index/certifications/2.png',
+  '/images/index/certifications/3.png',
+  '/images/index/certifications/4.png',
+  '/images/index/certifications/5.png',
+  '/images/index/certifications/5.png',
+  '/images/index/certifications/5.png',
 ];
 
 const duration = ref(0);
@@ -148,7 +148,7 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .certifcations {
-  background-image: url('@/assets/images/index/certifications/1.png');
+  background-image: url('/images/index/certifications/1.png');
   background-size: 100%;
   overflow: hidden;
   .box-title {
@@ -226,7 +226,7 @@ onMounted(() => {
       top: 45%;
       width: 2.5rem;
       height: 2.5rem;
-      background: url(@/assets/images/index/certifications/right-arrow.png)
+      background: url(/images/index/certifications/right-arrow.png)
         no-repeat;
       background-size: 100%;
       z-index: 99;
@@ -239,7 +239,7 @@ onMounted(() => {
       top: 45%;
       width: 2.5rem;
       height: 2.5rem;
-      background: url(@/assets/images/index/certifications/left-arrow.png)
+      background: url(/images/index/certifications/left-arrow.png)
         no-repeat;
       background-size: 100%;
       z-index: 99;

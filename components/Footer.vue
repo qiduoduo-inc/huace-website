@@ -11,21 +11,21 @@
           <div class="title">HUACE SPORTS</div>
           <div class="informations">
             <div class="item">
-              <img src="@/assets/images/footer/1.png" alt="" />
+              <img src="/images/footer/1.png" alt="" />
               <p>
                 CHONGXIAN TOWN, LINPING DIST. HANGZHOU CITY, ZHEJIANG, CHINA.
               </p>
             </div>
             <div class="item">
               <img
-                src="@/assets/images/footer/2.png"
+                src="/images/footer/2.png"
                 style="width: 24px; margin-left: 2px"
                 alt=""
               />
               <p>+86-571-86275871</p>
             </div>
             <div class="item">
-              <img src="@/assets/images/footer/3.png" alt="" />
+              <img src="/images/footer/3.png" alt="" />
               <p>huacesports@gmail.com</p>
             </div>
           </div>
@@ -40,40 +40,40 @@
               <p>FOLLOW US</p>
               <div class="icon-group row text-center">
                 <div class="icon col">
-                  <img src="@/assets/images/footer/4.png" alt="" />
+                  <img src="/images/footer/4.png" alt="" />
                 </div>
                 <div class="icon col">
-                  <img src="@/assets/images/footer/5.png" alt="" />
+                  <img src="/images/footer/5.png" alt="" />
                 </div>
                 <div class="icon col">
-                  <img src="@/assets/images/footer/6.png" alt="" />
+                  <img src="/images/footer/6.png" alt="" />
                 </div>
               </div>
             </div>
           </div>
           <div class="right-bottom-box row">
             <div class="item col">
-              <img src="@/assets/images/footer/7.png" alt="" />
+              <img src="/images/footer/7.png" alt="" />
               <span>CN</span>
             </div>
             <div class="item col">
-              <img src="@/assets/images/footer/7.png" alt="" /><span> EN</span>
+              <img src="/images/footer/7.png" alt="" /><span> EN</span>
             </div>
             <div class="item col">
-              <img src="@/assets/images/footer/7.png" alt="" /><span> FR</span>
+              <img src="/images/footer/7.png" alt="" /><span> FR</span>
             </div>
             <div class="item col">
-              <img src="@/assets/images/footer/7.png" alt="" /><span> DE</span>
+              <img src="/images/footer/7.png" alt="" /><span> DE</span>
             </div>
             <div class="item col">
-              <img src="@/assets/images/footer/7.png" alt="" /><span> KR</span>
+              <img src="/images/footer/7.png" alt="" /><span> KR</span>
             </div>
           </div>
         </div>
         <div id="components-back-top-demo-custom">
           <a-back-top>
             <div class="ant-back-top-inner">
-              <img src="@/assets/images/footer/arrow.png" alt="" />
+              <img src="/images/footer/arrow.png" alt="" />
             </div>
           </a-back-top>
         </div>
@@ -84,15 +84,15 @@
         <div class="title">HUACE SPORTS</div>
         <div class="informations">
           <div class="item">
-            <img src="@/assets/images/footer/1.png" alt="" />
+            <img src="/images/footer/1.png" alt="" />
             <p>CHONGXIAN TOWN, LINPING DIST. HANGZHOU CITY, ZHEJIANG, CHINA.</p>
           </div>
           <div class="item">
-            <img src="@/assets/images/footer/2.png" alt="" />
+            <img src="/images/footer/2.png" alt="" />
             <p>+86-571-86275871</p>
           </div>
           <div class="item">
-            <img src="@/assets/images/footer/3.png" alt="" />
+            <img src="/images/footer/3.png" alt="" />
             <p>huacesports@gmail.com</p>
           </div>
         </div>
@@ -105,33 +105,33 @@
             <p>FOLLOW US</p>
             <div class="icon-group">
               <div class="icon">
-                <img src="@/assets/images/footer/4.png" alt="" />
+                <img src="/images/footer/4.png" alt="" />
               </div>
               <div class="icon">
-                <img src="@/assets/images/footer/5.png" alt="" />
+                <img src="/images/footer/5.png" alt="" />
               </div>
               <div class="icon">
-                <img src="@/assets/images/footer/6.png" alt="" />
+                <img src="/images/footer/6.png" alt="" />
               </div>
             </div>
           </div>
         </div>
         <div class="right-bottom-box row">
           <div class="item col">
-            <img src="@/assets/images/footer/7.png" alt="" />
+            <img src="/images/footer/7.png" alt="" />
             <span>CN</span>
           </div>
           <div class="item col">
-            <img src="@/assets/images/footer/7.png" alt="" /><span> EN</span>
+            <img src="/images/footer/7.png" alt="" /><span> EN</span>
           </div>
           <div class="item col">
-            <img src="@/assets/images/footer/7.png" alt="" /><span> FR</span>
+            <img src="/images/footer/7.png" alt="" /><span> FR</span>
           </div>
           <div class="item col">
-            <img src="@/assets/images/footer/7.png" alt="" /><span> DE</span>
+            <img src="/images/footer/7.png" alt="" /><span> DE</span>
           </div>
           <div class="item col">
-            <img src="@/assets/images/footer/7.png" alt="" /><span> KR</span>
+            <img src="/images/footer/7.png" alt="" /><span> KR</span>
           </div>
         </div>
         <div class="patent">Copyright Huace Sports 2022©</div>
@@ -139,7 +139,7 @@
       <div id="components-back-top-demo-custom">
         <a-back-top>
           <div class="ant-back-top-inner">
-            <img src="@/assets/images/footer/arrow.png" alt="" />
+            <img src="/images/footer/arrow.png" alt="" />
           </div>
         </a-back-top>
       </div>
@@ -158,7 +158,6 @@
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  padding-bottom: 10rem;
 
   .left-box {
     .title {
@@ -252,9 +251,6 @@
 }
 
 #components-back-top-demo-custom {
-  .ant-back-top {
-    bottom: 150px;
-  }
   .ant-back-top-inner {
     width: 2rem;
     height: 2rem;
@@ -270,7 +266,6 @@
 
 @media only screen and (max-width: 750px) {
   .footer {
-    padding-bottom: 8rem;
     .pc {
       display: none;
     }

@@ -1,0 +1,89 @@
+html {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: 'Barlow-Regular';
+}
+
+body,
+html {
+  color: #333;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+}
+
+p {
+  margin: 0;
+}
+
+.box-title {
+  text-align: center;
+  font-size: 3.125rem;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 3rem 0 1rem 0;
+}
+// .{
+//   overflow: hidden;
+// }
+@media only screen and (max-width: 750px) {
+  .box-title {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    margin: 0 auto;
+    padding: 1.5rem 5px 0.8rem 5px;
+  }
+}
+.ant-btn.ant-btn-background-ghost:hover,
+.ant-btn.ant-btn-background-ghost:focus {
+  color: #f0831e;
+  border-color: #f0831e;
+}
+.ant-btn:hover,
+.ant-btn:focus {
+  color: #f0831e;
+  border-color: #f0831e;
+  background: #fff;
+}

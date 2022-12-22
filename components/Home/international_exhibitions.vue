@@ -1,12 +1,12 @@
 <template>
-  <transition>
+  <transition :duration="duration">
     <div class="international-exhibitions container-fluid">
       <div class="box-title">
         <p>INTERNATIONAL EXHIBITIONS</p>
       </div>
       <div class="photo-wall container-fluid" ref="photoWall">
         <div class="photo-item" v-for="(item, index) in itemList">
-          <img :src="item.url" alt="" />
+          <img :src="`${item.url}`" alt="" />
         </div>
         <div class="year-box">
           <div class="year">
@@ -28,12 +28,12 @@
       </div>
       <div class="photo-wall bottom" ref="photoWallOld">
         <div class="photo-item" v-for="(item, index) in itemListOld">
-          <img :src="item.url" alt="" />
+          <img :src="`${item.url}`" alt="" />
         </div>
       </div>
       <div class="h-photo-wall container-fluid" ref="hPhotoWall">
         <div class="photo-item" v-for="(item, index) in hItemList">
-          <img :src="item.url" alt="" />
+          <img :src="`${item.url}`" alt="" />
         </div>
         <div class="year-box">
           <div class="year">
@@ -55,7 +55,7 @@
       </div>
       <div class="h-photo-wall bottom" ref="hPhotoWallOld">
         <div class="photo-item" v-for="(item, index) in hItemListOld">
-          <img :src="item.url" alt="" />
+          <img :src="`${item.url}`" alt="" />
         </div>
       </div>
       <div class="title">
@@ -66,622 +66,623 @@
 </template>
 
 <script lang="ts" setup>
+const duration = ref(0);
 const itemList = ref([
   {
-    url: '../../assets/images/index/international_exhibitions/1.png',
+    url: 'images/index/international_exhibitions/1.png',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/2.png',
+    url: 'images/index/international_exhibitions/2.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/3.png',
+    url: 'images/index/international_exhibitions/3.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/4.jpg',
+    url: 'images/index/international_exhibitions/4.jpg',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/5.png',
+    url: 'images/index/international_exhibitions/5.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/6.png',
+    url: 'images/index/international_exhibitions/6.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/7.png',
+    url: 'images/index/international_exhibitions/7.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/8.png',
+    url: 'images/index/international_exhibitions/8.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/9.png',
+    url: 'images/index/international_exhibitions/9.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/10.png',
+    url: 'images/index/international_exhibitions/10.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/11.png',
+    url: 'images/index/international_exhibitions/11.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/12.png',
+    url: 'images/index/international_exhibitions/12.png',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/13.png',
+    url: 'images/index/international_exhibitions/13.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/14.png',
+    url: 'images/index/international_exhibitions/14.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/15.png',
+    url: 'images/index/international_exhibitions/15.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/16.png',
+    url: 'images/index/international_exhibitions/16.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/17.png',
+    url: 'images/index/international_exhibitions/17.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/18.png',
+    url: 'images/index/international_exhibitions/18.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/19.png',
+    url: 'images/index/international_exhibitions/19.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/20.png',
+    url: 'images/index/international_exhibitions/20.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/21.png',
+    url: 'images/index/international_exhibitions/21.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/22.png',
+    url: 'images/index/international_exhibitions/22.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/23.png',
+    url: 'images/index/international_exhibitions/23.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/24.png',
+    url: 'images/index/international_exhibitions/24.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/25.png',
+    url: 'images/index/international_exhibitions/25.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/26.png',
+    url: 'images/index/international_exhibitions/26.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/27.png',
+    url: 'images/index/international_exhibitions/27.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/28.png',
+    url: 'images/index/international_exhibitions/28.png',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/29.png',
+    url: 'images/index/international_exhibitions/29.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/30.png',
+    url: 'images/index/international_exhibitions/30.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/31.png',
+    url: 'images/index/international_exhibitions/31.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/32.png',
+    url: 'images/index/international_exhibitions/32.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/33.png',
+    url: 'images/index/international_exhibitions/33.png',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/34.png',
+    url: 'images/index/international_exhibitions/34.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/35.png',
+    url: 'images/index/international_exhibitions/35.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/36.png',
+    url: 'images/index/international_exhibitions/36.png',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/37.png',
+    url: 'images/index/international_exhibitions/37.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/38.png',
+    url: 'images/index/international_exhibitions/38.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/39.png',
+    url: 'images/index/international_exhibitions/39.png',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/40.png',
+    url: 'images/index/international_exhibitions/40.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/41.png',
+    url: 'images/index/international_exhibitions/41.png',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/42.png',
+    url: 'images/index/international_exhibitions/42.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/43.png',
+    url: 'images/index/international_exhibitions/43.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/44.png',
+    url: 'images/index/international_exhibitions/44.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/45.png',
+    url: 'images/index/international_exhibitions/45.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/46.png',
+    url: 'images/index/international_exhibitions/46.png',
     type: 1,
   },
 ]);
 
 const itemListOld = ref([
   {
-    url: '../../assets/images/index/international_exhibitions/1.png',
+    url: 'images/index/international_exhibitions/1.png',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/2.png',
+    url: 'images/index/international_exhibitions/2.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/3.png',
+    url: 'images/index/international_exhibitions/3.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/4.jpg',
+    url: 'images/index/international_exhibitions/4.jpg',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/5.png',
+    url: 'images/index/international_exhibitions/5.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/6.png',
+    url: 'images/index/international_exhibitions/6.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/7.png',
+    url: 'images/index/international_exhibitions/7.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/8.png',
+    url: 'images/index/international_exhibitions/8.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/9.png',
+    url: 'images/index/international_exhibitions/9.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/10.png',
+    url: 'images/index/international_exhibitions/10.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/11.png',
+    url: 'images/index/international_exhibitions/11.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/12.png',
+    url: 'images/index/international_exhibitions/12.png',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/13.png',
+    url: 'images/index/international_exhibitions/13.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/14.png',
+    url: 'images/index/international_exhibitions/14.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/15.png',
+    url: 'images/index/international_exhibitions/15.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/16.png',
+    url: 'images/index/international_exhibitions/16.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/17.png',
+    url: 'images/index/international_exhibitions/17.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/18.png',
+    url: 'images/index/international_exhibitions/18.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/19.png',
+    url: 'images/index/international_exhibitions/19.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/20.png',
+    url: 'images/index/international_exhibitions/20.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/21.png',
+    url: 'images/index/international_exhibitions/21.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/22.png',
+    url: 'images/index/international_exhibitions/22.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/23.png',
+    url: 'images/index/international_exhibitions/23.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/24.png',
+    url: 'images/index/international_exhibitions/24.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/25.png',
+    url: 'images/index/international_exhibitions/25.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/26.png',
+    url: 'images/index/international_exhibitions/26.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/27.png',
+    url: 'images/index/international_exhibitions/27.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/28.png',
+    url: 'images/index/international_exhibitions/28.png',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/29.png',
+    url: 'images/index/international_exhibitions/29.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/30.png',
+    url: 'images/index/international_exhibitions/30.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/31.png',
+    url: 'images/index/international_exhibitions/31.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/32.png',
+    url: 'images/index/international_exhibitions/32.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/33.png',
+    url: 'images/index/international_exhibitions/33.png',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/34.png',
+    url: 'images/index/international_exhibitions/34.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/35.png',
+    url: 'images/index/international_exhibitions/35.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/36.png',
+    url: 'images/index/international_exhibitions/36.png',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/37.png',
+    url: 'images/index/international_exhibitions/37.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/38.png',
+    url: 'images/index/international_exhibitions/38.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/39.png',
+    url: 'images/index/international_exhibitions/39.png',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/40.png',
+    url: 'images/index/international_exhibitions/40.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/41.png',
+    url: 'images/index/international_exhibitions/41.png',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/42.png',
+    url: 'images/index/international_exhibitions/42.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/43.png',
+    url: 'images/index/international_exhibitions/43.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/44.png',
+    url: 'images/index/international_exhibitions/44.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/45.png',
+    url: 'images/index/international_exhibitions/45.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/46.png',
+    url: 'images/index/international_exhibitions/46.png',
     type: 1,
   },
 ]);
 
 const hItemList = ref([
   {
-    url: '../../assets/images/index/international_exhibitions/1.png',
+    url: 'images/index/international_exhibitions/1.png',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/2.png',
+    url: 'images/index/international_exhibitions/2.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/3.png',
+    url: 'images/index/international_exhibitions/3.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/4.jpg',
+    url: 'images/index/international_exhibitions/4.jpg',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/5.png',
+    url: 'images/index/international_exhibitions/5.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/6.png',
+    url: 'images/index/international_exhibitions/6.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/7.png',
+    url: 'images/index/international_exhibitions/7.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/8.png',
+    url: 'images/index/international_exhibitions/8.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/9.png',
+    url: 'images/index/international_exhibitions/9.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/10.png',
+    url: 'images/index/international_exhibitions/10.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/11.png',
+    url: 'images/index/international_exhibitions/11.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/12.png',
+    url: 'images/index/international_exhibitions/12.png',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/13.png',
+    url: 'images/index/international_exhibitions/13.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/14.png',
+    url: 'images/index/international_exhibitions/14.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/15.png',
+    url: 'images/index/international_exhibitions/15.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/16.png',
+    url: 'images/index/international_exhibitions/16.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/17.png',
+    url: 'images/index/international_exhibitions/17.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/18.png',
+    url: 'images/index/international_exhibitions/18.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/19.png',
+    url: 'images/index/international_exhibitions/19.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/20.png',
+    url: 'images/index/international_exhibitions/20.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/21.png',
+    url: 'images/index/international_exhibitions/21.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/22.png',
+    url: 'images/index/international_exhibitions/22.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/23.png',
+    url: 'images/index/international_exhibitions/23.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/24.png',
+    url: 'images/index/international_exhibitions/24.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/25.png',
+    url: 'images/index/international_exhibitions/25.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/26.png',
+    url: 'images/index/international_exhibitions/26.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/27.png',
+    url: 'images/index/international_exhibitions/27.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/40.png',
+    url: 'images/index/international_exhibitions/40.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/29.png',
+    url: 'images/index/international_exhibitions/29.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/30.png',
+    url: 'images/index/international_exhibitions/30.png',
     type: 1,
   },
 ]);
 
 const hItemListOld = ref([
   {
-    url: '../../assets/images/index/international_exhibitions/1.png',
+    url: 'images/index/international_exhibitions/1.png',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/2.png',
+    url: 'images/index/international_exhibitions/2.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/3.png',
+    url: 'images/index/international_exhibitions/3.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/4.jpg',
+    url: 'images/index/international_exhibitions/4.jpg',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/5.png',
+    url: 'images/index/international_exhibitions/5.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/6.png',
+    url: 'images/index/international_exhibitions/6.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/7.png',
+    url: 'images/index/international_exhibitions/7.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/8.png',
+    url: 'images/index/international_exhibitions/8.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/9.png',
+    url: 'images/index/international_exhibitions/9.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/10.png',
+    url: 'images/index/international_exhibitions/10.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/11.png',
+    url: 'images/index/international_exhibitions/11.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/12.png',
+    url: 'images/index/international_exhibitions/12.png',
     type: 2,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/13.png',
+    url: 'images/index/international_exhibitions/13.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/14.png',
+    url: 'images/index/international_exhibitions/14.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/15.png',
+    url: 'images/index/international_exhibitions/15.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/16.png',
+    url: 'images/index/international_exhibitions/16.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/17.png',
+    url: 'images/index/international_exhibitions/17.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/18.png',
+    url: 'images/index/international_exhibitions/18.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/19.png',
+    url: 'images/index/international_exhibitions/19.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/20.png',
+    url: 'images/index/international_exhibitions/20.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/21.png',
+    url: 'images/index/international_exhibitions/21.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/22.png',
+    url: 'images/index/international_exhibitions/22.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/23.png',
+    url: 'images/index/international_exhibitions/23.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/24.png',
+    url: 'images/index/international_exhibitions/24.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/25.png',
+    url: 'images/index/international_exhibitions/25.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/26.png',
+    url: 'images/index/international_exhibitions/26.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/27.png',
+    url: 'images/index/international_exhibitions/27.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/40.png',
+    url: 'images/index/international_exhibitions/40.png',
     type: 1,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/29.png',
+    url: 'images/index/international_exhibitions/29.png',
     type: 3,
   },
   {
-    url: '../../assets/images/index/international_exhibitions/30.png',
+    url: 'images/index/international_exhibitions/30.png',
     type: 1,
   },
 ]);
